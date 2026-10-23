@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) { return request.auth != null && request.auth.uid == uid && request.auth.token.firebase.sign_in_provider != 'anonymous'; }
+    match /users/{uid} {
+      allow read, delete: if owner(uid);
+      allow create: if owner(uid) && request.resource.data.keys().hasOnly(['name','email','tenantId','createdAt']) && request.resource.data.tenantId == uid && request.resource.data.name is string && request.resource.data.email is string && request.resource.data.createdAt == request.time;
+      allow update: if owner(uid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name','email']) && request.resource.data.name is string && request.resource.data.email is string;
+    }
+    match /tenants/{uid} {
+      allow read, delete: if owner(uid);
+      allow create: if owner(uid) && request.resource.data.keys().hasOnly(['name','ownerId','createdAt']) && request.resource.data.ownerId == uid && request.resource.data.name is string && request.resource.data.createdAt == request.time;
+      allow update: if owner(uid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name']) && request.resource.data.name is string;
+      match /invitations/{invitationId} {
+        allow read, delete: if owner(uid);
+        allow create, update: if owner(uid) && request.resource.data.title is string && request.resource.data.status in ['draft','published','archived'] && request.resource.data.design is map;
+        match /guests/{guestId} {
+          allow read, delete: if owner(uid);
+          allow create, update: if owner(uid) && request.resource.data.name is string && request.resource.data.phoneNumber is string && request.resource.data.guestCountAllowed is int && request.resource.data.guestCountAllowed >= 1 && request.resource.data.guestCountAllowed <= 20;
+        }
+      }
+      match /templates/{templateId} { allow read, write: if owner(uid); }
+    }
+    function activeShare(id) {
+      let share = get(/databases/$(database)/documents/publicInvitations/$(id)).data;
+      return share.status == 'active' && get(/databases/$(database)/documents/tenants/$(share.ownerUid)/invitations/$(share.invitationId)).data.status == 'published';
+    }
+    function ownsShare(id) { return owner(get(/databases/$(database)/documents/publicInvitations/$(id)).data.ownerUid); }
+    function validShare(data) {
+      return data.keys().hasOnly(['mode','ownerUid','invitationId','guestId','guestDisplayName','guestCountAllowed','publishedSnapshot','status','createdAt'])
+        && data.get('mode','personal') in ['personal','open']
+        && data.ownerUid is string && data.invitationId is string && data.guestId is string
+        && data.guestDisplayName is string && data.guestDisplayName.size() <= 160
+        && data.guestCountAllowed is int && data.guestCountAllowed >= 1 && data.guestCountAllowed <= 20
+        && data.status in ['active','revoked'] && data.publishedSnapshot is map;
+    }
+    match /publicInvitations/{shareId} {
+      allow get: if owner(resource.data.ownerUid) || activeShare(shareId);
+      allow list: if false;
+      allow create: if shareId.matches('^[a-f0-9]{48}$') && owner(request.resource.data.ownerUid) && validShare(request.resource.data) && request.resource.data.createdAt == request.time;
+      allow update: if owner(resource.data.ownerUid) && validShare(request.resource.data) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['guestDisplayName','guestCountAllowed','publishedSnapshot','status']);
+      allow delete: if owner(resource.data.ownerUid);
+      match /response/{responseId} {
+        function validResponse() {
+          let d = request.resource.data;
+          let open = get(/databases/$(database)/documents/publicInvitations/$(shareId)).data.get('mode','personal') == 'open';
+          return ((open && responseId.matches('^[a-f0-9]{48}$')) || (!open && responseId == 'current')) && d.keys().hasOnly(['rsvpStatus','attendeesCount','respondedAt','respondentName'])
+            && d.keys().hasAll(['rsvpStatus','attendeesCount','respondedAt','respondentName'])
+            && d.respondentName is string && d.respondentName.size() >= 1 && d.respondentName.size() <= 160 && d.respondentName.matches('.*[^\\s].*')
+            && d.rsvpStatus in ['accepted','declined']
+            && d.attendeesCount is int
+            && ((d.rsvpStatus == 'accepted' && d.attendeesCount == 1) || (d.rsvpStatus == 'declined' && d.attendeesCount == 0))
+            && d.respondedAt == request.time;
+        }
+        allow get: if (responseId == 'current' || responseId.matches('^[a-f0-9]{48}$')) && (ownsShare(shareId) || activeShare(shareId));
+        allow list: if ownsShare(shareId);
+        allow create, update: if activeShare(shareId) && validResponse();
+        allow delete: if ownsShare(shareId);
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function owner(uid) { return request.auth != null && request.auth.uid == uid && request.auth.token.firebase.sign_in_provider != 'anonymous'; }
+    function validImage() { return request.resource.size < 5 * 1024 * 1024 && request.resource.contentType.matches('image/(png|jpeg|webp)'); }
+    match /tenants/{uid}/templates/{fileId} {
+      allow get: if owner(uid);
+      allow list: if false;
+      allow create, update: if owner(uid) && validImage();
+      allow delete: if owner(uid);
+    }
+    match /tenants/{uid}/invitations/{invitationId}/{fileId} {
+      allow get: if owner(uid);
+      allow list: if false;
+      allow create, update: if owner(uid) && validImage();
+      allow delete: if owner(uid);
+    }
+  }
+}

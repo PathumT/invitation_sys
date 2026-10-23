@@ -1,0 +1,58 @@
+{
+  "name": "inviteflow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:rules": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"vitest run --config vitest.rules.config.ts\"",
+    "emulators": "firebase emulators:start",
+    "test:e2e": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"playwright test\""
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.0.0",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tailwindcss/vite": "^4.1.0",
+    "@tanstack/react-query": "^5.74.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "firebase": "^13.1.0",
+    "konva": "^9.3.20",
+    "libphonenumber-js": "^1.11.20",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.55.0",
+    "react-konva": "^19.0.3",
+    "react-router-dom": "^7.5.0",
+    "recharts": "^3.10.1",
+    "sonner": "^2.0.3",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.0",
+    "zod": "^3.24.0",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@firebase/rules-unit-testing": "^6.0.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.24.0",
+    "firebase-tools": "^15.34.1",
+    "prettier": "^3.9.10",
+    "typescript-eslint": "^8.29.0",
+    "vitest": "^5.0.5"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.14.0"
+  }
+}
