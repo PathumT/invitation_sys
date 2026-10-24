@@ -5,6 +5,7 @@ import {
   interpolate,
   token,
   whatsappUrl,
+  shareUrl,
 } from "../src/utils";
 import { parseGuestCSV } from "../src/utils/csv";
 import { useEditorStore } from "../src/hooks/editorStore";
@@ -18,6 +19,12 @@ beforeAll(() => {
   });
 });
 describe("WhatsApp and personal links", () => {
+  it("adds a safe host name segment while retaining legacy links", () => {
+    expect(shareUrl("abc", "Pathum Thennakoon")).toBe("https://inviteflow.test/i/abc/pathum-thennakoon");
+    expect(shareUrl("abc", " H & K / Construction? ")).toBe("https://inviteflow.test/i/abc/h-k-construction");
+    expect(shareUrl("abc", "   ")).toBe("https://inviteflow.test/i/abc");
+    expect(shareUrl("abc")).toBe("https://inviteflow.test/i/abc");
+  });
   it("normalizes international phone numbers", () => {
     expect(normalizePhone("+94 77 123 4567")).toBe("+94771234567");
     expect(() => normalizePhone("123")).toThrow();

@@ -136,7 +136,7 @@ export default function App() {
               <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/i/:shareId" element={<PublicInvitation />} />
+                <Route path="/i/:shareId/:hostName?" element={<PublicInvitation />} />
                 <Route element={<Protected />}>
                   <Route
                     path="/invitations/:id/preview"
