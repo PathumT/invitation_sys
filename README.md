@@ -158,3 +158,9 @@ npx firebase deploy
 `src/pages` contains routes; `src/components` owns layout, card rendering, editor, and UI primitives; `src/services` owns Firebase operations; `src/firebase` contains initialization and tenant helpers; `src/hooks` owns subscriptions and Zustand history. The stack includes React Router, Tailwind, Radix/shadcn-style primitives, Lucide, React Hook Form/Zod, React Konva, Zustand, Recharts, Sonner, date-fns, and libphonenumber-js.
 
 Eight starter designs use original typography/vector artwork. The Grand Opening design adds a generated raster background inspired by the user's reference; its provenance and exact prompt are in `public/templates/ASSETS.md`. References: [Firebase field restrictions](https://firebase.google.com/docs/firestore/security/rules-fields), [React Konva Transformer](https://konvajs.org/docs/react/Transformer.html).
+
+## Vercel deployment
+
+The root `vercel.json` builds the Vite app into `dist` and rewrites direct client routes to `index.html`. This allows opening and refreshing `/i/{shareId}/{host-name}` links instead of receiving Vercel's 404 page. Existing static assets continue to be served normally.
+
+Deploy the project root containing `package.json` and `vercel.json`. In Vercel Project Settings, set the production Firebase `VITE_FIREBASE_*` values, `VITE_USE_EMULATORS=false`, and `VITE_APP_URL=https://invitation-sys.vercel.app` (or your own production domain). Redeploy after changing configuration or environment variables. Local `.env` changes do not update an existing deployment. Firebase security rules remain deployed separately through the Firebase CLI.
