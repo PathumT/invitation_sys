@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
+import { shareUrl } from "../utils";
 import { ensurePublicLink } from "../services/publicLinkService";
 import { getDoc } from "firebase/firestore";
 import { tenantDocument } from "../firebase/firestore";
@@ -16,12 +17,12 @@ export default function InvitationPreview() {
         if (!s.exists()) throw new Error("Invitation not found.");
         const value = { ...s.data(), id: s.id } as Invitation;
         if (value.status === "published")
-          setPublicId(await ensurePublicLink(value));
+          setPublicId(new URL(shareUrl(await ensurePublicLink(value), value.hostName)).pathname);
         else setEvent(value);
       })
       .catch((e) => setError(e.message));
   }, [id]);
-  if (publicId) return <Navigate replace to={`/i/${publicId}`} />;
+  if (publicId) return <Navigate replace to={publicId} />;
   if (error)
     return (
       <div className="full-state">

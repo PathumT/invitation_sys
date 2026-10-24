@@ -171,7 +171,7 @@ export default function GuestManagement() {
             onClick={() =>
               act(async () => {
                 const id = await ensurePublicLink(event);
-                await navigator.clipboard.writeText(shareUrl(id));
+                await navigator.clipboard.writeText(shareUrl(id, event.hostName));
                 toast.success(
                   "Public invitation link copied. Anyone can respond.",
                 );
@@ -314,7 +314,7 @@ export default function GuestManagement() {
                             act(async () => {
                               const share = await link(g);
                               await navigator.clipboard.writeText(
-                                shareUrl(share),
+                                shareUrl(share, event?.hostName),
                               );
                               toast.success("Personal invitation link copied.");
                             })

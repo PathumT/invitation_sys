@@ -52,8 +52,11 @@ export function token() {
     b.toString(16).padStart(2, "0"),
   ).join("");
 }
-export function shareUrl(id: string) {
-  return `${(import.meta.env.VITE_APP_URL || window.location.origin).replace(/\/$/, "")}/i/${id}`;
+export function shareUrl(id: string, hostName = "") {
+  const host = hostName.normalize("NFKC").trim().toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "");
+  const base = (import.meta.env.VITE_APP_URL || window.location.origin).trim().replace(/\/+$/, "");
+  return `${base}/i/${id}${host ? `/${encodeURIComponent(host)}` : ""}`;
 }
 export function whatsappUrl(
   phone: string,
@@ -61,7 +64,7 @@ export function whatsappUrl(
   event: Invitation,
   id: string,
 ) {
-  const message = `Hello ${name}!\n\nYou are warmly invited to ${event.title}.\n\nDate: ${event.eventDate}\nTime: ${event.eventTime} (${event.timezone})\nVenue: ${event.venueName}\n\nView your personal invitation:\n${shareUrl(id)}\n\nPlease confirm your attendance. Thank you!`;
+  const message = `Hello ${name}!\n\nYou are warmly invited to ${event.title}.\n\nDate: ${event.eventDate}\nTime: ${event.eventTime} (${event.timezone})\nVenue: ${event.venueName}\n\nView your personal invitation:\n${shareUrl(id, event.hostName)}\n\nPlease confirm your attendance. Thank you!`;
   return `https://wa.me/${normalizePhone(phone).slice(1)}?text=${encodeURIComponent(message)}`;
 }
 export function interpolate(

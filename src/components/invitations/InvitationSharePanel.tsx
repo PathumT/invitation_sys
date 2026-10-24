@@ -26,7 +26,7 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
     if (published)
       ensurePublicLink(event)
         .then((id) => {
-          if (!cancelled) setLink(shareUrl(id));
+          if (!cancelled) setLink(shareUrl(id, event.hostName));
         })
         .catch((e) => {
           if (!cancelled) setError(errorMessage(e));
@@ -34,7 +34,7 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
     return () => {
       cancelled = true;
     };
-  }, [event.id, event.status, retry, published]);
+  }, [event.id, event.status, event.hostName, retry, published]);
   const message = `You’re invited to ${event.title}!\n${event.eventDate}${event.eventTime ? ` at ${event.eventTime}` : ""}\n${event.venueName}\n\nView the invitation and RSVP:\n${link}`;
   const whatsapp = `https://wa.me/?text=${encodeURIComponent(message)}`;
   let local = false;
