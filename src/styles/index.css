@@ -1,17 +1,17 @@
 @import "tailwindcss";
 @theme {
   --font-sans: "Inter", "Segoe UI", sans-serif;
-  --color-primary: #226859;
+  --color-primary: var(--brand-primary);
 }
 :root {
   font-family: "Inter", "Segoe UI", sans-serif;
-  color: #24352e;
-  background: #f8f9f6;
+  color: var(--brand-ink);
+  background: var(--brand-surface);
   font-synthesis: none;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
-  --green: #226859;
-  --ink: #24352e;
+  --green: var(--brand-primary);
+  --ink: var(--brand-ink);
   --muted: #899088;
   --line: #e8ebe5;
   --serif: Georgia, "Times New Roman", serif;
@@ -152,7 +152,7 @@ hr {
   box-shadow: 0 2px 2px #18382a09;
 }
 .button.primary:hover {
-  background: #175548;
+  background: var(--brand-primary-hover);
 }
 .button.outline {
   background: #fff;
@@ -327,7 +327,7 @@ hr {
 }
 .sidebar nav a.active,
 .sidebar-bottom > a.active {
-  background: #eaf1e9;
+  background: var(--brand-sage);
   color: #285c49;
   font-weight: 600;
 }
@@ -2876,5 +2876,99 @@ dialog::backdrop {
   }
   .sidebar-bottom {
     padding-top: 20px;
+  }
+}
+
+.evently-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--brand-ink);
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 1;
+}
+.evently-brand > svg {
+  width: 44px;
+  height: 54px;
+  flex-shrink: 0;
+}
+.evently-brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.evently-brand-wordmark > span {
+  font-family: var(--serif);
+  letter-spacing: -0.04em;
+}
+.evently-brand-wordmark > small {
+  font-family: var(--font-sans);
+  font-size: 0.21em;
+  letter-spacing: 0.48em;
+  padding-left: 2px;
+  font-weight: 600;
+}
+.sidebar .evently-brand {
+  font-size: 29px;
+  gap: 9px;
+}
+.sidebar .evently-brand > svg {
+  width: 31px;
+  height: 41px;
+}
+
+/* Preserve readable content and reachable controls on narrow screens. */
+.page-heading > div,
+.panel,
+.settings-panel,
+.main-shell,
+main {
+  min-width: 0;
+}
+.page-heading h1,
+.table-person strong,
+.table-person small {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1000px) {
+  .editor-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .editor-properties {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .editor-toolbar > div {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 800px), (pointer: coarse) {
+  .app-shell .button,
+  .app-shell .icon-button,
+  .modal .button,
+  .modal .icon-button,
+  .app-shell .tabs button,
+  .app-shell .category-tabs button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .app-shell .table-actions .icon-button {
+    min-width: 44px;
+  }
+  .app-shell .table-wrap {
+    overscroll-behavior-x: contain;
+  }
+  .app-shell .table-wrap:focus-visible {
+    outline-offset: -3px;
+  }
+  .app-shell input:not([type="color"]):not([type="checkbox"]),
+  .app-shell select,
+  .app-shell textarea,
+  .modal input,
+  .modal select,
+  .modal textarea {
+    font-size: 16px;
   }
 }

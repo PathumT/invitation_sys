@@ -1,0 +1,349 @@
+import { Link } from "react-router-dom";
+import {
+  Users,
+  Check,
+  Clock,
+  ArrowUpRight,
+  Plus,
+  ArrowRight,
+  CalendarDays,
+  Mail,
+  X,
+  Leaf,
+  MapPin,
+} from "lucide-react";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import { useWorkspace } from "../hooks/useWorkspace";
+import { useAuth } from "../contexts/AuthContext";
+import { DesignPreview } from "../components/invitations/DesignPreview";
+import { format } from "date-fns";
+export default function Dashboard({
+  analytics = false,
+}: {
+  analytics?: boolean;
+}) {
+  const { events, guests, loading, error } = useWorkspace();
+  const { user } = useAuth();
+  const accepted = guests.filter((g) => g.rsvpStatus === "accepted").length,
+    declined = guests.filter((g) => g.rsvpStatus === "declined").length,
+    maybe = guests.filter((g) => g.rsvpStatus === "maybe").length,
+    pending = guests.length - accepted - declined - maybe;
+  const data = [
+    { name: "Accepted", value: accepted, color: "#236b5c" },
+    { name: "Declined", value: declined, color: "#d69589" },
+    { name: "Maybe", value: maybe, color: "#d6b771" },
+    { name: "Pending", value: pending, color: "#e5e8e3" },
+  ];
+  const upcoming = events
+    .filter(
+      (e) =>
+        e.status !== "archived" &&
+        e.eventDate >= format(new Date(), "yyyy-MM-dd"),
+    )
+    .sort((a, b) => a.eventDate.localeCompare(b.eventDate));
+  const activity = guests
+    .filter((g) => g.respondedAt)
+    .sort(
+      (a, b) => (b.respondedAt?.seconds || 0) - (a.respondedAt?.seconds || 0),
+    )
+    .slice(0, 5);
+  return (
+    <>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">YOUR WORKSPACE, AT A GLANCE</div>
+          <h1>
+            {analytics
+              ? "A little insight. A better gathering."
+              : `Hello, ${user?.displayName?.split(" ")[0] || "there"} `}
+            {!analytics && <span className="greeting-flower">✳</span>}
+          </h1>
+          <p>Here’s what’s happening with your invitations.</p>
+        </div>
+        <div className="date-label">
+          <CalendarDays size={16} />
+          {format(new Date(), "EEEE, MMM d, yyyy")}
+        </div>
+      </div>
+      {error && <div className="error-banner">{error}</div>}
+      <section className="welcome-banner">
+        <div>
+          <span className="banner-label">
+            <span />
+            EVERY GREAT MOMENT STARTS HERE
+          </span>
+          <h2>
+            A reason to gather.
+            <br />
+            An invitation to remember.
+          </h2>
+          <p>Turn your next occasion into something beautifully personal.</p>
+          <Link className="button primary" to="/invitations/new">
+            <Plus size={17} />
+            Create an invitation
+            <ArrowUpRight size={17} />
+          </Link>
+        </div>
+        <div className="banner-art" aria-hidden="true">
+          <div className="art-card back">
+            <Leaf size={38} />
+            <span>
+              together is
+              <br />a beautiful place
+            </span>
+          </div>
+          <div className="art-card front">
+            <span className="art-star">✳</span>
+            <small>THE PLEASURE OF YOUR COMPANY</small>
+            <span>
+              You’re
+              <br />
+              <em>invited.</em>
+            </span>
+            <div className="art-line" />
+            <small>LET’S MAKE A MEMORY</small>
+          </div>
+          <span className="art-spark">✧</span>
+        </div>
+      </section>
+      <div className="section-title">
+        <h2>The big picture</h2>
+        <span className="subtle">Across all your events</span>
+      </div>
+      <div className="stats-grid">
+        {[
+          [
+            Users,
+            "Total guests",
+            guests.length,
+            "Your guest list, all together",
+            "teal",
+          ],
+          [Check, "Accepted", accepted, "Good company on the way", "green"],
+          [X, "Declined", declined, "Until the next occasion", "rose"],
+          [Clock, "Pending", pending, "A little anticipation", "gold"],
+        ].map(([Icon, label, value, caption, color]) => {
+          const I = Icon as typeof Users;
+          return (
+            <div className="stat-card" key={String(label)}>
+              <div className="stat-top">
+                <span>{String(label)}</span>
+                <span className={`stat-icon ${color}`}>
+                  <I size={18} />
+                </span>
+              </div>
+              <strong>{loading ? "—" : String(value)}</strong>
+              <small>{String(caption)}</small>
+            </div>
+          );
+        })}
+      </div>
+      {analytics && (
+        <div className="metrics-strip">
+          <span>
+            <b>{events.length}</b> total events
+          </span>
+          <span>
+            <b>{guests.filter((g) => g.shareId).length}</b> personalized
+            invitations
+          </span>
+          <span>
+            <b>{guests.filter((g) => g.shareStatus === "initiated").length}</b>{" "}
+            sharing initiated
+          </span>
+          <span>
+            <b>
+              {guests.reduce(
+                (n, g) =>
+                  n + (g.rsvpStatus === "accepted" ? g.attendeesCount : 0),
+                0,
+              )}
+            </b>{" "}
+            attendees confirmed
+          </span>
+        </div>
+      )}
+      <div className="dashboard-columns">
+        <section className="panel response-panel">
+          <div className="panel-heading">
+            <div>
+              <h2>Who’s coming?</h2>
+              <p>A little look at your RSVPs</p>
+            </div>
+            <span className="live-badge">
+              <span />
+              Live
+            </span>
+          </div>
+          <div className="chart-layout">
+            <div className="donut">
+              <ResponsiveContainer width="100%" height={190}>
+                <PieChart>
+                  <Pie
+                    isAnimationActive={false}
+                    data={
+                      guests.length
+                        ? data
+                        : [
+                            {
+                              name: "No responses yet",
+                              value: 1,
+                              color: "#edf0eb",
+                            },
+                          ]
+                    }
+                    dataKey="value"
+                    innerRadius={65}
+                    outerRadius={83}
+                    strokeWidth={0}
+                    paddingAngle={guests.length ? 3 : 0}
+                  >
+                    {(guests.length ? data : [{ color: "#edf0eb" }]).map(
+                      (v, i) => (
+                        <Cell key={i} fill={v.color} />
+                      ),
+                    )}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+              <div className="donut-center">
+                <strong>
+                  {guests.length
+                    ? Math.round(
+                        ((accepted + declined + maybe) / guests.length) * 100,
+                      )
+                    : 0}
+                  %
+                </strong>
+                <span>responded</span>
+              </div>
+            </div>
+            <div className="chart-legend">
+              {data.map((d) => (
+                <div key={d.name}>
+                  <span>
+                    <i style={{ background: d.color }} />
+                    {d.name}
+                  </span>
+                  <strong>{d.value}</strong>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="panel-bottom">
+            <Mail size={15} />
+            {guests.length
+              ? `${pending} guests haven’t responded yet.`
+              : "Your first RSVP is the start of something lovely."}
+          </div>
+        </section>
+        <section className="panel activity-panel">
+          <div className="panel-heading">
+            <div>
+              <h2>Fresh from your guests</h2>
+              <p>The latest little updates</p>
+            </div>
+            <span className="activity-symbol">↗</span>
+          </div>
+          {activity.length ? (
+            <div className="activity-list">
+              {activity.map((g) => (
+                <div className="activity-item" key={`${g.invitationId}${g.id}`}>
+                  <span className={`activity-avatar ${g.rsvpStatus}`}>
+                    {g.name[0]}
+                  </span>
+                  <div>
+                    <strong>{g.name}</strong>
+                    <p>
+                      <span className={`status-text ${g.rsvpStatus}`}>
+                        {g.rsvpStatus}
+                      </span>{" "}
+                      · {events.find((e) => e.id === g.invitationId)?.title}
+                    </p>
+                  </div>
+                  <small>
+                    {g.respondedAt?.toDate
+                      ? format(g.respondedAt.toDate(), "MMM d, h:mm a")
+                      : ""}
+                  </small>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="quiet-empty">
+              <span className="empty-icon">
+                <Mail size={25} />
+              </span>
+              <h3>A little quiet, for now.</h3>
+              <p>
+                Once your guests respond, their
+                <br />
+                latest updates will appear right here.
+              </p>
+            </div>
+          )}
+          <Link className="panel-bottom link-bottom" to="/guests">
+            View guest list
+            <ArrowRight size={15} />
+          </Link>
+        </section>
+      </div>
+      <div className="section-title">
+        <div>
+          <h2>{analytics ? "Upcoming events" : "Your occasions"}</h2>
+          <p>Big days, small gatherings, and everything in between.</p>
+        </div>
+        <Link className="text-link" to="/invitations">
+          View all invitations <ArrowRight size={16} />
+        </Link>
+      </div>
+      <div className="event-grid">
+        {(analytics ? upcoming : events).slice(0, 3).map((e) => (
+          <Link
+            className="event-card"
+            key={e.id}
+            to={`/invitations/${e.id}/edit`}
+          >
+            <div className="event-art">
+              <DesignPreview design={e.design} event={e} mini />
+              <span className={`badge ${e.status}`}>{e.status}</span>
+            </div>
+            <div className="event-card-body">
+              <span className="eyebrow">{e.eventType}</span>
+              <h3>{e.title}</h3>
+              <p>
+                <CalendarDays size={14} />
+                {e.eventDate || "Date to be decided"}
+                <span>·</span>
+                {guests.filter((g) => g.invitationId === e.id).length} guests
+              </p>
+              <p>
+                <MapPin size={14} />
+                {e.venueName || "Venue to be decided"}
+              </p>
+            </div>
+          </Link>
+        ))}
+        <Link to="/invitations/new" className="create-event-card">
+          <span>
+            <Plus size={26} />
+          </span>
+          <h3>Something to celebrate?</h3>
+          <p>
+            Your next great gathering
+            <br />
+            starts with an invitation.
+          </p>
+          <b>
+            Create invitation <ArrowRight size={15} />
+          </b>
+        </Link>
+      </div>
+      <div className="footnote">
+        <Leaf size={16} />
+        <p>A thoughtful invitation goes a long way. Make someone’s day.</p>
+      </div>
+    </>
+  );
+}

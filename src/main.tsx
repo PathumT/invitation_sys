@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import App from "./App";
 import "./styles/index.css";
 import "./styles/invitation.css";
+import "./styles/brand.css";
 class ErrorBoundary extends Component<
   { children: ReactNode },
   { error: string }
@@ -21,7 +22,7 @@ class ErrorBoundary extends Component<
           className="button primary"
           onClick={() => window.location.reload()}
         >
-          Reload InviteFlow
+          Reload Evently Invitations
         </button>
       </div>
     ) : (

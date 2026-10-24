@@ -1,3 +1,4 @@
+import { Brand } from "../components/Brand";
 import { useEffect, useState, type CSSProperties } from "react";
 import { format, parseISO, isValid } from "date-fns";
 import { invitationTheme } from "../utils/invitationTheme";
@@ -134,7 +135,10 @@ export function GuestExperience({
         aria-label={`${e.title || "Your event"} invitation card`}
       >
         {(customArtwork || grandOpening) && (
-          <div className="invitation-artwork-first" aria-label="Invitation design">
+          <div
+            className="invitation-artwork-first"
+            aria-label="Invitation design"
+          >
             <DesignPreview
               design={e.design}
               event={e}
@@ -142,80 +146,84 @@ export function GuestExperience({
             />
           </div>
         )}
-        {!(customArtwork || grandOpening) && <header className="compact-card-header">
-          {decoration && (
-            <img
-              className="compact-card-decoration"
-              src={decoration.src}
-              alt=""
-              aria-hidden="true"
-            />
-          )}
-          {!grandOpening && (
-            <Flower2
-              className="compact-card-flower"
-              size={28}
-              strokeWidth={1}
-            />
-          )}
-          <span className="eyebrow">
-            {e.eventType || "A special occasion"} · YOU’RE INVITED
-          </span>
-          {grandOpening && (
-            <div className="opening-headline" aria-label="Grand opening">
-              <span>GRAND</span>
-              <span>OPENING</span>
-            </div>
-          )}
-          <h1>{e.title || "A special celebration"}</h1>
-          {e.hostName && (
-            <p className="compact-host">
-              Hosted by <strong>{e.hostName}</strong>
-            </p>
-          )}
-          <h2 className="compact-guest">
-            {data.guestDisplayName
-              ? `For ${data.guestDisplayName}`
-              : "You’re warmly invited"}
-          </h2>
-          {customText.map((el) => (
-            <p className="compact-custom-text" key={el.id}>
-              {el.text}
-            </p>
-          ))}
-        </header>}
+        {!(customArtwork || grandOpening) && (
+          <header className="compact-card-header">
+            {decoration && (
+              <img
+                className="compact-card-decoration"
+                src={decoration.src}
+                alt=""
+                aria-hidden="true"
+              />
+            )}
+            {!grandOpening && (
+              <Flower2
+                className="compact-card-flower"
+                size={28}
+                strokeWidth={1}
+              />
+            )}
+            <span className="eyebrow">
+              {e.eventType || "A special occasion"} · YOU’RE INVITED
+            </span>
+            {grandOpening && (
+              <div className="opening-headline" aria-label="Grand opening">
+                <span>GRAND</span>
+                <span>OPENING</span>
+              </div>
+            )}
+            <h1>{e.title || "A special celebration"}</h1>
+            {e.hostName && (
+              <p className="compact-host">
+                Hosted by <strong>{e.hostName}</strong>
+              </p>
+            )}
+            <h2 className="compact-guest">
+              {data.guestDisplayName
+                ? `For ${data.guestDisplayName}`
+                : "You’re warmly invited"}
+            </h2>
+            {customText.map((el) => (
+              <p className="compact-custom-text" key={el.id}>
+                {el.text}
+              </p>
+            ))}
+          </header>
+        )}
         <div className="guest-content">
-          {!(customArtwork || grandOpening) && <>
-          <p className="guest-message">{e.message}</p>
-          <div className="guest-details">
-            <div>
-              <CalendarDays />
-              <p>
-                <small>THE DAY</small>
-                <strong>{dayLabel || "Date to be confirmed"}</strong>
-              </p>
-            </div>
-            <div>
-              <Clock />
-              <p>
-                <small>THE TIME</small>
-                <strong>
-                  {timeLabel(e.eventTime)}
-                  {e.endTime ? ` – ${timeLabel(e.endTime)}` : ""}
-                </strong>
-                <span>{e.timezone}</span>
-              </p>
-            </div>
-            <div>
-              <MapPin />
-              <p>
-                <small>THE PLACE</small>
-                <strong>{e.venueName}</strong>
-                <span>{e.venueAddress}</span>
-              </p>
-            </div>
-          </div>
-          </>}
+          {!(customArtwork || grandOpening) && (
+            <>
+              <p className="guest-message">{e.message}</p>
+              <div className="guest-details">
+                <div>
+                  <CalendarDays />
+                  <p>
+                    <small>THE DAY</small>
+                    <strong>{dayLabel || "Date to be confirmed"}</strong>
+                  </p>
+                </div>
+                <div>
+                  <Clock />
+                  <p>
+                    <small>THE TIME</small>
+                    <strong>
+                      {timeLabel(e.eventTime)}
+                      {e.endTime ? ` – ${timeLabel(e.endTime)}` : ""}
+                    </strong>
+                    <span>{e.timezone}</span>
+                  </p>
+                </div>
+                <div>
+                  <MapPin />
+                  <p>
+                    <small>THE PLACE</small>
+                    <strong>{e.venueName}</strong>
+                    <span>{e.venueAddress}</span>
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
           {location ? (
             <a
               className="button outline full"
@@ -315,13 +323,10 @@ export function GuestExperience({
               </button>
             )}
           </div>
-
         </div>
         <footer className="guest-footer">
-          <Flower2 size={17} />
-          <span>InviteFlow</span>
+          <Brand compact />
         </footer>
-
       </article>
     </div>
   );

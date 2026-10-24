@@ -1,5 +1,5 @@
 {
-  "name": "inviteflow",
+  "name": "evently-invitations",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -10,7 +10,9 @@
     "test": "vitest run",
     "test:rules": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"vitest run --config vitest.rules.config.ts\"",
     "emulators": "firebase emulators:start",
-    "test:e2e": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"playwright test\""
+    "test:e2e": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"playwright test\"",
+    "test:responsive": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"playwright test responsive.e2e.ts\"",
+    "test:dashboard": "firebase emulators:exec --project demo-inviteflow --only firestore,storage,auth \"playwright test dashboard.e2e.ts --project chromium\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.0",
@@ -22,6 +24,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "firebase": "^13.1.0",
+    "framer-motion": "^14.6.0",
     "konva": "^9.3.20",
     "libphonenumber-js": "^1.11.20",
     "lucide-react": "^0.468.0",

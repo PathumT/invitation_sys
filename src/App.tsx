@@ -1,4 +1,6 @@
-import { useEffect, useState, lazy, Suspense } from "react";
+import { Brand } from "./components/Brand";
+import { lazyRoute } from "./utils/lazyRoute";
+import { useEffect, useState, Suspense } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -13,18 +15,36 @@ import { Flower2, Settings2, WifiOff } from "lucide-react";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import { configured, configurationErrors } from "./firebase/config";
 import { Layout } from "./components/layout/Layout";
-const Login = lazy(() => import("./pages/Login"));
-const Register = lazy(() => import("./pages/Register"));
-const Dashboard = lazy(() => import("./pages/Dashboard"));
-const Invitations = lazy(() => import("./pages/Invitations"));
-const CreateInvitation = lazy(() => import("./pages/CreateInvitation"));
-const EditInvitation = lazy(() => import("./pages/EditInvitation"));
-const InvitationPreview = lazy(() => import("./pages/InvitationPreview"));
-const GuestManagement = lazy(() => import("./pages/GuestManagement"));
-const Templates = lazy(() => import("./pages/Templates"));
-const Analytics = lazy(() => import("./pages/Analytics"));
-const Settings = lazy(() => import("./pages/Settings"));
-const PublicInvitation = lazy(() => import("./pages/PublicInvitation"));
+const Login = lazyRoute(() => import("./pages/Login"), "Login");
+const Register = lazyRoute(() => import("./pages/Register"), "Register");
+const Dashboard = lazyRoute(() => import("./pages/Dashboard"), "Dashboard");
+const Invitations = lazyRoute(
+  () => import("./pages/Invitations"),
+  "Invitations",
+);
+const CreateInvitation = lazyRoute(
+  () => import("./pages/CreateInvitation"),
+  "CreateInvitation",
+);
+const EditInvitation = lazyRoute(
+  () => import("./pages/EditInvitation"),
+  "EditInvitation",
+);
+const InvitationPreview = lazyRoute(
+  () => import("./pages/InvitationPreview"),
+  "InvitationPreview",
+);
+const GuestManagement = lazyRoute(
+  () => import("./pages/GuestManagement"),
+  "GuestManagement",
+);
+const Templates = lazyRoute(() => import("./pages/Templates"), "Templates");
+const Analytics = lazyRoute(() => import("./pages/Analytics"), "Analytics");
+const Settings = lazyRoute(() => import("./pages/Settings"), "Settings");
+const PublicInvitation = lazyRoute(
+  () => import("./pages/PublicInvitation"),
+  "PublicInvitation",
+);
 function Protected() {
   const { user, loading } = useAuth();
   const location = useLocation();
@@ -64,10 +84,7 @@ function Configuration() {
   return (
     <div className="setup-page">
       <div className="brand">
-        <span className="brand-mark">
-          <Flower2 />
-        </span>
-        InviteFlow.
+        <Brand />
       </div>
       <div className="setup-card">
         <span className="empty-icon">
@@ -80,8 +97,9 @@ function Configuration() {
           next great gathering.
         </h1>
         <p>
-          InviteFlow is ready for your Firebase project. Add your client
-          configuration to <code>.env</code> to connect your private workspace.
+          Evently Invitations is ready for your Firebase project. Add your
+          client configuration to <code>.env</code> to connect your private
+          workspace.
         </p>
         <div className="setup-steps">
           <p>
@@ -136,7 +154,10 @@ export default function App() {
               <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/i/:shareId/:hostName?" element={<PublicInvitation />} />
+                <Route
+                  path="/i/:shareId/:hostName?"
+                  element={<PublicInvitation />}
+                />
                 <Route element={<Protected />}>
                   <Route
                     path="/invitations/:id/preview"

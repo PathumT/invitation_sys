@@ -10,6 +10,8 @@ export const categories = [
   "Graduation",
   "Baby Shower",
   "General Invitation",
+  "Housewarming",
+  "Party Celebrations",
 ];
 const themes = [
   {
