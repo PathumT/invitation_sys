@@ -5,6 +5,19 @@ export default defineConfig({
   testDir: "tests",
   testMatch: "*.e2e.ts",
   workers: 1,
+  projects: [
+    { name: "chromium", use: { browserName: "chromium" } },
+    {
+      name: "firefox",
+      testMatch: "responsive.e2e.ts",
+      use: { browserName: "firefox" },
+    },
+    {
+      name: "webkit",
+      testMatch: "responsive.e2e.ts",
+      use: { browserName: "webkit" },
+    },
+  ],
   timeout: 90000,
   use: {
     baseURL,

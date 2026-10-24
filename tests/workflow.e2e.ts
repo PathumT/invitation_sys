@@ -1,11 +1,19 @@
 import { test, expect } from "@playwright/test";
-test("Google sign-in provisions a workspace and persists the session", async ({ page }) => {
+test("Google sign-in provisions a workspace and persists the session", async ({
+  page,
+}) => {
   // The emulator widget's optional CDN styling must not delay its inline login script.
-  await page.context().route(/^https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,
-    (route) => route.abort());
+  await page
+    .context()
+    .route(
+      /^https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,
+      (route) => route.abort(),
+    );
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/register");
-  await expect(page.getByRole("button", { name: "Continue with Google" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Continue with Google" }),
+  ).toBeVisible();
   await expect(page.locator("body")).toHaveJSProperty("scrollWidth", 390);
   await page.goto("/login");
   const popupPromise = page.waitForEvent("popup");
@@ -15,13 +23,21 @@ test("Google sign-in provisions a workspace and persists the session", async ({ 
   await popup.locator("#email-input").fill(`google-${Date.now()}@example.test`);
   await popup.locator("#display-name-input").fill("Google Guest");
   await popup.locator("#sign-in").click();
-  await expect(page.getByRole("heading", { name: /Hello, Google/ })).toBeVisible();
-  await expect(page.getByText("Google Guest workspace", { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: /Hello, Google/ }),
+  ).toBeVisible();
+  await expect(page.locator(".workspace-selector strong")).toHaveText(
+    "Google Guest workspace",
+  );
   await page.reload();
-  await expect(page.getByRole("heading", { name: /Hello, Google/ })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: /Hello, Google/ }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Open menu", exact: true }).click();
   await page.getByRole("button", { name: "Sign out" }).click();
-  await expect(page.getByRole("button", { name: "Continue with Google" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Continue with Google" }),
+  ).toBeVisible();
 });
 test("register → design → publish → guest → RSVP → live dashboard → isolation → logout", async ({
   page,
@@ -36,7 +52,9 @@ test("register → design → publish → guest → RSVP → live dashboard → 
   await page.getByLabel("Full name").fill("Alex Morgan");
   await page.getByLabel("Email address").fill(email);
   await page.getByLabel("Password", { exact: true }).fill("StrongPassword123!");
-  await page.getByLabel("Confirm password").fill("StrongPassword123!");
+  await page
+    .getByLabel("Confirm password", { exact: true })
+    .fill("StrongPassword123!");
   await page
     .getByRole("button", { name: "Create account", exact: true })
     .click();
@@ -236,7 +254,9 @@ test("private workspace, custom artwork, settings, guest edits and deletion", as
     .getByLabel("Email address")
     .fill(`jamie-${Date.now()}@example.test`);
   await page.getByLabel("Password", { exact: true }).fill("StrongPassword123!");
-  await page.getByLabel("Confirm password").fill("StrongPassword123!");
+  await page
+    .getByLabel("Confirm password", { exact: true })
+    .fill("StrongPassword123!");
   await page
     .getByRole("button", { name: "Create account", exact: true })
     .click();
@@ -337,7 +357,9 @@ test("one public link accepts independent visitors and shows every response to t
     .getByLabel("Email address")
     .fill(`open-${Date.now()}@example.test`);
   await page.getByLabel("Password", { exact: true }).fill("StrongPassword123!");
-  await page.getByLabel("Confirm password").fill("StrongPassword123!");
+  await page
+    .getByLabel("Confirm password", { exact: true })
+    .fill("StrongPassword123!");
   await page
     .getByRole("button", { name: "Create account", exact: true })
     .click();
@@ -352,13 +374,20 @@ test("one public link accepts independent visitors and shows every response to t
   const sharePanel = page.getByRole("region", {
     name: "Share your invitation",
   });
-  await expect(
-    sharePanel.getByRole("button", { name: "Copy public link" }),
-  ).toBeDisabled();
-  await expect(
-    sharePanel.getByRole("button", { name: "Share invitation", exact: true }),
-  ).toBeDisabled();
-  await page.getByRole("button", { name: "Event details", exact: true }).click();
+  await expect(sharePanel).toHaveCount(0);
+  await expect(page.getByRole("alert")).toContainText(
+    "fix the highlighted fields",
+  );
+  await expect(page.getByLabel("Event title")).toBeFocused();
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await expect(page.getByLabel("Event title")).toHaveAttribute(
+    "aria-invalid",
+    "true",
+  );
+  await page
+    .getByRole("button", { name: "Customize invitation", exact: true })
+    .click();
+  await expect(page.locator("canvas")).toHaveCount(0);
   await page.getByLabel("Event title").fill("Open Celebration");
   await page.getByLabel("Hosted by").fill("Open Host");
   await page.getByLabel("Event date").fill("2026-12-15");
@@ -443,7 +472,9 @@ test("Grand Opening custom template uses the event form, exports PNG, and render
     .getByLabel("Email address")
     .fill(`hardware-${Date.now()}@example.test`);
   await page.getByLabel("Password", { exact: true }).fill("StrongPassword123!");
-  await page.getByLabel("Confirm password").fill("StrongPassword123!");
+  await page
+    .getByLabel("Confirm password", { exact: true })
+    .fill("StrongPassword123!");
   await page
     .getByRole("button", { name: "Create account", exact: true })
     .click();
@@ -500,13 +531,24 @@ test("Grand Opening custom template uses the event form, exports PNG, and render
     guest.getByText("Grand Hardware", { exact: true }),
   ).toBeVisible();
   await expect(guest.locator(".invitation-artwork-first")).toBeVisible();
-  await expect(guest.getByText("View invitation artwork", { exact: true })).toHaveCount(0);
-  expect(await guest.locator(".invitation-sheet").evaluate((card) => {
-    const artwork = card.querySelector(".invitation-artwork-first");
-    const rsvp = card.querySelector(".rsvp-section");
-    return !!artwork && !!rsvp && !!(artwork.compareDocumentPosition(rsvp) & Node.DOCUMENT_POSITION_FOLLOWING)
-      && rsvp === card.querySelector(".guest-content")?.lastElementChild;
-  })).toBe(true);
+  await expect(
+    guest.getByText("View invitation artwork", { exact: true }),
+  ).toHaveCount(0);
+  expect(
+    await guest.locator(".invitation-sheet").evaluate((card) => {
+      const artwork = card.querySelector(".invitation-artwork-first");
+      const rsvp = card.querySelector(".rsvp-section");
+      return (
+        !!artwork &&
+        !!rsvp &&
+        !!(
+          artwork.compareDocumentPosition(rsvp) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+        ) &&
+        rsvp === card.querySelector(".guest-content")?.lastElementChild
+      );
+    }),
+  ).toBe(true);
   await expect(guest.locator("body")).toHaveJSProperty("scrollWidth", 390);
   await guest.screenshot({
     path: "test-results/grand-opening-mobile.png",

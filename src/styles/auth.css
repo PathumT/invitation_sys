@@ -1,0 +1,624 @@
+/* Evently Invitations: botanical authentication experience. */
+.evently-auth {
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 56.4% 43.6%;
+  min-height: 100svh;
+  color: var(--brand-ink);
+  background: var(--brand-surface);
+}
+.evently-auth .auth-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100svh;
+  padding: 42px clamp(32px, 4.4vw, 86px) 38px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, #faf8f2e8 0%, #faf8f2bc 40%, #faf8f218 76%),
+    url("/images/evently-login-botanical-v1.png") center 70% / cover;
+}
+.auth-brand-link {
+  display: inline-flex;
+  align-self: flex-start;
+}
+.evently-auth .auth-story-copy {
+  position: relative;
+  margin: 68px 0 58px;
+  z-index: 1;
+}
+.evently-auth .auth-story .eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #435950;
+}
+.evently-auth .auth-story h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 4.6vw, 83px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  margin: 21px 0 24px;
+  color: var(--brand-ink);
+}
+.evently-auth .auth-story-copy > p {
+  font-size: clamp(13px, 1.05vw, 17px);
+  color: #65766e;
+  line-height: 1.7;
+  max-width: 575px;
+}
+.auth-benefits {
+  display: grid;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 48px 0 0;
+}
+.auth-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+.auth-benefit-icon {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.auth-benefit-icon.sage {
+  background: #e2e7d8;
+}
+.auth-benefit-icon.rose {
+  background: #f8dfd8;
+}
+.auth-benefit-icon.lavender {
+  background: #e7e0f0;
+  color: #514674;
+}
+.auth-benefit-icon.gold {
+  background: #f7ebce;
+}
+.auth-benefits strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.auth-benefits small {
+  display: block;
+  font-size: 12px;
+  color: #6f7d73;
+  margin-top: 3px;
+}
+.evently-auth .auth-story-footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 11px;
+  color: #717e76;
+  letter-spacing: 0.07em;
+  position: relative;
+}
+.auth-story-footer > span {
+  width: 33px;
+  height: 1px;
+  background: var(--brand-gold);
+}
+.evently-auth .auth-form {
+  padding: 100px clamp(28px, 5vw, 90px) 52px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 90% 90%, #e7e8e080, transparent 65%), var(--brand-surface);
+}
+.evently-auth .auth-form > .auth-journey {
+  position: absolute;
+  top: 38px;
+  right: clamp(28px, 5vw, 90px);
+  width: auto;
+  display: flex;
+  gap: 24px;
+  max-width: none;
+  font-size: 8px;
+  color: #78877f;
+  letter-spacing: 0.24em;
+}
+.auth-journey span:last-child {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--brand-gold);
+}
+.evently-auth .auth-form > .auth-login-card {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 26px;
+  background: #ffffffed;
+  padding: clamp(30px, 3.1vw, 55px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 75px #344b3620;
+}
+.auth-card-leaves {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 126px;
+  height: 168px;
+  pointer-events: none;
+}
+.auth-login-card > :not(.auth-card-leaves) {
+  position: relative;
+}
+.evently-auth .auth-login-card > .eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: #63756d;
+}
+.evently-auth .auth-form h1 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 2.9vw, 49px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  color: var(--brand-ink);
+  margin: 15px 0 17px;
+}
+.evently-auth .auth-form .muted {
+  color: #7a857e;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 22px;
+  max-width: 365px;
+}
+.evently-auth .google-sign-in {
+  height: 51px;
+  border: 1px solid #d6dcd7;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  background: #fff;
+  gap: 14px;
+}
+.evently-auth .google-sign-in:hover {
+  background: #f7f9f5;
+  border-color: #9aafa0;
+}
+.evently-auth .auth-divider {
+  color: #a1aaa3;
+  font-size: 10px;
+  gap: 15px;
+  margin: 21px 0;
+}
+.evently-auth .auth-form form {
+  display: grid;
+  gap: 17px;
+}
+.evently-auth .auth-form label {
+  font-size: 12px;
+  color: #21362c;
+  font-weight: 500;
+  margin: 0;
+  display: grid;
+  gap: 7px;
+}
+.evently-auth .auth-form input {
+  min-height: 46px;
+  background: #f0f4fa;
+  border: 1px solid #e1e6e8;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 13px 14px;
+  color: #34483e;
+}
+.evently-auth .auth-form input:focus {
+  border-color: #7c9d86;
+  box-shadow: 0 0 0 3px #648d7320;
+}
+.auth-input-wrap {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.auth-input-wrap > svg {
+  position: absolute;
+  left: 15px;
+  z-index: 1;
+  color: #748277;
+  pointer-events: none;
+}
+.evently-auth .auth-input-wrap input {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+.evently-auth .auth-form .auth-password-toggle {
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  bottom: 1px;
+  width: 43px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  color: #738275;
+}
+.evently-auth .auth-password-toggle:focus-visible {
+  outline: 2px solid #678b73;
+  border-radius: 6px;
+}
+.evently-auth .auth-form .text-button {
+  color: #37744c;
+  font-size: 11px;
+  padding: 0;
+  min-height: 24px;
+  justify-self: end;
+  margin-top: -7px;
+}
+.evently-auth .auth-form form > .button.primary {
+  height: 52px;
+  min-height: 44px;
+  border-radius: 10px;
+  background: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+  margin: 2px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: inset 0 1px 0 #ffffff15;
+}
+.evently-auth .auth-form form > .button.primary > svg {
+  position: absolute;
+  right: 20px;
+}
+.evently-auth .auth-form form > .button.primary:hover {
+  background: var(--brand-primary-hover);
+}
+.evently-auth .auth-switch {
+  font-size: 11px;
+  color: #7f8a82;
+  margin: 26px 0 0;
+}
+.evently-auth .auth-switch a {
+  color: #367449;
+  font-weight: 500;
+}
+.evently-auth .secure-note {
+  font-size: 9px;
+  line-height: 1.6;
+  padding-top: 18px;
+  margin-top: 20px;
+  color: #8d988e;
+}
+@media (min-width: 1600px) {
+  .evently-auth .auth-story-copy {
+    margin: 76px 0 70px;
+  }
+  .auth-benefits {
+    margin-top: 51px;
+    gap: 17px;
+  }
+  .auth-benefit-icon {
+    width: 57px;
+    height: 57px;
+  }
+}
+@media (max-width: 1150px) {
+  .evently-auth {
+    grid-template-columns: 50% 50%;
+  }
+  .evently-auth .auth-story {
+    padding: 32px;
+  }
+  .evently-auth .auth-form {
+    padding: 90px 28px 35px;
+  }
+  .auth-desktop-break {
+    display: none;
+  }
+  .evently-auth .auth-story-copy {
+    margin: 52px 0 40px;
+  }
+  .auth-benefits {
+    margin-top: 32px;
+  }
+  .evently-auth .auth-form > .auth-journey {
+    right: 28px;
+    gap: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .evently-auth {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+  }
+  .evently-auth .auth-story {
+    min-height: auto;
+    padding: 28px 28px 26px;
+    background-position: right 48%;
+    background-size: cover;
+  }
+  .evently-auth .auth-brand-link .evently-brand {
+    font-size: 32px;
+  }
+  .evently-auth .auth-brand-link .evently-brand > svg {
+    width: 34px;
+    height: 42px;
+  }
+  .evently-auth .auth-story-copy {
+    margin: 28px 0 0;
+  }
+  .evently-auth .auth-story .eyebrow {
+    font-size: 8px;
+  }
+  .evently-auth .auth-story h1 {
+    font-size: clamp(38px, 7.2vw, 54px);
+    margin: 14px 0 12px;
+  }
+  .evently-auth .auth-story-copy > p {
+    font-size: 12px;
+    max-width: 410px;
+  }
+  .evently-auth .auth-benefits,
+  .evently-auth .auth-story-footer {
+    display: none;
+  }
+  .evently-auth .auth-form {
+    padding: 26px 24px 34px;
+  }
+  .evently-auth .auth-form > .auth-journey {
+    display: none;
+  }
+  .evently-auth .auth-form > .auth-login-card {
+    max-width: 520px;
+    padding: 32px;
+    border-radius: 20px;
+  }
+  .evently-auth .auth-form h1 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 400px) {
+  .evently-auth .auth-story {
+    padding: 23px 21px;
+  }
+  .evently-auth .auth-form {
+    padding: 18px 14px 28px;
+  }
+  .evently-auth .auth-form > .auth-login-card {
+    padding: 27px 23px;
+  }
+  .evently-auth .auth-form h1 {
+    font-size: 34px;
+  }
+  .auth-card-leaves {
+    width: 103px;
+    height: 138px;
+  }
+}
+
+@media (max-width: 800px) {
+  .evently-auth .auth-form {
+    min-height: auto;
+  }
+  .evently-auth .auth-story {
+    background-image:
+      linear-gradient(90deg, #faf8f2f5, #faf8f2c9 68%, #faf8f270),
+      url("/images/evently-login-botanical-v1.png");
+  }
+}
+
+/* Registration has its own composition; login styling stays unchanged. */
+.evently-signup {
+  grid-template-columns: 59.5% 40.5%;
+}
+.evently-signup .auth-story {
+  background-image:
+    linear-gradient(90deg, #faf8f2ba, #faf8f225 70%),
+    url("/images/evently-signup-botanical-v1.png");
+  background-position: center;
+  padding-bottom: 36px;
+}
+.evently-signup .auth-story-copy {
+  flex: 1;
+  margin: 42px 0 260px;
+}
+.evently-signup .auth-story h1 {
+  font-size: clamp(48px, 4.65vw, 82px);
+  line-height: 1.01;
+}
+.evently-signup .auth-story-footer,
+.evently-signup .auth-journey,
+.evently-signup .auth-card-leaves {
+  display: none;
+}
+.evently-signup .auth-benefits {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding-top: 20px;
+}
+.evently-signup .auth-benefits li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.evently-signup .auth-benefits strong {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 400;
+}
+.evently-signup .auth-benefits small {
+  font-size: 12px;
+  max-width: 155px;
+  line-height: 1.5;
+}
+.evently-signup .auth-form {
+  padding: 42px clamp(25px, 4vw, 75px);
+}
+.evently-signup .auth-form > .auth-login-card {
+  padding: 36px clamp(26px, 3.3vw, 58px) 27px;
+  border-radius: 18px;
+}
+.evently-signup .auth-form h1 {
+  font-size: clamp(34px, 3.2vw, 55px);
+  margin-bottom: 18px;
+}
+.evently-signup .auth-form h1::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  background: var(--brand-gold);
+  margin-top: 18px;
+}
+.evently-signup .auth-form .muted {
+  margin-bottom: 22px;
+}
+.evently-signup .auth-form form {
+  gap: 18px;
+}
+.evently-signup .auth-form label {
+  font-size: 10px;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: #626d63;
+  gap: 7px;
+}
+.evently-signup .auth-form input {
+  background: #fff;
+  border-color: #dfe2dc;
+  font-size: 13px;
+  letter-spacing: normal;
+  padding-left: 17px;
+}
+.evently-signup .auth-form .auth-input-wrap > svg {
+  display: none;
+}
+.evently-signup .auth-input-wrap input {
+  padding-left: 17px;
+}
+.evently-signup .auth-form label > .error {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.evently-auth input[aria-invalid="true"] {
+  border-color: #b44336;
+}
+.evently-signup .auth-switch {
+  margin-top: 18px;
+}
+.evently-signup .secure-note {
+  margin-top: 17px;
+}
+@media (max-width: 1200px) {
+  .evently-signup {
+    grid-template-columns: 53% 47%;
+  }
+  .evently-signup .auth-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .evently-signup .auth-benefits li {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .evently-signup .auth-benefits strong {
+    font-size: 15px;
+  }
+  .evently-signup .auth-benefit-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .evently-signup .auth-story-copy {
+    margin-bottom: 210px;
+  }
+  .evently-signup .auth-form {
+    padding: 32px 22px;
+  }
+}
+@media (max-width: 800px) {
+  .evently-signup {
+    display: flex;
+  }
+  .evently-signup .auth-story {
+    background-image:
+      linear-gradient(90deg, #faf8f2f5, #faf8f2ce 65%, #faf8f260),
+      url("/images/evently-signup-botanical-v1.png");
+    background-position: right 40%;
+    padding-bottom: 25px;
+  }
+  .evently-signup .auth-story-copy {
+    margin: 25px 0 0;
+  }
+  .evently-signup .auth-story h1 {
+    font-size: clamp(38px, 7.2vw, 54px);
+  }
+  .evently-signup .auth-form {
+    padding: 20px 24px 32px;
+  }
+  .evently-signup .auth-form > .auth-login-card {
+    padding: 30px;
+  }
+  .evently-signup .auth-benefits {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 520px) {
+  .evently-signup .auth-benefits {
+    display: none;
+  }
+  .evently-signup .auth-form {
+    padding: 18px 14px 28px;
+  }
+  .evently-signup .auth-form > .auth-login-card {
+    padding: 28px 23px;
+  }
+  .evently-signup .auth-form h1 {
+    font-size: 37px;
+  }
+}
+@media (pointer: coarse) {
+  .evently-auth .auth-form input {
+    font-size: 16px;
+  }
+}
+
+.evently-auth.evently-signup .auth-form > .auth-journey {
+  display: none;
+}
+@media (max-width: 800px) {
+  .evently-auth .auth-switch a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+.evently-auth .auth-field {
+  display: grid;
+  gap: 7px;
+}
+.evently-auth .auth-field > .error {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.evently-auth .auth-form .auth-password-toggle {
+  width: 44px;
+  min-width: 44px;
+}

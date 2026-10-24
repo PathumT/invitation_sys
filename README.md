@@ -1,4 +1,4 @@
-# InviteFlow
+# Evently Invitations
 
 A React + Firebase invitation workspace. Create an event, edit a card, add guests, share personal links through WhatsApp, and receive live RSVPs. No separate application server, Cloud Functions, Admin SDK, or localStorage database.
 
@@ -29,7 +29,7 @@ VITE_FIREBASE_PROJECT_ID=your-project
 VITE_FIREBASE_STORAGE_BUCKET=your-exact-bucket-name
 VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
 VITE_FIREBASE_APP_ID=your-app-id
-VITE_APP_NAME=InviteFlow
+VITE_APP_NAME=Evently Invitations
 VITE_APP_URL=http://localhost:5173
 VITE_FIREBASE_APPCHECK_SITE_KEY=
 VITE_USE_EMULATORS=false
@@ -164,3 +164,17 @@ Eight starter designs use original typography/vector artwork. The Grand Opening 
 The root `vercel.json` builds the Vite app into `dist` and rewrites direct client routes to `index.html`. This allows opening and refreshing `/i/{shareId}/{host-name}` links instead of receiving Vercel's 404 page. Existing static assets continue to be served normally.
 
 Deploy the project root containing `package.json` and `vercel.json`. In Vercel Project Settings, set the production Firebase `VITE_FIREBASE_*` values, `VITE_USE_EMULATORS=false`, and `VITE_APP_URL=https://invitation-sys.vercel.app` (or your own production domain). Redeploy after changing configuration or environment variables. Local `.env` changes do not update an existing deployment. Firebase security rules remain deployed separately through the Firebase CLI.
+
+
+## Responsive browser checks
+
+The sign-up page has its own Evently botanical artwork and form styling while retaining shared Firebase authentication. Registration validates all fields inline and has independent password visibility controls. The workspace editor stacks on tablets, mobile controls provide touch targets, and the navigation supports keyboard focus and Escape.
+
+Install Playwright Chromium, Firefox and WebKit (`npx playwright install chromium firefox webkit`) and Java 21+, then run `npm run test:responsive` for the emulator-backed responsive matrix. Set `INVITEFLOW_TEST_PORT` to an unused port if a development server is already running. See [RESPONSIVE_REVIEW.md](RESPONSIVE_REVIEW.md) for coverage, results, screenshots, and production verification limits.
+
+
+## Premium workspace dashboard
+
+The Evently dashboard includes real-time invitation/guest/RSVP statistics, response progress and activity, recent-invitation action menus, confirmation before deletion, a share invitation picker, template preview/use shortcuts, and responsive navigation. Header search finds invitations and guests in the current workspace; notifications show actual stored RSVP responses. No simulated counts, unread counters, payment plans or growth percentages are displayed.
+
+The shared WorkspaceProvider reuses owner-scoped Firebase listeners across the header and pages. Detailed Analytics remains available. Use `npm run test:dashboard` for the new workflow, or `npm run test:e2e` for all browser cases. See [PREMIUM_DASHBOARD.md](PREMIUM_DASHBOARD.md) for verification, screenshots, rollout and known dependency-audit limits.

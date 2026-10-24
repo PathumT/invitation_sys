@@ -113,7 +113,7 @@ export default function GuestManagement() {
                     .join(","),
                 )
                 .join("\r\n");
-              download("inviteflow-guests.csv", csv);
+              download("evently-invitations-guests.csv", csv);
             }}
           >
             <Download size={16} />
@@ -171,7 +171,9 @@ export default function GuestManagement() {
             onClick={() =>
               act(async () => {
                 const id = await ensurePublicLink(event);
-                await navigator.clipboard.writeText(shareUrl(id, event.hostName));
+                await navigator.clipboard.writeText(
+                  shareUrl(id, event.hostName),
+                );
                 toast.success(
                   "Public invitation link copied. Anyone can respond.",
                 );
@@ -241,7 +243,12 @@ export default function GuestManagement() {
           />
         </div>
       </div>
-      <div className="panel table-wrap">
+      <div
+        className="panel table-wrap"
+        role="region"
+        aria-label="Guest list table, scroll horizontally for more details and actions"
+        tabIndex={0}
+      >
         <table>
           <thead>
             <tr>

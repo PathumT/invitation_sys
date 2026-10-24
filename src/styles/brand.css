@@ -1,0 +1,85 @@
+/* Palette derived from the supplied Evently envelope-and-heart logo. */
+:root {
+  --brand-primary: #004b3d;
+  --brand-primary-hover: #00382e;
+  --brand-emerald: #087352;
+  --brand-ink: #073c32;
+  --brand-gold: #c58b3e;
+  --brand-gold-soft: #f4e1bf;
+  --brand-surface: #fff8ed;
+  --brand-sage: #edf3e9;
+  --brand-border: #e6e5da;
+}
+.evently-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 0;
+  max-width: 100%;
+}
+.evently-brand .evently-logo {
+  display: block;
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.sidebar .evently-brand .evently-logo {
+  width: 142px;
+}
+.evently-workspace .sidebar > .brand {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.auth-brand-link .evently-brand .evently-logo {
+  width: 185px;
+}
+.setup-page .evently-brand .evently-logo {
+  width: 180px;
+}
+.guest-footer .evently-brand--compact {
+  padding: 3px 11px;
+  border-radius: 8px;
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-border);
+}
+.guest-footer .evently-brand--compact .evently-logo {
+  width: 86px;
+}
+.evently-workspace .button.primary,
+.evently-auth .button.primary {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.evently-workspace .button.primary:hover,
+.evently-auth .button.primary:hover {
+  background: var(--brand-primary-hover);
+  border-color: var(--brand-primary-hover);
+}
+.evently-workspace .sidebar nav > a.active {
+  background: var(--brand-sage);
+  color: var(--brand-primary);
+  box-shadow: inset 3px 0 var(--brand-primary);
+}
+.evently-workspace .sidebar-bottom > a.active {
+  background: var(--brand-sage);
+  color: var(--brand-primary);
+}
+.evently-workspace .header-avatar {
+  color: var(--brand-ink);
+  background: var(--brand-gold-soft);
+  border-color: var(--brand-surface);
+}
+.evently-workspace .notification-dot,
+.evently-workspace .gold-line {
+  background: var(--brand-gold);
+}
+@media (max-width: 800px) {
+  .auth-brand-link .evently-brand .evently-logo {
+    width: 135px;
+  }
+  .evently-workspace .sidebar .evently-brand .evently-logo {
+    width: 124px;
+  }
+}
