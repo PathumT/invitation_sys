@@ -1,3 +1,4 @@
+import { uiText } from "../../i18n/uiText";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -74,7 +75,7 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
       await logout();
       navigate("/login");
     } catch {
-      toast.error("Could not sign out. Please try again.");
+      toast.error(uiText("ui.27ae196c23b9"));
     }
   }
   return (
@@ -86,16 +87,16 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
       <button
         className="workspace-search"
         onClick={() => setSearch(true)}
-        aria-label="Search invitations and guests"
+        aria-label={uiText("ui.0abaf4b082be")}
       >
         <Search size={17} />
-        <span>Search invitations, guests...</span>
+        <span>{uiText("ui.d737fc9a4dc4")}</span>
         <kbd>/</kbd>
       </button>
       <div className="topbar-right premium-topbar-actions">
         <button
           className="icon-button response-bell"
-          aria-label="Recent RSVP notifications"
+          aria-label={uiText("ui.37ebf6da5f78")}
           onClick={() => setNotifications(true)}
         >
           <Bell size={19} />
@@ -105,11 +106,11 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
         </button>
         <Link
           className="button primary small topbar-create"
-          aria-label="Create invitation"
+          aria-label={uiText("invitation.create")}
           to="/invitations/new"
         >
           <Plus size={16} />
-          <span>Create invitation</span>
+          <span>{uiText("invitation.create")}</span>
         </Link>
         <details
           className="profile-menu"
@@ -121,7 +122,7 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
             }
           }}
         >
-          <summary aria-label="Your profile menu">
+          <summary aria-label={uiText("ui.2ec58b2ddd56")}>
             <span className="header-avatar">
               {(user?.displayName || user?.email || "U")[0].toUpperCase()}
             </span>
@@ -132,52 +133,47 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
             <small>{user?.email}</small>
             <Link to="/settings">
               <Settings size={16} />
-              Workspace settings
+              {uiText("ui.5ebc59145b59")}
             </Link>
             <button onClick={signOut}>
               <LogOut size={16} />
-              Sign out
+              {uiText("nav.signOut")}
             </button>
           </div>
         </details>
       </div>
       {search && (
         <Modal
-          title="Find something lovely"
+          title={uiText("ui.5f2442e2d735")}
           onClose={() => setSearch(false)}
           className="workspace-search-dialog"
         >
           <label className="global-search-label">
-            Search your workspace
+            {uiText("ui.84917b36f495")}
             <input
               autoFocus
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="An invitation, host, guest or venue..."
+              placeholder={uiText("ui.76d59b99d0f0")}
             />
           </label>
           <div className="search-results" aria-live="polite">
             {loading ? (
-              <p>Loading your workspace...</p>
+              <p>{uiText("ui.9d5a187298ae")}</p>
             ) : error ? (
-              <p className="error">
-                Search is unavailable while workspace data cannot be loaded.
-              </p>
+              <p className="error">{uiText("ui.ea5ab5394d0d")}</p>
             ) : !query.trim() ? (
-              <p className="muted">
-                Search invitations by title, host, venue or occasion, and guests
-                by name, email or phone.
-              </p>
+              <p className="muted">{uiText("ui.da38fec2cd6f")}</p>
             ) : (
               <>
                 <p className="search-result-count">
-                  {results.events.length + results.guests.length} results in
-                  your workspace
+                  {results.events.length + results.guests.length}
+                  {uiText("ui.e38b815e21f2")}
                 </p>
                 {results.events.length > 0 && (
                   <>
-                    <h3>Invitations</h3>
+                    <h3>{uiText("ui.14210e691c87")}</h3>
                     {results.events.slice(0, 6).map((event) => (
                       <Link
                         key={event.id}
@@ -200,7 +196,7 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
                 )}
                 {results.guests.length > 0 && (
                   <>
-                    <h3>Guests</h3>
+                    <h3>{uiText("ui.3c8e0fde6fcc")}</h3>
                     {results.guests.slice(0, 6).map((guest) => (
                       <Link
                         key={`${guest.invitationId}-${guest.id}`}
@@ -229,15 +225,12 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
                 {!results.events.length && !results.guests.length && (
                   <div className="dashboard-empty">
                     <Search size={25} />
-                    <h3>No matches yet</h3>
-                    <p>Try another name, occasion or venue.</p>
+                    <h3>{uiText("ui.417b217a64c2")}</h3>
+                    <p>{uiText("ui.0dbaa1d91ee2")}</p>
                   </div>
                 )}
                 {(results.events.length > 6 || results.guests.length > 6) && (
-                  <p className="muted">
-                    Showing the first six results in each group. Refine your
-                    search to find a specific record.
-                  </p>
+                  <p className="muted">{uiText("ui.b4dc80ed654d")}</p>
                 )}
               </>
             )}
@@ -246,20 +239,14 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
       )}
       {notifications && (
         <Modal
-          title="Recent RSVP responses"
+          title={uiText("ui.43bb0f0d1960")}
           onClose={() => setNotifications(false)}
         >
-          <p className="muted">
-            The latest responses from your guests. These update as your guests
-            reply.
-          </p>
+          <p className="muted">{uiText("ui.a6d5dfcb427e")}</p>
           {loading ? (
-            <p>Loading responses...</p>
+            <p>{uiText("ui.d75626ec1460")}</p>
           ) : error ? (
-            <p className="error">
-              Responses could not be loaded. Please try again from your
-              dashboard.
-            </p>
+            <p className="error">{uiText("ui.69e0e14634f0")}</p>
           ) : activity.length ? (
             <div className="notification-list">
               {activity.map((guest) => (
@@ -288,10 +275,8 @@ export function WorkspaceHeader({ workspaceName }: { workspaceName: string }) {
           ) : (
             <div className="dashboard-empty">
               <Bell size={25} />
-              <h3>All quiet for now</h3>
-              <p>
-                Real RSVP updates will appear here after your guests respond.
-              </p>
+              <h3>{uiText("ui.db15713586d8")}</h3>
+              <p>{uiText("ui.a253bfc49053")}</p>
             </div>
           )}
         </Modal>

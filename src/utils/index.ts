@@ -1,12 +1,10 @@
+import { uiText } from "../i18n/uiText";
+import { formatCalendarDate, formatClockTime } from "../i18n/format";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import type { Invitation } from "../types";
-import { format, parseISO, isValid } from "date-fns";
 export function normalizePhone(value: string) {
   const phone = parsePhoneNumberFromString(value);
-  if (!phone?.isValid())
-    throw new Error(
-      "Enter a valid international phone number, including + and country code.",
-    );
+  if (!phone?.isValid()) throw new Error(uiText("ui.70230b9110d1"));
   return phone.number;
 }
 export function mapsUrl(url: string, lat = "", lng = "", address = "") {
@@ -19,7 +17,7 @@ export function mapsUrl(url: string, lat = "", lng = "", address = "") {
       Math.abs(+lat) > 90 ||
       Math.abs(+lng) > 180
     )
-      throw new Error("Enter valid latitude and longitude.");
+      throw new Error(uiText("ui.a5b309b35df8"));
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${lat},${lng}`)}`;
   }
   if (url) {
@@ -40,7 +38,7 @@ export function mapsUrl(url: string, lat = "", lng = "", address = "") {
       u.username !== "" ||
       u.password !== ""
     )
-      throw new Error("Use a secure Google Maps link.");
+      throw new Error(uiText("ui.633d57c1d2b9"));
     return u.href;
   }
   return address
@@ -53,9 +51,15 @@ export function token() {
   ).join("");
 }
 export function shareUrl(id: string, hostName = "") {
-  const host = hostName.normalize("NFKC").trim().toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "");
-  const base = (import.meta.env.VITE_APP_URL || window.location.origin).trim().replace(/\/+$/, "");
+  const host = hostName
+    .normalize("NFKC")
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, "-")
+    .replace(/^-+|-+$/g, "");
+  const base = (import.meta.env.VITE_APP_URL || window.location.origin)
+    .trim()
+    .replace(/\/+$/, "");
   return `${base}/i/${id}${host ? `/${encodeURIComponent(host)}` : ""}`;
 }
 export function whatsappUrl(
@@ -79,16 +83,12 @@ export function interpolate(
   ) {
     text = `📍 ${text}`;
   }
-  let eventDate = event.eventDate;
-  if (eventDate && /^\d{4}-\d{2}-\d{2}$/.test(eventDate)) {
-    const date = parseISO(eventDate);
-    if (isValid(date)) eventDate = format(date, "d MMMM yyyy");
-  }
-  let eventTime = event.eventTime;
-  if (eventTime && /^\d{2}:\d{2}$/.test(eventTime)) {
-    const [h, m] = eventTime.split(":").map(Number);
-    eventTime = `${h % 12 || 12}:${String(m).padStart(2, "0")} ${h >= 12 ? "PM" : "AM"}`;
-  }
+  const eventDate = event.eventDate
+    ? formatCalendarDate(event.eventDate)
+    : event.eventDate;
+  const eventTime = event.eventTime
+    ? formatClockTime(event.eventTime)
+    : event.eventTime;
   const values = {
     ...event,
     eventDate,

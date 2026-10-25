@@ -1,3 +1,5 @@
+import { uiText } from "../i18n/uiText";
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -105,6 +107,7 @@ export default function Login({
 }: {
   registration?: boolean;
 }) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const schema = authSchema(registration);
   const [confirmVisible, setConfirmVisible] = useState(false);
@@ -174,43 +177,43 @@ export default function Login({
         <Link
           className="auth-brand-link"
           to="/"
-          aria-label="Evently Invitations home"
+          aria-label={uiText("ui.a1d0ca62351d")}
         >
           <Brand />
         </Link>
         <div className="auth-story-copy">
           <span className="eyebrow">
             {registration
-              ? "A LITTLE INVITATION. A BIG MOMENT."
-              : "BEAUTIFUL INVITATIONS, MEANINGFUL MOMENTS."}
+              ? uiText("ui.58640113daf6")
+              : uiText("ui.d0334b3396ac")}
           </span>
           <h1>
             {registration ? (
               <>
-                Bring your
+                {uiText("ui.d562adb5dd0d")}
                 <br />
-                people together.
+                {uiText("ui.16283ba35b55")}
               </>
             ) : (
               <>
-                Turn moments
+                {uiText("ui.58f4115f4080")}
                 <br />
-                into memories.
+                {uiText("ui.f4159af5f52f")}
               </>
             )}
           </h1>
           <p>
             {registration ? (
               <>
-                Beautiful invitations. Thoughtful details.
+                {uiText("ui.429e661d11b1")}
                 <br />
-                Every response, in one happy place.
+                {uiText("ui.0acae8abfbf0")}
               </>
             ) : (
               <>
-                Design stunning digital invitations, personalize every detail,
-                <br className="auth-desktop-break" /> and share with the people
-                who matter &mdash; all in one place.
+                {uiText("ui.2ac62cb91ed8")}
+                <br className="auth-desktop-break" />
+                {uiText("ui.e05d4bb47123")}
               </>
             )}
           </p>
@@ -218,16 +221,16 @@ export default function Login({
         </div>
         <p className="auth-story-footer">
           <span />
-          Simple. Beautiful. Meaningful.
+          {uiText("ui.5c0de7b01b95")}
         </p>
         {registration && <AuthBenefits registration />}
       </div>
       <div className="auth-form">
         <div className="auth-journey" aria-hidden="true">
-          <span>CREATE</span>
-          <span>PERSONALIZE</span>
-          <span>SHARE</span>
-          <span>CELEBRATE</span>
+          <span>{uiText("ui.fde9c5013bf5")}</span>
+          <span>{uiText("ui.0398e046d786")}</span>
+          <span>{uiText("ui.0b060acf4d67")}</span>
+          <span>{uiText("ui.97165fc5b7d1")}</span>
         </div>
         <div className="auth-login-card">
           <svg
@@ -252,33 +255,34 @@ export default function Login({
             </g>
           </svg>
           {registration && (
-            <span className="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+            <span className="eyebrow">{uiText("ui.2487e6c635b9")}</span>
           )}
           <h1>
             {registration ? (
               <>
-                Make room for
+                {uiText("ui.d2fce326c100")}
                 <br />
-                celebration.
+                {uiText("ui.9432c8e41f32")}
               </>
             ) : (
               <>
-                Your Events,
+                {uiText("ui.0f4cadbc551a")}
                 <br />
-                All in One Place.
+                {uiText("ui.2b9cb4b0babd")}
               </>
             )}
           </h1>
           <p className="muted">
             {registration
-              ? "Create your private invitation workspace."
-              : "Sign in to continue creating beautiful invitations and managing your special moments."}
+              ? uiText("ui.6e110a7f0edd")
+              : uiText("ui.bc194b65aa19")}
           </p>
           {workspaceError && (
             <div className="error-banner" role="alert">
               <p>{workspaceError}</p>
               <p>
-                Firebase project: <strong>{auth.app.options.projectId}</strong>
+                {uiText("ui.bd0c4ee8f22b")}
+                <strong>{auth.app.options.projectId}</strong>
               </p>
               <a
                 className="text-link"
@@ -286,7 +290,7 @@ export default function Login({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open Firestore rules ↗
+                {uiText("ui.42947a6c3560")}
               </a>
             </div>
           )}
@@ -297,21 +301,25 @@ export default function Login({
             onClick={googleSignIn}
           >
             <img src="/google-mark.svg" alt="" width={20} height={20} />
-            {googleBusy ? "Connecting to Google…" : "Continue with Google"}
+            {googleBusy ? uiText("ui.7f806263c4e3") : t("auth.google")}
           </button>
           <div className="auth-divider">
-            <span>{registration ? "or continue with email" : "OR"}</span>
+            <span>
+              {registration
+                ? uiText("ui.14233b39a312")
+                : uiText("ui.829e5b28af38")}
+            </span>
           </div>
           <form onSubmit={submit} noValidate>
             {registration && (
               <label>
-                Full name
+                {t("auth.fullName")}
                 <input
                   autoComplete="name"
                   {...field("name")}
                   required
                   maxLength={160}
-                  placeholder="John Doe"
+                  placeholder={uiText("ui.6cea57c2fb6c")}
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? "auth-name-error" : undefined}
                 />
@@ -323,7 +331,7 @@ export default function Login({
               </label>
             )}
             <label>
-              Email address
+              {t("common.email")}
               <span className="auth-input-wrap">
                 <Mail size={18} aria-hidden="true" />
                 <input
@@ -335,7 +343,7 @@ export default function Login({
                   autoComplete="email"
                   {...field("email")}
                   required
-                  placeholder="you@example.com"
+                  placeholder={uiText("ui.53e6cdc30765")}
                 />
               </span>
               {errors.email && (
@@ -345,7 +353,7 @@ export default function Login({
               )}
             </label>
             <div className="auth-field">
-              <label htmlFor="auth-password">Password</label>
+              <label htmlFor="auth-password">{t("common.password")}</label>
               <span className="auth-input-wrap">
                 <LockKeyhole size={18} aria-hidden="true" />
                 <input
@@ -361,14 +369,18 @@ export default function Login({
                   {...field("password")}
                   required
                   placeholder={
-                    registration ? "Create a password" : "Enter your password"
+                    registration
+                      ? uiText("ui.4defceba0862")
+                      : uiText("ui.c06bf9670174")
                   }
                 />
                 <button
                   type="button"
                   className="auth-password-toggle"
                   aria-label={
-                    passwordVisible ? "Hide password" : "Show password"
+                    passwordVisible
+                      ? uiText("ui.a60a56c584b3")
+                      : uiText("ui.6aeaa6a53d09")
                   }
                   aria-controls="auth-password"
                   aria-pressed={passwordVisible}
@@ -385,7 +397,9 @@ export default function Login({
             </div>
             {registration && (
               <div className="auth-field">
-                <label htmlFor="auth-confirm">Confirm password</label>
+                <label htmlFor="auth-confirm">
+                  {t("auth.confirmPassword")}
+                </label>
                 <span className="auth-input-wrap">
                   <input
                     id="auth-confirm"
@@ -393,7 +407,7 @@ export default function Login({
                     autoComplete="new-password"
                     {...field("confirm")}
                     required
-                    placeholder="Confirm your password"
+                    placeholder={uiText("ui.bfd8c343fbd2")}
                     aria-invalid={!!errors.confirm}
                     aria-describedby={
                       errors.confirm ? "auth-confirm-error" : undefined
@@ -404,8 +418,8 @@ export default function Login({
                     className="auth-password-toggle"
                     aria-label={
                       confirmVisible
-                        ? "Hide confirm password"
-                        : "Show confirm password"
+                        ? uiText("ui.2bddadd8d881")
+                        : uiText("ui.bd17fffd90f9")
                     }
                     aria-controls="auth-confirm"
                     aria-pressed={confirmVisible}
@@ -429,13 +443,13 @@ export default function Login({
                 onClick={async () => {
                   const email = getValues("email");
                   if (!email) {
-                    toast.error("Enter your email address first.");
+                    toast.error(uiText("ui.e30416d70536"));
                     return;
                   }
                   setReset(true);
                   try {
                     await resetPassword(email);
-                    toast.success("Password reset email sent.");
+                    toast.success(uiText("ui.a5615910e9d3"));
                   } catch (e) {
                     toast.error(errorMessage(e));
                   } finally {
@@ -443,7 +457,7 @@ export default function Login({
                   }
                 }}
               >
-                {reset ? "Sending…" : "Forgot password?"}
+                {reset ? uiText("ui.b8ed5279e897") : t("auth.forgotPassword")}
               </button>
             )}
             <button
@@ -451,24 +465,22 @@ export default function Login({
               disabled={isSubmitting || googleBusy || reset}
             >
               {isSubmitting
-                ? "Please wait…"
+                ? uiText("ui.4660a983366f")
                 : registration
-                  ? "Create account"
-                  : "Sign in to your workspace"}
+                  ? t("auth.createAccount")
+                  : t("auth.signInWorkspace")}
               <ArrowRight size={17} />
             </button>
           </form>
           <p className="auth-switch">
             {registration
-              ? "Already part of Evently Invitations?"
-              : "Don't have an account?"}{" "}
+              ? uiText("ui.404d240a4e67")
+              : uiText("ui.1b545b23fae3")}{" "}
             <Link to={registration ? "/login" : "/register"}>
-              {registration ? "Sign in" : "Create one"}
+              {registration ? t("auth.signIn") : uiText("ui.b6ab95ea0749")}
             </Link>
           </p>
-          <div className="secure-note">
-            Your events and guest details stay in your private workspace.
-          </div>
+          <div className="secure-note">{uiText("ui.1d3d256b6d35")}</div>
         </div>
       </div>
     </div>

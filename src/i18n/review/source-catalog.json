@@ -1,0 +1,8537 @@
+{
+  "ui.bed9096c411e": {
+    "english": "Opening your workspace…",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 60,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5bd760695ab2": {
+    "english": "You’re offline. Reconnect to save changes and receive responses.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 84,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9b3b45f8bbcd": {
+    "english": "ONE LITTLE STEP BEFORE THE CELEBRATION",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 98,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fe090af694af": {
+    "english": "A home for your",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 100,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.152bb14213c9": {
+    "english": "next great gathering.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 102,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.88d6d139d8fb": {
+    "english": "Evently Invitations is ready for your Firebase project. Add your client configuration to ",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 105,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e9cbb0224c4a": {
+    "english": ".env",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 106,
+        "kind": "existing"
+      },
+      {
+        "file": "src/App.tsx",
+        "line": 117,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a609caee52ca": {
+    "english": " to connect your private workspace.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 107,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.97ed92bb8ab0": {
+    "english": "Create a Firebase project and enable Email/Password Authentication, Firestore, and Storage.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 112,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7cfaa14553d1": {
+    "english": "Copy the web app configuration into the matching variables in ",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 116,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fe066194d126": {
+    "english": "Deploy the supplied security rules, then restart",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 121,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.21f1677c8f4f": {
+    "english": "npm run dev",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 121,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f2d53ec77d69": {
+    "english": "Missing configuration (",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 127,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d0b1c3baa24a": {
+    "english": " values)",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 129,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e84756e4488e": {
+    "english": "See README.md for setup, emulator testing, and Firebase Hosting deployment. No demo records or simulated backend are used.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 139,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.df06f57c5956": {
+    "english": "Made for moments that matter.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 141,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.17923c287ecf": {
+    "english": "Opening your occasion…",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 159,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.126b5b20d2cd": {
+    "english": "This page wandered off.",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 200,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.47d32925dd1f": {
+    "english": "Return to your workspace",
+    "sources": [
+      {
+        "file": "src/App.tsx",
+        "line": 201,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ef2e64783891": {
+    "english": "Actions for {{value0}}",
+    "sources": [
+      {
+        "file": "src/components/dashboard/InvitationActions.tsx",
+        "line": 46,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.72207468a4de": {
+    "english": "Edit invitation",
+    "sources": [
+      {
+        "file": "src/components/dashboard/InvitationActions.tsx",
+        "line": 53,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c83ba6c7366e": {
+    "english": "Preview invitation",
+    "sources": [
+      {
+        "file": "src/components/dashboard/InvitationActions.tsx",
+        "line": 57,
+        "kind": "existing"
+      }
+    ]
+  },
+  "invitation.share": {
+    "english": "Share invitation",
+    "sources": [
+      {
+        "file": "src/components/dashboard/InvitationActions.tsx",
+        "line": 66,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fea69dc79995": {
+    "english": "Manage guests",
+    "sources": [
+      {
+        "file": "src/components/dashboard/InvitationActions.tsx",
+        "line": 70,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6daff779d26e": {
+    "english": "Delete invitation",
+    "sources": [
+      {
+        "file": "src/components/dashboard/InvitationActions.tsx",
+        "line": 80,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 698,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 152,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.27ae196c23b9": {
+    "english": "Could not sign out. Please try again.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 78,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0abaf4b082be": {
+    "english": "Search invitations and guests",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 90,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d737fc9a4dc4": {
+    "english": "Search invitations, guests...",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 93,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.37ebf6da5f78": {
+    "english": "Recent RSVP notifications",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 99,
+        "kind": "existing"
+      }
+    ]
+  },
+  "invitation.create": {
+    "english": "Create invitation",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 109,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 113,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 655,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 629,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 39,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2ec58b2ddd56": {
+    "english": "Your profile menu",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 125,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5ebc59145b59": {
+    "english": "Workspace settings",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 136,
+        "kind": "existing"
+      }
+    ]
+  },
+  "nav.signOut": {
+    "english": "Sign out",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 140,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 283,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5f2442e2d735": {
+    "english": "Find something lovely",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 147,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.84917b36f495": {
+    "english": "Search your workspace",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 152,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.76d59b99d0f0": {
+    "english": "An invitation, host, guest or venue...",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 158,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9d5a187298ae": {
+    "english": "Loading your workspace...",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 163,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ea5ab5394d0d": {
+    "english": "Search is unavailable while workspace data cannot be loaded.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 165,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.da38fec2cd6f": {
+    "english": "Search invitations by title, host, venue or occasion, and guests by name, email or phone.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 167,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e38b815e21f2": {
+    "english": " results in your workspace",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 172,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.14210e691c87": {
+    "english": "Invitations",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 176,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3c8e0fde6fcc": {
+    "english": "Guests",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 199,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.417b217a64c2": {
+    "english": "No matches yet",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 228,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0dbaa1d91ee2": {
+    "english": "Try another name, occasion or venue.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 229,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b4dc80ed654d": {
+    "english": "Showing the first six results in each group. Refine your search to find a specific record.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 233,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.43bb0f0d1960": {
+    "english": "Recent RSVP responses",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 242,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a6d5dfcb427e": {
+    "english": "The latest responses from your guests. These update as your guests reply.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 245,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d75626ec1460": {
+    "english": "Loading responses...",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 247,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.69e0e14634f0": {
+    "english": "Responses could not be loaded. Please try again from your dashboard.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 249,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.db15713586d8": {
+    "english": "All quiet for now",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 278,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a253bfc49053": {
+    "english": "Real RSVP updates will appear here after your guests respond.",
+    "sources": [
+      {
+        "file": "src/components/dashboard/WorkspaceHeader.tsx",
+        "line": 279,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.93bab7ea0ef9": {
+    "english": "An image could not load. Check Storage access and CORS configuration.",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 45,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.71988c4d8e08": {
+    "english": "Text",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 283,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e0e492707f85": {
+    "english": "Shape",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 287,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5ce44dd77dae": {
+    "english": "Uploading…",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 298,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 77,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1aa4cb0bcca7": {
+    "english": "Image",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 298,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a8283ade3185": {
+    "english": "Undo",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 304,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.74273989b096": {
+    "english": "Redo",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 312,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.796120837694": {
+    "english": "PNG",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 323,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.509c517ede79": {
+    "english": "Zoom",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 329,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c8cf9b8f5efa": {
+    "english": "Export resolution",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 339,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d1875ad1daec": {
+    "english": "480 x 720",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 344,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.693f54ef2cf3": {
+    "english": "960 x 1440",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 345,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.583339526230": {
+    "english": "Mobile: 1080 x 1620",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 346,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.96bf10df9e93": {
+    "english": "Print: 1920 x 2880",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 347,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1ce4ae3c7c81": {
+    "english": "Grid snapping",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 356,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e17aa0b4fe0d": {
+    "english": "Safe zone / guides",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 364,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f4dc1c96a30f": {
+    "english": "JPEG",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 370,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1d393b0081b6": {
+    "english": "PDF",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 376,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.02cdaabfca80": {
+    "english": "Duplicate",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 383,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ee03dafd9ac3": {
+    "english": "Lock / unlock",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 390,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d946067427e9": {
+    "english": "Center",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 397,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.34ca0e766088": {
+    "english": "Group",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 404,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b57ef478f9ba": {
+    "english": "Ungroup",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 411,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.85dfdceb0405": {
+    "english": "YOUR DESIGN DETAILS",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 628,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6d59bda00d70": {
+    "english": "Selected element",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 629,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6de94b8da3df": {
+    "english": "Make it your own",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 629,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c24623502a05": {
+    "english": "Text content",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 634,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.51b561cbca71": {
+    "english": "Element type",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 635,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.64d0b3adcd2d": {
+    "english": "Font",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 648,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1af851907331": {
+    "english": "Size",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 673,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6b73191a0a4b": {
+    "english": "Color",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 685,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 712,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 156,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9d597870c4b3": {
+    "english": "Alignment",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 694,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f1c65e14817e": {
+    "english": "Forward",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 748,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.76900f1bfd16": {
+    "english": "Back",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 765,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c3812fc4acb8": {
+    "english": "Remove",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 778,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.039236556ece": {
+    "english": "Select an element on the canvas to edit it. Drag to move; use the handles to resize.",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 783,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0bcd66e677f4": {
+    "english": "Layers",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 786,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.25c7e4a79549": {
+    "english": "Locked: ",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 795,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6062652e10dd": {
+    "english": "Opacity",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 803,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.81e2329fa5ae": {
+    "english": "Shadow blur",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 814,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fe1a77cadd77": {
+    "english": "Image crop (%)",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 831,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8bff3d46a667": {
+    "english": "Crop {{value0}}",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 834,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.203c4c9b5abc": {
+    "english": "Saved design versions",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 875,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.983ee369eec2": {
+    "english": "Save checkpoints after saving the invitation. Restoring changes your draft; republish to update guest pages.",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 876,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9a7f8df424a6": {
+    "english": "Design checkpoint saved.",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 885,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b1b159bc646a": {
+    "english": "Save checkpoint",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 893,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9a9b1c99b60c": {
+    "english": "Load saved versions",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 909,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a76e13b98392": {
+    "english": "Restore",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 926,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.571f169ade11": {
+    "english": "Background gradient",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 931,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.36670c89ef35": {
+    "english": "Gradient end",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 951,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3e314dafdf7c": {
+    "english": "Background color",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 965,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.32fc8e0014fa": {
+    "english": "Upload background",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 990,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0f33e1e6b462": {
+    "english": "Link text to your event with:",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 993,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.391ce586da48": {
+    "english": "{{eventTitle}} · {{hostName}}",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 995,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9cce49656ce7": {
+    "english": "{{eventDate}} · {{eventTime}}",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 997,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f1a8bceaf84a": {
+    "english": "{{venueName}} · {{venueAddress}}",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 999,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2a91539c1db8": {
+    "english": "{{guestName}} / {{rsvpDeadline}} / {{dressCode}} / {{contactNumber}} / {{eventWebsite}}",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 1001,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0913bc0b9907": {
+    "english": "Image uploaded.",
+    "sources": [
+      {
+        "file": "src/components/editor/CardEditor.tsx",
+        "line": 1036,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.291d097fdb5b": {
+    "english": "Invitation artwork",
+    "sources": [
+      {
+        "file": "src/components/invitations/DesignPreview.tsx",
+        "line": 57,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0d04f37879f8": {
+    "english": "Play video: ",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 31,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.cfe1b4640f0e": {
+    "english": "YOU ARE INVITED",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 61,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 171,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d04444a24aef": {
+    "english": "Hosted by ",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 64,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 339,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e12fa5363dd4": {
+    "english": "When we celebrate",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 74,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.eebdeee5b989": {
+    "english": " - {{value0}}",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 78,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.55876489dee5": {
+    "english": "Where we gather",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 86,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3fe1eea77c0a": {
+    "english": "Open Google Maps",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 96,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.09ad3c5382ec": {
+    "english": "The plan for the day",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 103,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aec10bba70e3": {
+    "english": "Dress code",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 116,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 732,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4c35e1f41831": {
+    "english": "A little inspiration",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 122,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a91b4769b1a6": {
+    "english": "Our moments in motion",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 149,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ba1353b9ca76": {
+    "english": "Gift registry",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 157,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aab7685123cf": {
+    "english": "Good to know",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 173,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ffbc51641485": {
+    "english": "Stay in touch",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 184,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dec0d13d7eb4": {
+    "english": "Contact ",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 188,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.58b2eeb7fffa": {
+    "english": "Event website",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 199,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 115,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 740,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 422,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.518a40b31aab": {
+    "english": "{{value0}} event website",
+    "sources": [
+      {
+        "file": "src/components/invitations/EventMiniSite.tsx",
+        "line": 211,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7664e8c43fe8": {
+    "english": "Private guest details",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 13,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.32dfa35659bc": {
+    "english": "Only your workspace can view these fields. Planned counts do not change the guest's RSVP.",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 14,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.702ef921ed1d": {
+    "english": "First name",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 17,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7b4888049459": {
+    "english": "Last name",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 27,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bb8e2701da83": {
+    "english": "Guest category",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 38,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.89e58ff3c751": {
+    "english": "Planned adults",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 55,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.87d3dc6029ee": {
+    "english": "Planned children",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 67,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.74951b78a50a": {
+    "english": "Do not prepare reminders for this guest",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 87,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a1d75836fd27": {
+    "english": "Meal preference",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 90,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e9ed443a4b55": {
+    "english": "Dietary restrictions",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 100,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.72ff78fb2fd5": {
+    "english": "Private notes",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 110,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b830e9c807aa": {
+    "english": "Guest tags (comma separated)",
+    "sources": [
+      {
+        "file": "src/components/invitations/GuestProfileFields.tsx",
+        "line": 120,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d6ed82a67709": {
+    "english": "A special invitation is waiting for you.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 21,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5aa56ab42916": {
+    "english": "Open invitation",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 23,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 165,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4a9573bb0885": {
+    "english": "The celebration has begun.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 75,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.35beba64146b": {
+    "english": "Time until the event",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 81,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e08c0aa8f558": {
+    "english": "Days",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 85,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.21e8492938ab": {
+    "english": "Hours",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 89,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4f846a84e7fc": {
+    "english": "Minutes",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 93,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.381a8e969905": {
+    "english": "Seconds",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 97,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.28c7e33aa998": {
+    "english": "Pause music",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 134,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a8d3be414362": {
+    "english": "Play music",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 134,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d8773f37c57e": {
+    "english": "Music volume",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 137,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.da42f1f41f96": {
+    "english": "Music could not play. You can still view and respond to the invitation.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationPresentation.tsx",
+        "line": 149,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e6aa1cb87f29": {
+    "english": "Invitation QR code",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 46,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2849d63112fe": {
+    "english": "Scan to open the invitation. Keep personal guest QR codes with their intended guest.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 48,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6cec2471e7dc": {
+    "english": "QR code for this invitation link",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 53,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.508b7ef2e55f": {
+    "english": "QR image downloaded. Attach it to your message to share it.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 78,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.cd9c0d58426c": {
+    "english": "Share QR image",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 88,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.82c965655426": {
+    "english": "Download QR PNG",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 91,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d5feeaa5880a": {
+    "english": "Download QR PDF",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationQRCode.tsx",
+        "line": 110,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4ff69f6f16e0": {
+    "english": "Clipboard unavailable",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 56,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4e453a08e12f": {
+    "english": "Public invitation link copied. Anyone can respond.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 58,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 207,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.965e10ddecb5": {
+    "english": "Select and copy the invitation link from the field.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 62,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fbae29669515": {
+    "english": "Sharing could not open. Use Copy public link or WhatsApp instead.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 79,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5fc19c12d3d2": {
+    "english": "Share your invitation",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 87,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 94,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c1c9640611d9": {
+    "english": "Anyone with this link can enter their name and accept or decline.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 95,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.88c3be350635": {
+    "english": "Invitation link",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 99,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.091f33d8a8c2": {
+    "english": "Link could not be generated",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 108,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.288ca402972d": {
+    "english": "Generating your invitation link…",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 109,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e6bf03bb1c49": {
+    "english": "Publish your invitation to generate a shareable link",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 110,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7f5ff9117a29": {
+    "english": "Retry link generation",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 123,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2649d27971e2": {
+    "english": "Opening share…",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 138,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2c24d35a117c": {
+    "english": "QR code",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 145,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6a40edf1fc87": {
+    "english": "WhatsApp",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 156,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2ae3a22dbfb1": {
+    "english": "Add the event title, host, date, time and venue, then click Publish invitation. Your link will appear here after publishing succeeds.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 177,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.36aabc6fd80d": {
+    "english": "This link uses localhost. Set VITE_APP_URL to your published website address and restart the app to share it with other devices.",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 178,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5948954e3b49": {
+    "english": "Remove ",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 66,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.eb769caa2522": {
+    "english": " item ",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 68,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8d89e4a829ae": {
+    "english": "Add ",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 84,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a5f3c2e9f903": {
+    "english": " item",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 86,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ff1e047b8a57": {
+    "english": "Use an event mini-website",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 122,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3ca7d48b0bc5": {
+    "english": "Your invitation card stays available as the cover. Arrange the sections below. Hiding RSVP also disables new responses on the published website.",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 126,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a8d6c20cdb7a": {
+    "english": "Website accent",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 129,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0703162f3784": {
+    "english": "Website background",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 137,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3e91fe24c979": {
+    "english": "Website font",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 146,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9906958b0bdb": {
+    "english": "Classic serif",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 153,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.02ae9aa28987": {
+    "english": "Clean sans serif",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 154,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bb38e61e51f8": {
+    "english": "Friendly sans serif",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 155,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b6826e6b528d": {
+    "english": "Move {{value0}} up",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 183,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.55490a4bf3a8": {
+    "english": "Up",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 187,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1802f67e277e": {
+    "english": "Move {{value0}} down",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 192,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b86d11af7918": {
+    "english": "Down",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 199,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.83185eb03074": {
+    "english": "Photo gallery",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 215,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d8cd955af9b0": {
+    "english": "Upload photos you have permission to publish, up to twelve. Photos appear publicly only after you publish.",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 216,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8546e95d5543": {
+    "english": "Gallery layout",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 218,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0e60e831f2c6": {
+    "english": "Photo grid",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 227,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.246a1d588fa1": {
+    "english": "Flowing columns",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 228,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.23eb6f682aac": {
+    "english": "Selected event photo",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 235,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d7d7467971af": {
+    "english": "Publish photo ",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 258,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bad132b9f355": {
+    "english": "Photo caption",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 262,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3c5bba393243": {
+    "english": "Remove photo ",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 286,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.65d439a5689c": {
+    "english": "Add event photo",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 292,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4f3b835ea111": {
+    "english": "Save a draft before uploading photos or a background.",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 318,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9af6b95d09d2": {
+    "english": "Website background image",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 321,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bf5b700aeb06": {
+    "english": "Remove background image",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 348,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5750bf358db2": {
+    "english": "Closing message",
+    "sources": [
+      {
+        "file": "src/components/invitations/MiniSiteBuilder.tsx",
+        "line": 382,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8cf0e32e7235": {
+    "english": "Choose an answer",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPFields.tsx",
+        "line": 101,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.85a39ab345d6": {
+    "english": "Yes",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPFields.tsx",
+        "line": 104,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 790,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1ea442a134b2": {
+    "english": "No",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPFields.tsx",
+        "line": 105,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 791,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.32df80b94112": {
+    "english": "RSVP questions",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 16,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d8c38e297b64": {
+    "english": "Add up to six optional questions. Required questions apply when accepting. Editing a question after publishing can change how earlier answers are interpreted.",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 17,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.39821a754d34": {
+    "english": "Question ",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 21,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4d2e34550244": {
+    "english": "Question label",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 25,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.efe8656fc7c2": {
+    "english": "Question type",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 33,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.38a11505fddd": {
+    "english": "Short text",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 52,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c00e6554e94d": {
+    "english": "Yes / No",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 53,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.45a76a9d2e7a": {
+    "english": "Single choice",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 54,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.79fefc32357d": {
+    "english": "Multiple choice",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 55,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bd82cf16699b": {
+    "english": "Number",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 56,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.742b8370175b": {
+    "english": "Dietary selection",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 57,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ed825f731926": {
+    "english": "Choices (one per line)",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 62,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.735beee2e390": {
+    "english": "Minimum",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 75,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.66c9ab177708": {
+    "english": "Maximum",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 85,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f0c3fb4cd63d": {
+    "english": "Required when accepting",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 104,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1cfcaf7a67c9": {
+    "english": "Remove question ",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 115,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5ef90af59e0e": {
+    "english": "Add RSVP question",
+    "sources": [
+      {
+        "file": "src/components/invitations/RSVPQuestionBuilder.tsx",
+        "line": 133,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6ccd5c785604": {
+    "english": "Close menu",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 147,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.58ea5a145c6a": {
+    "english": "Personal workspace",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 161,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5493ff8e9397": {
+    "english": "WORKSPACE",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 165,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a253ff09c5a8": {
+    "english": "NEW",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 177,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.27c94593d9b2": {
+    "english": "QUICK CREATE",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 183,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c4eb2c87c1d2": {
+    "english": "Could not sign out. Try again.",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 225,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b40b3713b43d": {
+    "english": "Open menu",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 251,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.87bb59ba2f92": {
+    "english": "Workspace",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 260,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.845ccac6bfd2": {
+    "english": "Evently Invitations © ",
+    "sources": [
+      {
+        "file": "src/components/layout/Layout.tsx",
+        "line": 277,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aa01640cff61": {
+    "english": "Team access",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 9,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.86f9f415e706": {
+    "english": " / Owner",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 12,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.35db544838a2": {
+    "english": "Your workspace currently has one authenticated owner. Team invitations are not enabled until secure invitation verification is connected.",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 14,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a7c2da50e477": {
+    "english": "Prepared roles and permissions",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 16,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.14736a2eb9f4": {
+    "english": "Role",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 21,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.abccc78cc93c": {
+    "english": "Permissions",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 22,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.12f67f8539c4": {
+    "english": "Availability",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 23,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.92340695899b": {
+    "english": "Active",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 33,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2b0e80483609": {
+    "english": "Not enabled",
+    "sources": [
+      {
+        "file": "src/components/TeamReadiness.tsx",
+        "line": 34,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a7b0d1e64c5c": {
+    "english": "Workspace branding",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 35,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0b17b1a2303d": {
+    "english": "Your private workspace's identity. Invitation artwork keeps its chosen design.",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 36,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ba5f281a6051": {
+    "english": "Workspace branding saved.",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 50,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8d540410fa30": {
+    "english": "Brand display name",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 63,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.80d90ef1d26e": {
+    "english": "Workspace logo",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 74,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fdc6c0fa440b": {
+    "english": "Workspace logo preview",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 98,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8ad2aee7137e": {
+    "english": "Remove custom logo",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 106,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3c0600d53769": {
+    "english": "Primary brand color",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 112,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b8846849a451": {
+    "english": "Accent brand color",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 122,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.25d4cf0610d3": {
+    "english": "Workspace footer",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 133,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.af8afa1c245e": {
+    "english": "Save branding",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 143,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4ed0814d315a": {
+    "english": "Reset branding form",
+    "sources": [
+      {
+        "file": "src/components/TenantBrandingSettings.tsx",
+        "line": 150,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c8df66c5fe3f": {
+    "english": "Close dialog",
+    "sources": [
+      {
+        "file": "src/components/ui/Modal.tsx",
+        "line": 45,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6f3e1a834a42": {
+    "english": "Please sign in to your workspace.",
+    "sources": [
+      {
+        "file": "src/firebase/firestore.ts",
+        "line": 6,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.46594024a4e8": {
+    "english": "Workspace pages must be inside WorkspaceProvider.",
+    "sources": [
+      {
+        "file": "src/hooks/useWorkspace.ts",
+        "line": 211,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5f9a0ee1c65d": {
+    "english": "We hit a little snag.",
+    "sources": [
+      {
+        "file": "src/main.tsx",
+        "line": 28,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7db5e46ea270": {
+    "english": "Reload Evently Invitations",
+    "sources": [
+      {
+        "file": "src/main.tsx",
+        "line": 34,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9625fd741776": {
+    "english": "Report event",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 19,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.20b8487b3804": {
+    "english": "All events",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 24,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 171,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.592e2d44f00a": {
+    "english": "Event date from",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 33,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0e32686e4bd9": {
+    "english": "Event date to",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 42,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d77c086db33b": {
+    "english": "Report guest category",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 51,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9d5097a83710": {
+    "english": "All categories",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 56,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 281,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.59502c05a50e": {
+    "english": "Export report CSV",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 75,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.34e90c96d2c2": {
+    "english": "Print report",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 78,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9c7b2f5f3031": {
+    "english": " events / ",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 83,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d36c6e45d5a3": {
+    "english": " guest records. Event dates ",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 85,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.87721689ee42": {
+    "english": " to ",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 87,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3267fe748b7b": {
+    "english": " / {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 90,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 422,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.694ed564aed1": {
+    "english": " expected attendees",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 97,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.55659eddeadb": {
+    "english": " checked-in attendees",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 101,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9d12c86fc86c": {
+    "english": " sharing initiated",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 105,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.72c527d9a1fb": {
+    "english": "Delivery and human page views are not measured. Sharing initiated, RSVP responses, and authenticated check-in are separate recorded events.",
+    "sources": [
+      {
+        "file": "src/pages/Analytics.tsx",
+        "line": 108,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8a5b4209c438": {
+    "english": "YOUR WORKSPACE, AT A GLANCE",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 65,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.00a21c8c1cde": {
+    "english": "A little insight. A better gathering.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 68,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2b4d21337d47": {
+    "english": "Hello, {{value0}} ",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 69,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ef129578aa8f": {
+    "english": "Here’s what’s happening with your invitations.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 74,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.09a1d802befa": {
+    "english": "EVERY GREAT MOMENT STARTS HERE",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 86,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3e18b6c9cda2": {
+    "english": "A reason to gather.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 89,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.019a8f62d6fd": {
+    "english": "An invitation to remember.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 91,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ebe3ceb3ed62": {
+    "english": "Turn your next occasion into something beautifully personal.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 93,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1495a0b48d52": {
+    "english": "Create an invitation",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 96,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b4c524d6e692": {
+    "english": "together is",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 104,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.975e61675e17": {
+    "english": "a beautiful place",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 106,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.de3ae44c6da1": {
+    "english": "THE PLEASURE OF YOUR COMPANY",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 111,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6d4d224c45f7": {
+    "english": "You’re",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 113,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b573e44bda25": {
+    "english": "invited.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 115,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a16f1dcf6a6b": {
+    "english": "LET’S MAKE A MEMORY",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 118,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6a1c7bdd1527": {
+    "english": "The big picture",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 124,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d5cb1473ca4a": {
+    "english": "Across the selected report",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 125,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d319e5fa46b0": {
+    "english": " total events",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 159,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.991633af6993": {
+    "english": " personalized invitations",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 163,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.cd3587a5501a": {
+    "english": "sharing initiated",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 167,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4c2a8db78120": {
+    "english": "attendees confirmed",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 177,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.60ab32671df4": {
+    "english": "Who’s coming?",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 185,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fd31db0b8dd8": {
+    "english": "A little look at your RSVPs",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 186,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b64ac05f17e6": {
+    "english": "Live",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 190,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 417,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.42d72995406e": {
+    "english": "responded",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 234,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 315,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b4627de88259": {
+    "english": "{{value0}} guests haven’t responded yet.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 252,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e752ec30b28d": {
+    "english": "Your first RSVP is the start of something lovely.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 253,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5a2e23e80637": {
+    "english": "Fresh from your guests",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 259,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.693d4fd0ec4d": {
+    "english": "The latest little updates",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 260,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.da6aa9e55105": {
+    "english": "A little quiet, for now.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 293,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7754ff39f3fb": {
+    "english": "Once your guests respond, their",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 295,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2ce7b9f14516": {
+    "english": "latest updates will appear right here.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 297,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9d2d2eb013c7": {
+    "english": "View guest list",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 302,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 469,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.df9110b56fb1": {
+    "english": "Upcoming events",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 310,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 274,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bd926c3a16c2": {
+    "english": "Your occasions",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 310,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.77a710ba9923": {
+    "english": "Big days, small gatherings, and everything in between.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 312,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9b66b1fae3ba": {
+    "english": "View all invitations ",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 315,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d68761f770a1": {
+    "english": " guests",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 338,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 309,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 85,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.959c90b93aa6": {
+    "english": "Something to celebrate?",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 351,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c7b3d900714f": {
+    "english": "Your next great gathering",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 353,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0f6a87303e7e": {
+    "english": "starts with an invitation.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 355,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f063f6bf7add": {
+    "english": "Create invitation ",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 358,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 123,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3a2b54636008": {
+    "english": "A thoughtful invitation goes a long way. Make someone’s day.",
+    "sources": [
+      {
+        "file": "src/pages/AnalyticsDashboard.tsx",
+        "line": 365,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.02cb61a030e2": {
+    "english": "Camera access requires HTTPS and browser camera support. You can paste a link instead.",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 51,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1a99fc81dec7": {
+    "english": "A WARM WELCOME",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 107,
+        "kind": "existing"
+      }
+    ]
+  },
+  "nav.checkIn": {
+    "english": "Guest check-in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 108,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a41d1eef1250": {
+    "english": "For signed-in organizers. Personal guest links identify an accepted RSVP; reusable public links cannot identify an arriving guest.",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 109,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d8863dd335d8": {
+    "english": "Scan a personal guest QR code",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 113,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a69bc55cbe58": {
+    "english": "Start camera",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 120,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c2e8e6cf5611": {
+    "english": "Stop camera",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 124,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3a0f74040bc7": {
+    "english": "QR scanner camera preview",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 134,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.51558292de9f": {
+    "english": "Personal invitation link",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 143,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c5cc3477fbbe": {
+    "english": "Paste a guest invitation link",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 148,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a4fd253dd6e3": {
+    "english": "Confirm check-in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 152,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.05e816178a7d": {
+    "english": "Find a guest",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 163,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4e1f49a9c8ae": {
+    "english": "Event",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 166,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.912ea0d26482": {
+    "english": "Search guest name",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 180,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9c99b81763a8": {
+    "english": "Loading guests...",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 189,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 189,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fa8d38d012a4": {
+    "english": "No matching personal guests.",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 193,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.99c750e77435": {
+    "english": " - Checked in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 206,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.66477affd24a": {
+    "english": "Checked in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 221,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.20e82b4d236a": {
+    "english": "Check in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 222,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6899abdf1320": {
+    "english": "Manual override for {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 227,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.723c2826018e": {
+    "english": "Manual override",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 243,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.33d05aa048df": {
+    "english": "Manual guest check-in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 253,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.deac50ef2eac": {
+    "english": "Record an arrival for ",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 257,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2282297528cc": {
+    "english": " even without an accepted active personal RSVP. Only the authenticated workspace owner can do this.",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 259,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8e2e32d28654": {
+    "english": "Override reason",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 277,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.42f11bf0c318": {
+    "english": "Actual arriving attendees",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 286,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.70030648aeee": {
+    "english": "Confirm manual check-in",
+    "sources": [
+      {
+        "file": "src/pages/CheckIn.tsx",
+        "line": 302,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6174ed94cfe8": {
+    "english": "We would love for you to join us for a special celebration.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 52,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.65c9eddbab53": {
+    "english": "This invitation no longer exists.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 135,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.505c6216c79b": {
+    "english": "Autosave is finishing. Please try again in a moment.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 208,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b0ab622c4fdb": {
+    "english": "Give your event a title first.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 215,
+        "kind": "existing"
+      },
+      {
+        "file": "src/services/invitationService.ts",
+        "line": 19,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dd1306f61d68": {
+    "english": "Enter the event timezone.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 216,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.614f0ec838c4": {
+    "english": "Use a valid timezone, such as Asia/Colombo.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 220,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.30cb30e6f098": {
+    "english": "Add a host, date, time and venue before publishing.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 229,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4c298b6be9c2": {
+    "english": "We couldn’t open this invitation.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 273,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.25b02faee99a": {
+    "english": "Back to invitations",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 276,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9688f2ce291d": {
+    "english": "Opening your invitation…",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 281,
+        "kind": "existing"
+      }
+    ]
+  },
+  "nav.invitations": {
+    "english": "My invitations",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 288,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 34,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ddd1f0a0eae4": {
+    "english": "Make it yours.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 290,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2982c4ca102f": {
+    "english": "Let’s make an occasion.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 290,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d2407b2d6699": {
+    "english": "Thoughtful details. A little creativity. A beautiful invitation.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 291,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3de100106dd4": {
+    "english": "Save draft",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 305,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.23e39291d613": {
+    "english": "Saving…",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 314,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 709,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 225,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ed09e395484e": {
+    "english": "Republish",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 316,
+        "kind": "existing"
+      }
+    ]
+  },
+  "invitation.publish": {
+    "english": "Publish",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 317,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7e4dec8864a6": {
+    "english": "Find your starting point.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 341,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fea442801c49": {
+    "english": "Browse & upload designs ",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 343,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.10faeb656c1b": {
+    "english": "The details make the day.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 396,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5e33b053cf28": {
+    "english": "Tell your guests what’s in store.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 397,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.95d151fe8f67": {
+    "english": "Please fix the highlighted fields before continuing. Required fields are marked with *.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 403,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.03b86e29c7b5": {
+    "english": "Grand Opening · Hardware",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 408,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7623dcdb4510": {
+    "english": "Event title = your business or store name. Hosted by = your company or organizer. Your message, date, time, venue and address update the card automatically.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 409,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c225b0e8fef4": {
+    "english": "Event title *",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 414,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5c387ffb0ba0": {
+    "english": "A day to remember",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 420,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f68e0b1ef126": {
+    "english": "Occasion",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 426,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0e3067bb863e": {
+    "english": "Hosted by *",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 440,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1a67b5de4c74": {
+    "english": "Your names",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 445,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b2656efdf939": {
+    "english": "A message for your guests",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 452,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5d918a4d7eab": {
+    "english": "Use an occasion message",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 466,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b10e79bdcfd7": {
+    "english": "Event date *",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 470,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9753210810cd": {
+    "english": "Start time *",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 481,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2e46006a5eeb": {
+    "english": "End time",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 492,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.109c6d257c45": {
+    "english": "Timezone *",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 503,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aa94105757d7": {
+    "english": "Asia/Colombo",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 509,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.50c5d0cb1800": {
+    "english": "A place to come together",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 514,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9ba9060f4cfc": {
+    "english": "Venue name *",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 516,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.91c7abca5902": {
+    "english": "Venue address",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 526,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a6ac8e35ee0c": {
+    "english": "Google Maps link",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 537,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ba48a8678367": {
+    "english": " Select on Google Maps",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 546,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.85a8cd275f8f": {
+    "english": "https://maps.app.goo.gl/?",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 555,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8f00b41be908": {
+    "english": "Choose a place in Google Maps, click Share ? Copy link, then paste the link here.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 564,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fa4d92cac6bc": {
+    "english": "Latitude (optional)",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 569,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.abea4a36ce57": {
+    "english": "Longitude (optional)",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 582,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2c6a40482cfb": {
+    "english": "Contact number",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 596,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5871e1abaa63": {
+    "english": "Additional notes",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 606,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a4a595f68656": {
+    "english": "Event status",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 616,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ebf12ef47cf5": {
+    "english": "Draft",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 622,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2ef42ec21d93": {
+    "english": "Published",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 627,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.739bb9ea7b87": {
+    "english": "Archived — revoke guest access when saved",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 629,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.820f88fe38c7": {
+    "english": "Allow guests to change their response",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 662,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b736b1be54b2": {
+    "english": "Confirmation message",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 665,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ee60422d2ddf": {
+    "english": "Invitation experience",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 675,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5d5ee1577500": {
+    "english": "Presentation",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 677,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e7cdf3322cf3": {
+    "english": "Static invitation",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 699,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3a9de7b68026": {
+    "english": "Show event countdown",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 715,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4319fd07c795": {
+    "english": "RSVP deadline",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 718,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.57e9825d6d05": {
+    "english": "Uses the event timezone: ",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 726,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 150,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a771ed302d6b": {
+    "english": "I have permission to publish this music",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 755,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0aa269d4cdc3": {
+    "english": "Upload background music (MP3 / OGG / WAV)",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 758,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.df784050385e": {
+    "english": "Music uploaded. Republish to update guest pages.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 773,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bc478c32fa10": {
+    "english": "Save a draft to enable music uploads.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 784,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.418d6afd0c8a": {
+    "english": "Default music volume",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 789,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a2b87442385c": {
+    "english": "Remove music",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 818,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ee8306184fbe": {
+    "english": "Customize invitation ",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 824,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ce3a01d96f55": {
+    "english": "YOUR INVITATION, COMING TO LIFE",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 830,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bd1469c5beb4": {
+    "english": "Change a detail. Watch your design follow along.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 832,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f3454aeb69ef": {
+    "english": "Opening the design editor...",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 838,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.be29e3c22ec4": {
+    "english": "Your complete invitation",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 847,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8d68027be042": {
+    "english": "The design, event details, location and RSVP — all in one card.",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 848,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b25616696efe": {
+    "english": "Publish invitation",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 857,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b0e834ae78ae": {
+    "english": "Add guests & share",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 866,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7723e4dec204": {
+    "english": "Open full preview",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 873,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.144adf27f7f3": {
+    "english": "Desktop preview",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 887,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f4185502ae83": {
+    "english": "Mobile preview",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 894,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a57b08a480b8": {
+    "english": "Previous",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 916,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.474a987f3bbe": {
+    "english": "Step ",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 919,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.723bb5b47d8f": {
+    "english": " of 4",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 921,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.31fbef162594": {
+    "english": "Continue",
+    "sources": [
+      {
+        "file": "src/pages/CreateInvitation.tsx",
+        "line": 928,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.78fb6157cf22": {
+    "english": "Join us for a beautiful celebration.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 98,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c9449e7bb51a": {
+    "english": "YOUR INVITATION WORKSPACE",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 104,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.23429bd9ba98": {
+    "english": "Hello, ",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 106,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.00fc419a0a4a": {
+    "english": "A little inspiration for your next great gathering.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 109,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dd383958a651": {
+    "english": "We couldn't load your workspace. ",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 123,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d8b8392e2c54": {
+    "english": "Try again",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 127,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 272,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7a5899afc5ad": {
+    "english": "LITTLE INVITATIONS. BEAUTIFUL POSSIBILITIES.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 140,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1d8f5ac8bebd": {
+    "english": "Create beautiful invitations",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 143,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.891df35822f1": {
+    "english": " for life's special moments.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 145,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.777275d82c9e": {
+    "english": "Design, personalize and share stunning invitations with the people who matter most — all in one place.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 147,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.464c1232790b": {
+    "english": "Create New Invitation",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 151,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2488c5d85119": {
+    "english": "Explore Templates",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 154,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.047e5fa87071": {
+    "english": "A little joy,",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 164,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5050864fdb91": {
+    "english": "on its way.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 166,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a1fc5e2c7d88": {
+    "english": "A moment",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 173,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.21e85d8ca2ac": {
+    "english": "to remember.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 175,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.95d01ea65039": {
+    "english": "Let's celebrate together",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 178,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9770f595eb7e": {
+    "english": "Workspace statistics",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 186,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dfa545c245e2": {
+    "english": "Loading statistic",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 236,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5b16328ccefa": {
+    "english": "Recent invitations",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 249,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3e61a50bb6ee": {
+    "english": "Small beginnings. Unforgettable occasions.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 250,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ff5573a6f287": {
+    "english": "View All",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 253,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.97a042ad492a": {
+    "english": "Loading invitations",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 260,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f29d3f31dc6e": {
+    "english": "Workspace unavailable",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 269,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5c4d9b21dfc2": {
+    "english": "We couldn't load your invitations. Please try again.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 270,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.128b618dc412": {
+    "english": "Preview {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 287,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 220,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a4282e4b2298": {
+    "english": " of ",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 314,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8fad8ca7e1b8": {
+    "english": "Response progress for {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 322,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.005d30268f09": {
+    "english": "Your next memory starts here",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 341,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.31324866be76": {
+    "english": "Create your first invitation and bring your people together.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 342,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d0c6907a5067": {
+    "english": "Create your first invitation",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 345,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b4a0f6f81644": {
+    "english": "Who's joining you?",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 354,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d29f7751fe15": {
+    "english": "Every reply, in one place.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 355,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.38b4054df9f8": {
+    "english": "View RSVP analytics",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 359,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.cdffc1a8fa98": {
+    "english": "{{value0}}%",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 369,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1b34f916afad": {
+    "english": "of your guests have responded",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 373,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3cfbf341915a": {
+    "english": "RSVP distribution",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 377,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6cb44b56336a": {
+    "english": "Recent activity",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 412,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d2444a944bff": {
+    "english": "Good news from your guests.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 413,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0acd8adfdd7a": {
+    "english": "Loading activity",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 423,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2298414142f9": {
+    "english": "Activity couldn't be loaded. Try again from the workspace error message.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 431,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d96c3fd531f7": {
+    "english": "A little quiet, for now",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 464,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b9dade950d76": {
+    "english": "Responses will appear here as your guests reply.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 465,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.541937cf38bb": {
+    "english": "MAKE SOMETHING MEANINGFUL",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 478,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.862f429aaf60": {
+    "english": "A little shortcut to your next step",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 479,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c2678f35dc46": {
+    "english": "A DESIGN FOR EVERY OCCASION",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 564,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a364e275bbb5": {
+    "english": "Find a little inspiration",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 565,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a79908f20576": {
+    "english": "Thoughtful templates, ready for your personal touch.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 566,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.39c2fa5cfc32": {
+    "english": "Explore all templates",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 569,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6855cd382561": {
+    "english": "Invitation template inspiration",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 575,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.91382b25e84a": {
+    "english": "Preview {{value0}} template",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 586,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e127649ca4a6": {
+    "english": "Preview design",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 597,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6a0418f673c8": {
+    "english": "Use Template",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 607,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 714,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8b49078262a7": {
+    "english": "Share a little joy",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 617,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.704e7e942736": {
+    "english": "Choose an invitation",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 624,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f47488076591": {
+    "english": "Edit or publish this invitation",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 643,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.87855a185b2f": {
+    "english": "A beautiful invitation comes first",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 652,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.52d726cc6987": {
+    "english": "Create and publish an invitation, then share it with your guests.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 653,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0e5d7537b52a": {
+    "english": "Delete this invitation?",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 664,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 130,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.85941fb9c992": {
+    "english": "Delete ",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 670,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4fd7b4e5734c": {
+    "english": "? This revokes public links and permanently removes the invitation and its guest list.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 672,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1de10d002022": {
+    "english": "Keep invitation",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 680,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 134,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d3169492c581": {
+    "english": "Invitation deleted.",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 690,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 144,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.685ecb984ac2": {
+    "english": "Deleting...",
+    "sources": [
+      {
+        "file": "src/pages/Dashboard.tsx",
+        "line": 698,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a05a7a2841f1": {
+    "english": "Event not found.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 79,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0403c1733c43": {
+    "english": "THE PEOPLE MAKE THE OCCASION",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 86,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e995e909e691": {
+    "english": "Your people, all together.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 88,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.74f4dd61d2a0": {
+    "english": "Personal invitations. Real responses. A little less to keep track of.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 90,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3664895579f0": {
+    "english": "Export",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 150,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7de903b2a7c9": {
+    "english": "Choose an event before adding guests.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 156,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d675272d0ef6": {
+    "english": "Add guest",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 164,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4a268e080c6d": {
+    "english": "Choose an occasion",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 171,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f2ffa526bb1a": {
+    "english": "All occasions",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 177,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bd1e1c6c2136": {
+    "english": " guests in this view",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 187,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9982ac26053c": {
+    "english": "Import CSV",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 195,
+        "kind": "existing"
+      }
+    ]
+  },
+  "invitation.copyLink": {
+    "english": "Copy public link",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 211,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.db6f42b128ec": {
+    "english": "Edit invitation →",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 216,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.94e0f23fbb60": {
+    "english": "CSV columns: name, phone, email, allowed attendees. Use international phone numbers. Sharing opens WhatsApp for you to send manually; delivery is not tracked.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 220,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.af56f27dfc14": {
+    "english": "Imported {{value0}} guests. Row {{value1}}: {{value2}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 239,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.77f3fde0f364": {
+    "english": "Imported {{value0}} guests.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 247,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.196cbccb7182": {
+    "english": "All guests",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 260,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.67db96774336": {
+    "english": "Find a guest…",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 269,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.03306d0ca190": {
+    "english": "Search guests",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 270,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.112c0333dc7b": {
+    "english": "Filter guest category",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 276,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d7a3906295f0": {
+    "english": " personal guests selected",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 293,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7cdc3ca852df": {
+    "english": "Bulk tags",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 296,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d6a7af13b422": {
+    "english": "Family, evening",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 300,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d404e3cf7a62": {
+    "english": "Guest tags updated.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 310,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a0820d6a9d95": {
+    "english": "Tag selected",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 314,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7c8e3061d2fd": {
+    "english": "Links prepared. Share them with their intended guests.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 333,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9393d9f46191": {
+    "english": "Prepare selected links",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 337,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2cccffaae528": {
+    "english": "Guest list table, scroll horizontally for more details and actions",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 343,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0f2668df9e96": {
+    "english": "Select all visible personal guests",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 352,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5ed8944a85a9": {
+    "english": "Guest",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 381,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ec21453f9cd8": {
+    "english": "WhatsApp number",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 382,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 665,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bbedc70e985f": {
+    "english": "Sharing",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 383,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1dfe8a8e0cb2": {
+    "english": "RSVP",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 384,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e2e8d95fc673": {
+    "english": "Attendees",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 385,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aab7a52cb5bc": {
+    "english": "Response date",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 386,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ff8059dc6752": {
+    "english": "Actions",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 387,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.33de0e8b35aa": {
+    "english": "Select {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 397,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c0bf568963a3": {
+    "english": "RSVP name: ",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 430,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d773727fff8a": {
+    "english": "Sharing initiated",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 446,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.178b790b1cb2": {
+    "english": "Public link",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 448,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f8a76298d2e8": {
+    "english": "Not shared",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 449,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ee8d94b3fb47": {
+    "english": "View response from {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 467,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 556,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f150cd1e7a51": {
+    "english": "QR code for {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 478,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a439fba430a3": {
+    "english": "QR",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 497,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1906197e58ac": {
+    "english": "Copy personalized link",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 501,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.305264e2bb42": {
+    "english": "Copy link for {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 502,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.cbf5b377e319": {
+    "english": "Personal invitation link copied.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 512,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a16f49488c59": {
+    "english": "Share / resend via WhatsApp",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 520,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0c4a806209e2": {
+    "english": "Share with {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 521,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.412b1cf6058f": {
+    "english": "Allow popups to open WhatsApp.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 540,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d92421816079": {
+    "english": "WhatsApp opened. Send the message to complete sharing.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 543,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d64914064077": {
+    "english": "View response",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 555,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.57438897845a": {
+    "english": "Edit guest",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 565,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6ec4b47d02bf": {
+    "english": "Edit {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 566,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ef798c0bff00": {
+    "english": "Revoke current link",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 578,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7b6f27d0c5ed": {
+    "english": "Revoke link for {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 579,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6fb71cd5dc5f": {
+    "english": "Link revoked. Copy or share to generate a new link.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 586,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.587fcf1aa63c": {
+    "english": "Remove guest",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 594,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 739,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e224cf245aad": {
+    "english": "Remove {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 595,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2c5996f6e19b": {
+    "english": "Loading your guests…",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 617,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.89000e966aaf": {
+    "english": "No guests match this view.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 619,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2158a8b16b00": {
+    "english": "Every gathering starts with someone.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 620,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.30b72e91c10f": {
+    "english": "Choose an occasion and add your first guest.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 624,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.987ef813533d": {
+    "english": "Create an invitation to start building your guest list.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 625,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ea9483458cd8": {
+    "english": "Page opens are omitted because client-only tracking cannot reliably identify human views. RSVPs are recorded independently in real time.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 635,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.88449e4dc66b": {
+    "english": "A little guest update",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 639,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.23cf9046ead3": {
+    "english": "Someone to celebrate with",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 639,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0773b9418fc1": {
+    "english": "Guest saved.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 649,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e34006b5ed3b": {
+    "english": "Guest name",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 654,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6eea8608c452": {
+    "english": "Email (optional)",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 677,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6fc7fcbcf19b": {
+    "english": "Allowed attendees",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 687,
+        "kind": "existing"
+      }
+    ]
+  },
+  "common.cancel": {
+    "english": "Cancel",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 706,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4bed077d55db": {
+    "english": "Save guest",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 709,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d69641b09ea9": {
+    "english": "Remove {{value0}}?",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 717,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6ae34961983a": {
+    "english": "Their personal invitation link will also be revoked.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 720,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f715fb35ba36": {
+    "english": "Keep guest",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 726,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a80b98375bcf": {
+    "english": "Guest removed.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 735,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6eae5c7bd1c2": {
+    "english": "{{value0}}’s response",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 753,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.29e8a4686393": {
+    "english": "RSVP:",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 757,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0a2ad02934b8": {
+    "english": "Responded as: ",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 763,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.32b7e7bdf05b": {
+    "english": "Attendees: ",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 767,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.88eb5a7ed273": {
+    "english": " of",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 769,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f03ea87fed05": {
+    "english": " allowed",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 770,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fb33f0fc987c": {
+    "english": "Responded:",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 773,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.543c90eef979": {
+    "english": "This is the latest response received when you opened this dialog.",
+    "sources": [
+      {
+        "file": "src/pages/GuestManagement.tsx",
+        "line": 798,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dbf2d9094b85": {
+    "english": "Invitation not found.",
+    "sources": [
+      {
+        "file": "src/pages/InvitationPreview.tsx",
+        "line": 18,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.084eaaba311e": {
+    "english": "Return to invitations",
+    "sources": [
+      {
+        "file": "src/pages/InvitationPreview.tsx",
+        "line": 34,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c4cf2b2ccb5d": {
+    "english": "Loading preview…",
+    "sources": [
+      {
+        "file": "src/pages/InvitationPreview.tsx",
+        "line": 40,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d046de14c639": {
+    "english": "BIG DAYS & LITTLE GATHERINGS",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 33,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.00d82df7da24": {
+    "english": "A home for every occasion you’re bringing to life.",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 35,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ef51660eb5e1": {
+    "english": "All invitations",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 50,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4ae613ba820d": {
+    "english": "Search invitations",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 57,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1de712140d0b": {
+    "english": "Find an occasion…",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 58,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f36d4708595b": {
+    "english": "Loading your occasions…",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 66,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5388f68999c8": {
+    "english": "Manage guests ",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 92,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.50256b3995d6": {
+    "english": "Delete {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 96,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4cf100fcd5ea": {
+    "english": "Make another memory.",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 114,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0cd70885132f": {
+    "english": "Your first occasion awaits.",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 115,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3fad2d03734e": {
+    "english": "Choose a design, add your details,",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 118,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8f7ecc2a4f3e": {
+    "english": "and make it yours.",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 120,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a13604ce30a7": {
+    "english": "This revokes its public guest links and removes the event and guest list. This cannot be undone.",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 131,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.43b5894c3e4e": {
+    "english": "Deleting…",
+    "sources": [
+      {
+        "file": "src/pages/Invitations.tsx",
+        "line": 152,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a1d0ca62351d": {
+    "english": "Evently Invitations home",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 180,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.58640113daf6": {
+    "english": "A LITTLE INVITATION. A BIG MOMENT.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 187,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d0334b3396ac": {
+    "english": "BEAUTIFUL INVITATIONS, MEANINGFUL MOMENTS.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 188,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d562adb5dd0d": {
+    "english": "Bring your",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 193,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.16283ba35b55": {
+    "english": "people together.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 195,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.58f4115f4080": {
+    "english": "Turn moments",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 199,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f4159af5f52f": {
+    "english": "into memories.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 201,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.429e661d11b1": {
+    "english": "Beautiful invitations. Thoughtful details.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 208,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0acae8abfbf0": {
+    "english": "Every response, in one happy place.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 210,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2ac62cb91ed8": {
+    "english": "Design stunning digital invitations, personalize every detail,",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 214,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e05d4bb47123": {
+    "english": " and share with the people who matter — all in one place.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 216,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5c0de7b01b95": {
+    "english": "Simple. Beautiful. Meaningful.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 224,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fde9c5013bf5": {
+    "english": "CREATE",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 230,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0398e046d786": {
+    "english": "PERSONALIZE",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 231,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0b060acf4d67": {
+    "english": "SHARE",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 232,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.97165fc5b7d1": {
+    "english": "CELEBRATE",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 233,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2487e6c635b9": {
+    "english": "YOUR NEXT CHAPTER STARTS HERE",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 258,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d2fce326c100": {
+    "english": "Make room for",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 263,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9432c8e41f32": {
+    "english": "celebration.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 265,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0f4cadbc551a": {
+    "english": "Your Events,",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 269,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2b9cb4b0babd": {
+    "english": "All in One Place.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 271,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6e110a7f0edd": {
+    "english": "Create your private invitation workspace.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 277,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bc194b65aa19": {
+    "english": "Sign in to continue creating beautiful invitations and managing your special moments.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 278,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bd0c4ee8f22b": {
+    "english": "Firebase project: ",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 284,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.42947a6c3560": {
+    "english": "Open Firestore rules ↗",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 293,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7f806263c4e3": {
+    "english": "Connecting to Google…",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 304,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.14233b39a312": {
+    "english": "or continue with email",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 309,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.829e5b28af38": {
+    "english": "OR",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 310,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6cea57c2fb6c": {
+    "english": "John Doe",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 322,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.53e6cdc30765": {
+    "english": "you@example.com",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 346,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4defceba0862": {
+    "english": "Create a password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 373,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c06bf9670174": {
+    "english": "Enter your password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 374,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a60a56c584b3": {
+    "english": "Hide password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 382,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6aeaa6a53d09": {
+    "english": "Show password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 383,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bfd8c343fbd2": {
+    "english": "Confirm your password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 410,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2bddadd8d881": {
+    "english": "Hide confirm password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 421,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bd17fffd90f9": {
+    "english": "Show confirm password",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 422,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e30416d70536": {
+    "english": "Enter your email address first.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 446,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a5615910e9d3": {
+    "english": "Password reset email sent.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 452,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b8ed5279e897": {
+    "english": "Sending…",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 460,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4660a983366f": {
+    "english": "Please wait…",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 468,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.404d240a4e67": {
+    "english": "Already part of Evently Invitations?",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 477,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1b545b23fae3": {
+    "english": "Don't have an account?",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 478,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b6ab95ea0749": {
+    "english": "Create one",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 480,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1d3d256b6d35": {
+    "english": "Your events and guest details stay in your private workspace.",
+    "sources": [
+      {
+        "file": "src/pages/Login.tsx",
+        "line": 483,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3235962c9b95": {
+    "english": "ROOM TO GROW",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 9,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.46ebe399c2ca": {
+    "english": "A plan for every occasion.",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 10,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2049b053d59d": {
+    "english": "Paid plans are not available yet. Your existing workspace access continues.",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 11,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6fc4ba3fe19c": {
+    "english": "Planned feature package",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 18,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d787cf27f25f": {
+    "english": "Checkout unavailable",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 25,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.86948ae83fa4": {
+    "english": "Prices, quotas and paid activation will be available after secure billing is connected. These plan definitions do not restrict your current workspace.",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 30,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dc9c6093b76f": {
+    "english": "Back to settings",
+    "sources": [
+      {
+        "file": "src/pages/Plans.tsx",
+        "line": 32,
+        "kind": "existing"
+      }
+    ]
+  },
+  "rsvp.closed": {
+    "english": "The RSVP deadline has passed. Please contact your host.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 128,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a7b3b8ed3836": {
+    "english": "Please enter your name (up to 160 characters).",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 132,
+        "kind": "existing"
+      },
+      {
+        "file": "src/services/rsvpService.ts",
+        "line": 14,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.180b0a7bd92f": {
+    "english": "Your response: ",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 167,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.744ecc29ef3c": {
+    "english": "Contact your host to request a change.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 170,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.21bf31a235da": {
+    "english": "You can change it below.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 171,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.56af5fc2531a": {
+    "english": "Could not load the previous response: ",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 176,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c49a77c43418": {
+    "english": "Your response is shared with your host.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 240,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f4701b4c5b92": {
+    "english": "Publish this invitation to enable responses.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 242,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a49a3e4ff70d": {
+    "english": "Respond for another person",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 256,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dde9b4683a75": {
+    "english": "Return to editor",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 266,
+        "kind": "existing"
+      },
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 283,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b16e88de0aa6": {
+    "english": "Owner preview ·",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 281,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a8dd6a7adcfd": {
+    "english": "{{value0}} invitation card",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 290,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3827fd19fcb9": {
+    "english": "Invitation design",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 297,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7dcbea837b63": {
+    "english": " · YOU’RE INVITED",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 325,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.94ffac13278f": {
+    "english": "Grand opening",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 330,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4321bb63c0d1": {
+    "english": "GRAND",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 332,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3f65664dc577": {
+    "english": "OPENING",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 333,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9431b4421b09": {
+    "english": "For {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 345,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7527077cb347": {
+    "english": "You’re warmly invited",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 348,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.25f6dd852c2c": {
+    "english": "THE DAY",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 367,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.47859b095a11": {
+    "english": "THE TIME",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 374,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e0631ad696a8": {
+    "english": " – {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 378,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.49754f6ee80c": {
+    "english": "THE PLACE",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 389,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aa64a202ce1d": {
+    "english": "View Location on Google Maps",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 405,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e9b1856058e1": {
+    "english": "Contact your host for directions.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 408,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.49a631aea3c8": {
+    "english": "Dress code:",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 412,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d1d73014ee7d": {
+    "english": "Additional event details",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 427,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.78ba2a6d9b97": {
+    "english": "Contact host · ",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 436,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7e869557e2a2": {
+    "english": "This invitation link is invalid.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 457,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c8a5f20a78f9": {
+    "english": "This invitation is no longer available. Please ask your host for a new link.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 465,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6ffacac95f03": {
+    "english": "We couldn’t open this invitation. It may have been revoked, archived or removed. Please contact your host.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 474,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a338c3447dff": {
+    "english": "Something lovely is on its way…",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 483,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0026c1ff7f41": {
+    "english": "An invitation needs a little help.",
+    "sources": [
+      {
+        "file": "src/pages/PublicInvitation.tsx",
+        "line": 490,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.909c41a6b527": {
+    "english": "KEEP EVERYONE IN THE LOOP",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 86,
+        "kind": "existing"
+      }
+    ]
+  },
+  "nav.reminders": {
+    "english": "Reminder center",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 87,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ad63e7fa9fcf": {
+    "english": "Prepare personal messages and send them yourself through WhatsApp. Opening WhatsApp does not confirm sending or delivery.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 88,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.29a3dfc89a43": {
+    "english": "Plan a manual reminder",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 92,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8023d9509f85": {
+    "english": "Saved schedules are planning notes. Automatic background delivery is not configured.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 93,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.945f83002b2a": {
+    "english": "Reminder event",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 95,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4349a7b25a72": {
+    "english": "Choose an event",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 100,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b2aecaeb2490": {
+    "english": "Message preset",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 109,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.998a5a462a97": {
+    "english": "Invitation message",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 119,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.31ca862aa34c": {
+    "english": "RSVP reminder",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 120,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.94072455223d": {
+    "english": "Event reminder",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 121,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7c3dbeb5cae9": {
+    "english": "Venue update",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 122,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.83ae8301a449": {
+    "english": "Thank-you message",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 123,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6e7a3632dc6f": {
+    "english": "Personalized message",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 127,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e82904cb0ce0": {
+    "english": "Available fields:",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 139,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d4410d72f5dc": {
+    "english": "{{guestName}}, {{eventTitle}}, {{eventDate}}, {{eventTime}}, {{venueName}}, {{invitationLink}}",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 139,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6e46e41095f5": {
+    "english": "Planned reminder time",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 142,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.760872b7b20a": {
+    "english": "Manual reminder preferences saved.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 165,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4b5405013dc6": {
+    "english": "Save reminder preferences",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 169,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.43a35f6bda17": {
+    "english": "Guests requiring follow-up",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 173,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.842c440cc6be": {
+    "english": "Reminder RSVP filter",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 175,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3b3b562d0922": {
+    "english": "Not responded",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 180,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a00fb0c50741": {
+    "english": "Accepted",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 181,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dce083a2c47f": {
+    "english": "Declined",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 182,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.da318d11754e": {
+    "english": "Maybe",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 183,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a05e0927c985": {
+    "english": "All contactable personal guests",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 184,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.02e2af5b4e20": {
+    "english": "Guests who opted out and public responders without a private contact record are excluded.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 187,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c8708694f10f": {
+    "english": "Choose an event to see its follow-up list.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 193,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4af206fee8e3": {
+    "english": "No matching guests require follow-up.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 195,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d1c88109df14": {
+    "english": "Prepare message for ",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 231,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.672711b4d666": {
+    "english": "Message for ",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 241,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4d4407e9e8ae": {
+    "english": "Prepared message",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 245,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7bb129eab244": {
+    "english": "Message copied.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 254,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.95d8a7b46908": {
+    "english": "Select and copy the message from the field.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 255,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6147ab9beef4": {
+    "english": "Copy prepared message",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 258,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5ac4b2d11037": {
+    "english": "Open WhatsApp",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 266,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b1fa4b5c11a4": {
+    "english": "Prepared only. Send the message in WhatsApp to complete sharing.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 269,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f5c86679c1ad": {
+    "english": "No upcoming published events.",
+    "sources": [
+      {
+        "file": "src/pages/Reminders.tsx",
+        "line": 285,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.12b3f1a3e924": {
+    "english": "Changes saved.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 41,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ce1109d39859": {
+    "english": "Enter your current password to change credentials.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 49,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a406bb5c7ca5": {
+    "english": "A SPACE THAT FEELS LIKE YOU",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 59,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0fee4c6e23f4": {
+    "english": "Make yourself at home.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 60,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7afeb647d45a": {
+    "english": "Your profile, your workspace, your peace of mind.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 61,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6a8576dff840": {
+    "english": "Browser diagnostics",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 67,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2c235c245066": {
+    "english": "Export failure categories and sanitized page paths from this browser session. Message contents, guest links and contact details are excluded. Remote error monitoring is not configured.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 68,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.68d79a936a17": {
+    "english": "Export browser diagnostics",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 79,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.04c376f7f552": {
+    "english": "Workspace access",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 87,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.84be3f5d94d7": {
+    "english": "Your existing workspace access continues. Paid subscriptions are not active.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 88,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.57841286903e": {
+    "english": "View future plans",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 90,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.528d89ad72cb": {
+    "english": "Your profile",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 99,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c41c2a4f5624": {
+    "english": "The person behind the occasions.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 101,
+        "kind": "existing"
+      }
+    ]
+  },
+  "auth.fullName": {
+    "english": "Full name",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 120,
+        "kind": "existing"
+      }
+    ]
+  },
+  "common.email": {
+    "english": "Email address",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 130,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0c8209e72ec8": {
+    "english": "Save profile",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 133,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4d0260e6c3e7": {
+    "english": "Your workspace",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 141,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4f2ea19b878a": {
+    "english": "A private home for all your gatherings.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 143,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9619649d8dc1": {
+    "english": "Workspace name",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 159,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e583e76263b7": {
+    "english": "Only your account has access to this workspace and its private guest data.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 168,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6a9c1db1f5de": {
+    "english": "Save workspace",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 170,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1d85c11e1444": {
+    "english": "Account security",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 179,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0dbeb9970a1c": {
+    "english": "Keep your little corner of the world secure.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 181,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.72ed2bd767ce": {
+    "english": "Current password",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 186,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.594ff6116297": {
+    "english": "Verify the new email using the link we sent. Your current email stays active until verification.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 200,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bb0d06f56708": {
+    "english": "New email address",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 205,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3e01e3010ce7": {
+    "english": "Send verification email",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 217,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3dd9df4441fb": {
+    "english": "New password",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 233,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.fe45b4014135": {
+    "english": "Update password",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 244,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a4fe65264ef7": {
+    "english": "Language",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 251,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8027f432a7fb": {
+    "english": "Interface language",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 253,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a358615c19bd": {
+    "english": " - pending review",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 264,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4b19a42c48a5": {
+    "english": "English is active. Sinhala, Tamil, Spanish and French translations are being prepared for review.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 270,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.78b426f141a9": {
+    "english": "See you at the next occasion.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 276,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4517f0d27ee0": {
+    "english": "Sign out of this device when you’re done.",
+    "sources": [
+      {
+        "file": "src/pages/Settings.tsx",
+        "line": 277,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.78737181ea97": {
+    "english": "Join us as we celebrate our new opening.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 61,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.04231ec47118": {
+    "english": "START WITH A LITTLE INSPIRATION",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 67,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2e82535c2853": {
+    "english": "A design for every occasion.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 68,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f000baa0deb2": {
+    "english": "Thoughtfully made. Endlessly yours. Find your starting point.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 69,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c2662b3a128e": {
+    "english": "Upload your design",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 77,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f049756cfc57": {
+    "english": "Your private template is ready.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 116,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b2db92661afc": {
+    "english": "A little inspiration for your next big moment.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 129,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.113fdce7a96e": {
+    "english": "Every design is a canvas for your story.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 131,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.04b9835b977e": {
+    "english": "Search templates",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 147,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8c63167e0f4a": {
+    "english": "Name or occasion",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 152,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.dddce8fd2176": {
+    "english": "All colors",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 158,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8f67196bc3d5": {
+    "english": "Light palettes",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 159,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f28b1a6caa87": {
+    "english": "Dark palettes",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 160,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7e744141b40e": {
+    "english": "Style",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 164,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7009bdcf113b": {
+    "english": "All styles",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 166,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a60ef685b2ed": {
+    "english": "Illustrated",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 167,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e2f8e3586a17": {
+    "english": "Custom artwork",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 168,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bec69036aa27": {
+    "english": "Sort",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 172,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.250eee8ed574": {
+    "english": "Curated catalog",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 174,
+        "kind": "existing"
+      }
+    ]
+  },
+  "common.name": {
+    "english": "Name",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 175,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b954abdce984": {
+    "english": "Recently added custom designs",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 176,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3033ce280484": {
+    "english": "Favorites only",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 185,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.58f72e4aa68c": {
+    "english": "Use {{value0}}",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 235,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5e87a7bd5a63": {
+    "english": "Unfavorite",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 254,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ea713ecd8537": {
+    "english": "Favorite",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 255,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4abe2e057252": {
+    "english": "Private template cloned.",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 271,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5779f32fab00": {
+    "english": "Clone",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 279,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.351dd54e5327": {
+    "english": "Use template",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 287,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f949ac35d5e2": {
+    "english": "Make it yours ",
+    "sources": [
+      {
+        "file": "src/pages/Templates.tsx",
+        "line": 301,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8fd948ad411a": {
+    "english": "Scan or paste a valid personal invitation link.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 15,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.321b00856a31": {
+    "english": "Select a guest from a published event.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 30,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.de3aca9b69df": {
+    "english": "This guest needs a personal invitation and an accepted RSVP before check-in.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 34,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c5bb1f674a1c": {
+    "english": "This personal invitation is no longer active.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 48,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d3c398089aa1": {
+    "english": "Only guests with an accepted RSVP can be checked in.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 50,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b10ece7051d4": {
+    "english": "This invitation does not belong to your workspace.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 65,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.d16e94b4cfa5": {
+    "english": "This is a reusable public link. Use a personal guest QR code for check-in.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 67,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ec1bd131f994": {
+    "english": "Enter a reason of up to 300 characters and a valid arrival count.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 88,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.518090593f92": {
+    "english": "Choose a guest from a published event.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 100,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.623af4a9aefe": {
+    "english": "Arrival count cannot exceed the guest's allowed count.",
+    "sources": [
+      {
+        "file": "src/services/checkInService.ts",
+        "line": 104,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4e38c6b6f2b8": {
+    "english": "Save your invitation before creating a version.",
+    "sources": [
+      {
+        "file": "src/services/designVersionService.ts",
+        "line": 13,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.aef338c84f5e": {
+    "english": "Enter a name and allow between 1 and 20 attendees.",
+    "sources": [
+      {
+        "file": "src/services/guestService.ts",
+        "line": 37,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6c4e672c44a7": {
+    "english": "A guest with this phone number already exists for this event. Edit the existing guest instead.",
+    "sources": [
+      {
+        "file": "src/services/guestService.ts",
+        "line": 48,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9fc702f359cd": {
+    "english": "Publish this event before generating guest links.",
+    "sources": [
+      {
+        "file": "src/services/guestService.ts",
+        "line": 73,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e2746e65aed9": {
+    "english": "Enter a valid timezone, such as Asia/Colombo.",
+    "sources": [
+      {
+        "file": "src/services/invitationService.ts",
+        "line": 23,
+        "kind": "existing"
+      },
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 40,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b0f71cf0b75d": {
+    "english": "Save and publish this invitation first.",
+    "sources": [
+      {
+        "file": "src/services/publicLinkService.ts",
+        "line": 9,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.bf2f28985c03": {
+    "english": "Publish this invitation to enable public responses.",
+    "sources": [
+      {
+        "file": "src/services/publicLinkService.ts",
+        "line": 15,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9878dce8fc11": {
+    "english": "Choose an event and a message of up to 2,000 characters.",
+    "sources": [
+      {
+        "file": "src/services/reminderService.ts",
+        "line": 14,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.433e6437f53d": {
+    "english": "Choose a valid reminder date and time.",
+    "sources": [
+      {
+        "file": "src/services/reminderService.ts",
+        "line": 19,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.287d3cb2b6f3": {
+    "english": "Choose a PNG, JPG or WEBP image smaller than 5 MB.",
+    "sources": [
+      {
+        "file": "src/services/uploadService.ts",
+        "line": 14,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.30b2b0169428": {
+    "english": "Save the invitation before uploading music.",
+    "sources": [
+      {
+        "file": "src/services/uploadService.ts",
+        "line": 50,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.4730eacc3312": {
+    "english": "Choose an MP3, OGG or WAV file under 10 MB.",
+    "sources": [
+      {
+        "file": "src/services/uploadService.ts",
+        "line": 55,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9aa2fb0a8a7e": {
+    "english": "CSV contains an unclosed quote.",
+    "sources": [
+      {
+        "file": "src/utils/csv.ts",
+        "line": 26,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2c663947e52f": {
+    "english": "CSV needs a header and at least one guest.",
+    "sources": [
+      {
+        "file": "src/utils/csv.ts",
+        "line": 29,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.0a6c574f2211": {
+    "english": "Import up to 500 guests at a time.",
+    "sources": [
+      {
+        "file": "src/utils/csv.ts",
+        "line": 30,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e59d36dca3b3": {
+    "english": "Guest names, category and meal preferences must be 160 characters or fewer.",
+    "sources": [
+      {
+        "file": "src/utils/guestProfile.ts",
+        "line": 31,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3a89f9e8b5ca": {
+    "english": "Use up to 500 characters for dietary restrictions and 2,000 for private notes.",
+    "sources": [
+      {
+        "file": "src/utils/guestProfile.ts",
+        "line": 36,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.759985038d1a": {
+    "english": "Use up to 20 tags of 32 characters each.",
+    "sources": [
+      {
+        "file": "src/utils/guestProfile.ts",
+        "line": 38,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8a054d4e673b": {
+    "english": "Planned adults and children must be whole numbers within the allowed guest count.",
+    "sources": [
+      {
+        "file": "src/utils/guestProfile.ts",
+        "line": 45,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.70230b9110d1": {
+    "english": "Enter a valid international phone number, including + and country code.",
+    "sources": [
+      {
+        "file": "src/utils/index.ts",
+        "line": 7,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a5b309b35df8": {
+    "english": "Enter valid latitude and longitude.",
+    "sources": [
+      {
+        "file": "src/utils/index.ts",
+        "line": 20,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.633d57c1d2b9": {
+    "english": "Use a secure Google Maps link.",
+    "sources": [
+      {
+        "file": "src/utils/index.ts",
+        "line": 41,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5c28851944ef": {
+    "english": "{{value0}} is required.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 17,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1d141bd9b87b": {
+    "english": "{{value0}} must be 160 characters or fewer.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 19,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.277083310fd1": {
+    "english": "Enter a valid event date.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 27,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8a5eaf7b4acf": {
+    "english": "Enter a valid start time.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 29,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ec124da8b3e0": {
+    "english": "End time must be later than start time on the event date.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 35,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.985fec4eba2e": {
+    "english": "Enter a secure Google Maps link (https://maps.google.com or https://maps.app.goo.gl/?).",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 46,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3500fa80ac0e": {
+    "english": "Enter latitude between -90 and 90; both coordinates are required.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 55,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.15a08ee925f5": {
+    "english": "Enter longitude between -180 and 180; both coordinates are required.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 61,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.45fe1249f6db": {
+    "english": "Enter a valid contact number; include the country code (for example +94).",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 70,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8c6283ed9ee9": {
+    "english": "Use 2,000 characters or fewer.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 72,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.81473af118e0": {
+    "english": "Enter a valid RSVP deadline in the event timezone.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 74,
+        "kind": "existing"
+      },
+      {
+        "file": "src/utils/publishedSnapshot.ts",
+        "line": 39,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.97fb26c54e69": {
+    "english": "Enter a secure website address starting with https://.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 81,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.9fd21af1973d": {
+    "english": "Use 300 characters or fewer.",
+    "sources": [
+      {
+        "file": "src/utils/invitationValidation.ts",
+        "line": 87,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b9094cb6f16b": {
+    "english": "This guest needs a valid WhatsApp number.",
+    "sources": [
+      {
+        "file": "src/utils/reminders.ts",
+        "line": 28,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.b504b662563f": {
+    "english": "Please answer this question.",
+    "sources": [
+      {
+        "file": "src/utils/rsvpQuestions.ts",
+        "line": 56,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.6fbcb764ac0f": {
+    "english": "Enter a valid answer using the available choices or bounds.",
+    "sources": [
+      {
+        "file": "src/utils/rsvpQuestions.ts",
+        "line": 77,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.699fd1d3ab41": {
+    "english": "This form has changed. Reload the invitation and try again.",
+    "sources": [
+      {
+        "file": "src/utils/rsvpQuestions.ts",
+        "line": 80,
+        "kind": "existing"
+      }
+    ]
+  }
+}

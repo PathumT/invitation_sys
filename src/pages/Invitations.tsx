@@ -1,3 +1,4 @@
+import { uiText } from "../i18n/uiText";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -29,13 +30,13 @@ export default function Invitations() {
     <>
       <div className="page-heading">
         <div>
-          <span className="eyebrow">BIG DAYS & LITTLE GATHERINGS</span>
-          <h1>My invitations</h1>
-          <p>A home for every occasion you’re bringing to life.</p>
+          <span className="eyebrow">{uiText("ui.d046de14c639")}</span>
+          <h1>{uiText("nav.invitations")}</h1>
+          <p>{uiText("ui.00d82df7da24")}</p>
         </div>
         <Link to="/invitations/new" className="button primary">
           <Plus size={17} />
-          Create invitation
+          {uiText("invitation.create")}
         </Link>
       </div>
       <div className="filter-bar">
@@ -46,15 +47,15 @@ export default function Invitations() {
               key={s}
               onClick={() => setStatus(s)}
             >
-              {s === "all" ? "All invitations" : s}
+              {s === "all" ? uiText("ui.ef51660eb5e1") : s}
             </button>
           ))}
         </div>
         <div className="search-input">
           <Search size={17} />
           <input
-            aria-label="Search invitations"
-            placeholder="Find an occasion…"
+            aria-label={uiText("ui.4ae613ba820d")}
+            placeholder={uiText("ui.1de712140d0b")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -62,7 +63,7 @@ export default function Invitations() {
       </div>
       {error && <p className="error-banner">{error}</p>}
       {loading ? (
-        <div className="skeleton">Loading your occasions…</div>
+        <div className="skeleton">{uiText("ui.f36d4708595b")}</div>
       ) : (
         <div className="event-grid library-grid">
           {filtered.map((e) => (
@@ -80,17 +81,21 @@ export default function Invitations() {
                 </p>
                 <p>
                   <Users size={14} />
-                  {guests.filter((g) => g.invitationId === e.id).length} guests
+                  {guests.filter((g) => g.invitationId === e.id).length}
+                  {uiText("ui.d68761f770a1")}
                 </p>
                 <div className="card-actions">
                   <Link
                     to={`/invitations/${e.id}/guests`}
                     className="text-link"
                   >
-                    Manage guests <ArrowUpRight size={15} />
+                    {uiText("ui.5388f68999c8")}
+                    <ArrowUpRight size={15} />
                   </Link>
                   <button
-                    aria-label={`Delete ${e.title}`}
+                    aria-label={uiText("ui.50256b3995d6", {
+                      value0: String(e.title),
+                    })}
                     className="icon-button danger-text"
                     onClick={() => setRemove(e.id)}
                   >
@@ -106,29 +111,27 @@ export default function Invitations() {
             </span>
             <h3>
               {events.length
-                ? "Make another memory."
-                : "Your first occasion awaits."}
+                ? uiText("ui.4cf100fcd5ea")
+                : uiText("ui.0cd70885132f")}
             </h3>
             <p>
-              Choose a design, add your details,
+              {uiText("ui.3fad2d03734e")}
               <br />
-              and make it yours.
+              {uiText("ui.8f7ecc2a4f3e")}
             </p>
             <b>
-              Create invitation <ArrowUpRight size={15} />
+              {uiText("ui.f063f6bf7add")}
+              <ArrowUpRight size={15} />
             </b>
           </Link>
         </div>
       )}
       {remove && (
-        <Modal title="Delete this invitation?" onClose={() => setRemove("")}>
-          <p>
-            This revokes its public guest links and removes the event and guest
-            list. This cannot be undone.
-          </p>
+        <Modal title={uiText("ui.0e5d7537b52a")} onClose={() => setRemove("")}>
+          <p>{uiText("ui.a13604ce30a7")}</p>
           <div className="modal-actions">
             <button className="button outline" onClick={() => setRemove("")}>
-              Keep invitation
+              {uiText("ui.1de10d002022")}
             </button>
             <button
               disabled={busy}
@@ -138,7 +141,7 @@ export default function Invitations() {
                 try {
                   await deleteInvitation(remove);
                   setRemove("");
-                  toast.success("Invitation deleted.");
+                  toast.success(uiText("ui.d3169492c581"));
                 } catch (e) {
                   toast.error(errorMessage(e));
                 } finally {
@@ -146,7 +149,7 @@ export default function Invitations() {
                 }
               }}
             >
-              {busy ? "Deleting…" : "Delete invitation"}
+              {busy ? uiText("ui.43b5894c3e4e") : uiText("ui.6daff779d26e")}
             </button>
           </div>
         </Modal>

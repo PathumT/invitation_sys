@@ -1,3 +1,4 @@
+import { uiText } from "../../i18n/uiText";
 import { useEffect, useRef, useId, type ReactNode } from "react";
 import { X } from "lucide-react";
 export function Modal({
@@ -41,7 +42,7 @@ export function Modal({
       <div className="modal-head">
         <h2 id={titleId}>{title}</h2>
         <button
-          aria-label="Close dialog"
+          aria-label={uiText("ui.c8df66c5fe3f")}
           className="icon-button"
           onClick={onClose}
         >

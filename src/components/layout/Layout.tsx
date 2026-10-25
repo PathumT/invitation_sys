@@ -1,3 +1,11 @@
+import { uiText } from "../../i18n/uiText";
+import { useTranslation } from "react-i18next";
+import {
+  defaultTenantBrand,
+  tenantBrandError,
+  brandHover,
+} from "../../utils/tenantBrand";
+import type { CSSProperties } from "react";
 import { WorkspaceProvider } from "../../hooks/useWorkspace";
 import { WorkspaceHeader } from "../dashboard/WorkspaceHeader";
 import { starterTemplates } from "../../services/templateService";
@@ -16,6 +24,8 @@ import {
   Mail,
   Palette,
   Users,
+  ScanLine,
+  BellRing,
   ChartNoAxesCombined,
   Settings,
   ArrowUpRight,
@@ -35,11 +45,13 @@ import { useAuth } from "../../contexts/AuthContext";
 import { logout } from "../../services/authService";
 import { toast } from "sonner";
 const links = [
-  ["/", "Overview", LayoutDashboard],
-  ["/invitations", "My invitations", Mail],
-  ["/templates", "Template library", Palette],
-  ["/guests", "Guest list", Users],
-  ["/analytics", "Analytics", ChartNoAxesCombined],
+  ["/", "nav.overview", LayoutDashboard],
+  ["/invitations", "nav.invitations", Mail],
+  ["/templates", "nav.templates", Palette],
+  ["/guests", "nav.guests", Users],
+  ["/analytics", "nav.analytics", ChartNoAxesCombined],
+  ["/check-in", "nav.checkIn", ScanLine],
+  ["/reminders", "nav.reminders", BellRing],
 ] as const;
 export function Layout() {
   return (
@@ -51,6 +63,7 @@ export function Layout() {
   );
 }
 function WorkspaceLayout() {
+  const { t } = useTranslation();
   const reduced = useReducedMotion();
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(
@@ -80,14 +93,21 @@ function WorkspaceLayout() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open, mobile]);
   const { user } = useAuth();
+  const [brand, setBrand] = useState(defaultTenantBrand);
   const [workspaceName, setWorkspaceName] = useState("My workspace");
   useEffect(
     () =>
       user
         ? onSnapshot(
             doc(db, "tenants", user.uid),
-            (snapshot) =>
-              setWorkspaceName(snapshot.data()?.name || "My workspace"),
+            (snapshot) => {
+              setWorkspaceName(snapshot.data()?.name || "My workspace");
+              const next = {
+                ...defaultTenantBrand,
+                ...snapshot.data()?.branding,
+              };
+              setBrand(tenantBrandError(next) ? defaultTenantBrand : next);
+            },
             (error) => toast.error(error.message),
           )
         : undefined,
@@ -95,12 +115,22 @@ function WorkspaceLayout() {
   );
   const location = useLocation();
   const navigate = useNavigate();
-  const label =
-    [...links, ["/settings", "Settings", Settings] as const].find(
-      ([url]) => url === location.pathname,
-    )?.[1] || "Invitation studio";
+  const labelKey = [
+    ...links,
+    ["/settings", "nav.settings", Settings] as const,
+  ].find(([url]) => url === location.pathname)?.[1];
+  const label = labelKey ? t(labelKey) : "Invitation studio";
   return (
-    <div className="app-shell evently-workspace">
+    <div
+      className="app-shell evently-workspace"
+      style={
+        {
+          "--brand-primary": brand.primaryColor,
+          "--brand-primary-hover": brandHover(brand.primaryColor),
+          "--brand-gold": brand.accentColor,
+        } as CSSProperties
+      }
+    >
       <aside
         id="workspace-navigation"
         className={`sidebar ${open ? "is-open" : ""}`}
@@ -108,13 +138,13 @@ function WorkspaceLayout() {
         aria-hidden={mobile && !open}
       >
         <Link to="/" className="brand">
-          <Brand />
+          <Brand logo={brand.logoUrl} name={brand.displayName} />
         </Link>
         <button
           className="mobile close-sidebar icon-button"
           ref={menuClose}
           onClick={() => setOpen(false)}
-          aria-label="Close menu"
+          aria-label={uiText("ui.6ccd5c785604")}
         >
           <X />
         </button>
@@ -128,11 +158,11 @@ function WorkspaceLayout() {
           </span>
           <div>
             <strong>{workspaceName}</strong>
-            <small>Personal workspace</small>
+            <small>{uiText("ui.58ea5a145c6a")}</small>
           </div>
           <ArrowUpRight size={15} />
         </Link>
-        <p className="nav-label">WORKSPACE</p>
+        <p className="nav-label">{uiText("ui.5493ff8e9397")}</p>
         <nav>
           {links.map(([url, title, Icon]) => (
             <NavLink
@@ -142,13 +172,15 @@ function WorkspaceLayout() {
               onClick={() => setOpen(false)}
             >
               <Icon size={19} />
-              {title}
-              {url === "/templates" && <span className="nav-new">NEW</span>}
+              {t(title)}
+              {url === "/templates" && (
+                <span className="nav-new">{uiText("ui.a253ff09c5a8")}</span>
+              )}
             </NavLink>
           ))}
         </nav>
         <div className="sidebar-quick-create">
-          <p className="nav-label">QUICK CREATE</p>
+          <p className="nav-label">{uiText("ui.27c94593d9b2")}</p>
           {[
             { title: "Wedding", category: "Wedding", Icon: Heart },
             { title: "Birthday", category: "Birthday", Icon: Cake },
@@ -181,7 +213,7 @@ function WorkspaceLayout() {
         <div className="sidebar-bottom">
           <NavLink to="/settings" onClick={() => setOpen(false)}>
             <Settings size={19} />
-            Settings
+            {t("nav.settings")}
           </NavLink>
           <button
             className="logout"
@@ -190,12 +222,12 @@ function WorkspaceLayout() {
                 await logout();
                 navigate("/login");
               } catch {
-                toast.error("Could not sign out. Try again.");
+                toast.error(uiText("ui.c4eb2c87c1d2"));
               }
             }}
           >
             <LogOut size={18} />
-            Sign out
+            {t("nav.signOut")}
           </button>
           <div className="user-profile">
             <span className="user-avatar">
@@ -216,7 +248,7 @@ function WorkspaceLayout() {
         <header className="topbar">
           <div className="breadcrumb">
             <button
-              aria-label="Open menu"
+              aria-label={uiText("ui.b40b3713b43d")}
               ref={menuTrigger}
               aria-expanded={open}
               aria-controls="workspace-navigation"
@@ -225,7 +257,7 @@ function WorkspaceLayout() {
             >
               <Menu />
             </button>
-            <span>Workspace</span>
+            <span>{uiText("ui.87bb59ba2f92")}</span>
             <span>/</span>
             <strong>{label}</strong>
           </div>
@@ -240,8 +272,11 @@ function WorkspaceLayout() {
           <Outlet />
         </motion.main>
         <footer className="app-footer">
-          <span>Made for moments that matter.</span>
-          <span>Evently Invitations © {new Date().getFullYear()}</span>
+          <span>{brand.footerText}</span>
+          <span>
+            {uiText("ui.845ccac6bfd2")}
+            {new Date().getFullYear()}
+          </span>
         </footer>
       </div>
     </div>

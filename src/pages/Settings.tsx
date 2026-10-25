@@ -1,3 +1,10 @@
+import { uiText } from "../i18n/uiText";
+import { browserDiagnostics } from "../utils/diagnostics";
+import { download } from "../utils";
+import { TenantBrandingSettings } from "../components/TenantBrandingSettings";
+import { TeamReadiness } from "../components/TeamReadiness";
+import { Link } from "react-router-dom";
+import { localeCatalog, localeIsReady } from "../i18n";
 import { Button } from "../components/ui/button";
 import { useState, useEffect } from "react";
 import {
@@ -31,7 +38,7 @@ export default function Settings() {
     setBusy(true);
     try {
       await fn();
-      toast.success("Changes saved.");
+      toast.success(uiText("ui.12b3f1a3e924"));
     } catch (e) {
       toast.error(errorMessage(e));
     } finally {
@@ -39,8 +46,7 @@ export default function Settings() {
     }
   }
   async function reauth() {
-    if (!password)
-      throw new Error("Enter your current password to change credentials.");
+    if (!password) throw new Error(uiText("ui.ce1109d39859"));
     await reauthenticateWithCredential(
       auth.currentUser!,
       EmailAuthProvider.credential(user!.email!, password),
@@ -50,20 +56,49 @@ export default function Settings() {
     <>
       <div className="page-heading">
         <div>
-          <span className="eyebrow">A SPACE THAT FEELS LIKE YOU</span>
-          <h1>Make yourself at home.</h1>
-          <p>Your profile, your workspace, your peace of mind.</p>
+          <span className="eyebrow">{uiText("ui.a406bb5c7ca5")}</span>
+          <h1>{uiText("ui.0fee4c6e23f4")}</h1>
+          <p>{uiText("ui.7afeb647d45a")}</p>
         </div>
       </div>
       <div className="settings-layout">
+        <section className="panel settings-panel">
+          <div className="form-content">
+            <h2>{uiText("ui.6a8576dff840")}</h2>
+            <p className="helper">{uiText("ui.2c235c245066")}</p>
+            <button
+              className="button outline"
+              onClick={() =>
+                download(
+                  "evently-browser-diagnostics.json",
+                  JSON.stringify(browserDiagnostics(), null, 2),
+                  "application/json",
+                )
+              }
+            >
+              {uiText("ui.68d79a936a17")}
+            </button>
+          </div>
+        </section>
+        <TeamReadiness />
+        <TenantBrandingSettings />
+        <section className="panel settings-panel">
+          <div className="form-content">
+            <h2>{uiText("ui.04c376f7f552")}</h2>
+            <p>{uiText("ui.84be3f5d94d7")}</p>
+            <Link className="button outline" to="/plans">
+              {uiText("ui.57841286903e")}
+            </Link>
+          </div>
+        </section>
         <section className="panel settings-panel">
           <div className="panel-heading">
             <div>
               <h2>
                 <UserRound size={19} />
-                Your profile
+                {uiText("ui.528d89ad72cb")}
               </h2>
-              <p>The person behind the occasions.</p>
+              <p>{uiText("ui.c41c2a4f5624")}</p>
             </div>
           </div>
           <form
@@ -82,7 +117,7 @@ export default function Settings() {
             }}
           >
             <label>
-              Full name
+              {uiText("auth.fullName")}
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -92,10 +127,10 @@ export default function Settings() {
               />
             </label>
             <label>
-              Email address
+              {uiText("common.email")}
               <input value={user?.email || ""} disabled />
             </label>
-            <Button disabled={busy}>Save profile</Button>
+            <Button disabled={busy}>{uiText("ui.0c8209e72ec8")}</Button>
           </form>
         </section>
         <section className="panel settings-panel">
@@ -103,9 +138,9 @@ export default function Settings() {
             <div>
               <h2>
                 <Building2 size={19} />
-                Your workspace
+                {uiText("ui.4d0260e6c3e7")}
               </h2>
-              <p>A private home for all your gatherings.</p>
+              <p>{uiText("ui.4f2ea19b878a")}</p>
             </div>
           </div>
           <form
@@ -121,7 +156,7 @@ export default function Settings() {
             }}
           >
             <label>
-              Workspace name
+              {uiText("ui.9619649d8dc1")}
               <input
                 value={workspace}
                 onChange={(e) => setWorkspace(e.target.value)}
@@ -130,12 +165,9 @@ export default function Settings() {
                 maxLength={160}
               />
             </label>
-            <p className="helper">
-              Only your account has access to this workspace and its private
-              guest data.
-            </p>
+            <p className="helper">{uiText("ui.e583e76263b7")}</p>
             <button disabled={busy} className="button primary">
-              Save workspace
+              {uiText("ui.6a9c1db1f5de")}
             </button>
           </form>
         </section>
@@ -144,14 +176,14 @@ export default function Settings() {
             <div>
               <h2>
                 <LockKeyhole size={19} />
-                Account security
+                {uiText("ui.1d85c11e1444")}
               </h2>
-              <p>Keep your little corner of the world secure.</p>
+              <p>{uiText("ui.0dbeb9970a1c")}</p>
             </div>
           </div>
           <div className="form-content">
             <label>
-              Current password
+              {uiText("ui.72ed2bd767ce")}
               <input
                 type="password"
                 autoComplete="current-password"
@@ -165,14 +197,12 @@ export default function Settings() {
                 void action(async () => {
                   await reauth();
                   await verifyBeforeUpdateEmail(auth.currentUser!, email);
-                  toast.info(
-                    "Verify the new email using the link we sent. Your current email stays active until verification.",
-                  );
+                  toast.info(uiText("ui.594ff6116297"));
                 });
               }}
             >
               <label>
-                New email address
+                {uiText("ui.bb0d06f56708")}
                 <input
                   type="email"
                   value={email}
@@ -184,7 +214,7 @@ export default function Settings() {
                 disabled={busy || email === user?.email}
                 className="button outline"
               >
-                Send verification email
+                {uiText("ui.3e01e3010ce7")}
               </button>
             </form>
             <hr />
@@ -200,7 +230,7 @@ export default function Settings() {
               }}
             >
               <label>
-                New password
+                {uiText("ui.3dd9df4441fb")}
                 <input
                   type="password"
                   autoComplete="new-password"
@@ -211,21 +241,46 @@ export default function Settings() {
                 />
               </label>
               <button disabled={busy} className="button outline">
-                Update password
+                {uiText("ui.fe45b4014135")}
               </button>
             </form>
           </div>
         </section>
+        <section className="panel settings-panel">
+          <div className="form-content">
+            <h2>{uiText("ui.a4fe65264ef7")}</h2>
+            <label>
+              {uiText("ui.8027f432a7fb")}
+              <select defaultValue="en" aria-describedby="language-review-note">
+                {localeCatalog.map((locale) => (
+                  <option
+                    key={locale.code}
+                    value={locale.code}
+                    disabled={!localeIsReady(locale.code)}
+                  >
+                    {locale.name}
+                    {localeIsReady(locale.code)
+                      ? ""
+                      : uiText("ui.a358615c19bd")}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <p id="language-review-note" className="helper">
+              {uiText("ui.4b19a42c48a5")}
+            </p>
+          </div>
+        </section>
         <section className="panel settings-panel signout-panel">
           <LogOut size={25} />
-          <h2>See you at the next occasion.</h2>
-          <p>Sign out of this device when you’re done.</p>
+          <h2>{uiText("ui.78b426f141a9")}</h2>
+          <p>{uiText("ui.4517f0d27ee0")}</p>
           <button
             className="button outline"
             disabled={busy}
             onClick={() => action(logout)}
           >
-            Sign out
+            {uiText("nav.signOut")}
           </button>
         </section>
       </div>

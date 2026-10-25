@@ -1,3 +1,4 @@
+import { uiText } from "../../i18n/uiText";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -41,17 +42,19 @@ export function InvitationActions({
         }
       }}
     >
-      <summary aria-label={`Actions for ${event.title}`}>
+      <summary
+        aria-label={uiText("ui.ef2e64783891", { value0: String(event.title) })}
+      >
         <MoreHorizontal size={20} />
       </summary>
       <div className="invitation-menu-content">
         <Link to={`/invitations/${event.id}/edit`}>
           <Pencil size={15} />
-          Edit invitation
+          {uiText("ui.72207468a4de")}
         </Link>
         <Link to={`/invitations/${event.id}/preview`}>
           <Eye size={15} />
-          Preview invitation
+          {uiText("ui.c83ba6c7366e")}
         </Link>
         <button
           onClick={() => {
@@ -60,11 +63,11 @@ export function InvitationActions({
           }}
         >
           <Share2 size={15} />
-          Share invitation
+          {uiText("invitation.share")}
         </button>
         <Link to={`/invitations/${event.id}/guests`}>
           <Users size={15} />
-          Manage guests
+          {uiText("ui.fea69dc79995")}
         </Link>
         <button
           className="danger-text"
@@ -74,7 +77,7 @@ export function InvitationActions({
           }}
         >
           <Trash2 size={15} />
-          Delete invitation
+          {uiText("ui.6daff779d26e")}
         </button>
       </div>
     </details>

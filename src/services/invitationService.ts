@@ -1,3 +1,5 @@
+import { uiText } from "../i18n/uiText";
+import { publishedSnapshot } from "../utils/publishedSnapshot";
 import {
   addDoc,
   updateDoc,
@@ -14,11 +16,11 @@ import type { Invitation } from "../types";
 import { revokeGuest } from "./guestService";
 import { mapsUrl } from "../utils";
 export async function saveInvitation(event: Invitation) {
-  if (!event.title.trim()) throw new Error("Give your event a title first.");
+  if (!event.title.trim()) throw new Error(uiText("ui.b0ab622c4fdb"));
   try {
     new Intl.DateTimeFormat("en", { timeZone: event.timezone });
   } catch {
-    throw new Error("Enter a valid timezone, such as Asia/Colombo.");
+    throw new Error(uiText("ui.e2746e65aed9"));
   }
   const { id, ...data } = event;
   const payload = {
@@ -52,8 +54,7 @@ export async function refreshPublished(event: Invitation) {
   const current = await getDoc(tenantDocument("invitations", event.id));
   const publicShareId = current.data()?.publicShareId;
   if (publicShareId) {
-    const snapshot = { ...event };
-    delete snapshot.publicShareId;
+    const snapshot = publishedSnapshot(event);
     await updateDoc(doc(db, "publicInvitations", publicShareId), {
       publishedSnapshot: snapshot,
       status: event.status === "published" ? "active" : "revoked",
@@ -68,7 +69,7 @@ export async function refreshPublished(event: Invitation) {
       const data = g.data();
       if (data.shareId)
         b.update(doc(db, "publicInvitations", data.shareId), {
-          publishedSnapshot: event,
+          publishedSnapshot: publishedSnapshot(event),
           status: event.status === "published" ? "active" : "revoked",
         });
     }

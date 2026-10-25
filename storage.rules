@@ -3,6 +3,7 @@ service firebase.storage {
   match /b/{bucket}/o {
     function owner(uid) { return request.auth != null && request.auth.uid == uid && request.auth.token.firebase.sign_in_provider != 'anonymous'; }
     function validImage() { return request.resource.size < 5 * 1024 * 1024 && request.resource.contentType.matches('image/(png|jpeg|webp)'); }
+    function validAudio() { return request.resource.size < 10 * 1024 * 1024 && request.resource.contentType.matches('audio/(mpeg|ogg|wav)'); }
     match /tenants/{uid}/templates/{fileId} {
       allow get: if owner(uid);
       allow list: if false;
@@ -12,7 +13,7 @@ service firebase.storage {
     match /tenants/{uid}/invitations/{invitationId}/{fileId} {
       allow get: if owner(uid);
       allow list: if false;
-      allow create, update: if owner(uid) && validImage();
+      allow create, update: if owner(uid) && (validImage() || (fileId.matches("^audio-.*") && validAudio()));
       allow delete: if owner(uid);
     }
   }

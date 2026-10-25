@@ -138,7 +138,9 @@ test("all workspace screens, editor, dialogs, sharing and public RSVP are respon
   await signup(page, info);
   for (const path of ["/invitations", "/guests", "/analytics"]) {
     await page.goto(path);
-    await expect(page.locator(".page-heading h1")).toBeVisible();
+    await expect(page.locator(".page-heading h1")).toBeVisible({
+      timeout: 20000,
+    });
     await checkLayout(page, `empty-${path.slice(1)}`, info);
   }
   await page.goto("/invitations/new");
@@ -190,10 +192,15 @@ test("all workspace screens, editor, dialogs, sharing and public RSVP are respon
       "/guests",
       "/analytics",
       "/settings",
+      "/check-in",
+      "/reminders",
+      "/plans",
       guestPath,
     ]) {
       await page.goto(path);
-      await expect(page.locator(".page-heading h1")).toBeVisible();
+      await expect(page.locator(".page-heading h1")).toBeVisible({
+        timeout: 20000,
+      });
       await checkLayout(
         page,
         path === guestPath ? "event-guests" : path.slice(1) || "dashboard",

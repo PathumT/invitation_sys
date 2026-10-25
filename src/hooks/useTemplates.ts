@@ -6,7 +6,13 @@ import type { Design } from "../types";
 import { toast } from "sonner";
 export function useTemplates() {
   const [custom, setCustom] = useState<
-    { id: string; name: string; category: string; design: Design }[]
+    {
+      id: string;
+      name: string;
+      category: string;
+      design: Design;
+      createdAt?: { toMillis: () => number };
+    }[]
   >([]);
   useEffect(
     () =>
@@ -22,5 +28,11 @@ export function useTemplates() {
       ),
     [],
   );
-  return [...starterTemplates, ...custom];
+  return [
+    ...starterTemplates.map((t) => ({
+      ...t,
+      createdAt: undefined as { toMillis: () => number } | undefined,
+    })),
+    ...custom,
+  ];
 }

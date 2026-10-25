@@ -62,12 +62,15 @@ test("register → design → publish → guest → RSVP → live dashboard → 
     page.getByRole("heading", { name: /Hello, Alex/ }),
   ).toBeVisible();
   await page.getByRole("link", { name: /Template library/ }).click();
-  await expect(page.locator(".template-card")).toHaveCount(9);
-  await page
-    .locator(".template-art img")
-    .evaluateAll((images) =>
-      Promise.all(images.map((image) => (image as HTMLImageElement).decode())),
-    );
+  await expect(page.locator(".template-card")).toHaveCount(19);
+  await page.locator(".template-art img").evaluateAll((images) =>
+    Promise.all(
+      images.map((image) => {
+        (image as HTMLImageElement).loading = "eager";
+        return (image as HTMLImageElement).decode();
+      }),
+    ),
+  );
   await page.screenshot({
     path: "test-results/template-gallery.png",
     fullPage: true,
@@ -112,8 +115,61 @@ test("register → design → publish → guest → RSVP → live dashboard → 
     .getByLabel("WhatsApp number", { exact: true })
     .fill("+94771234567");
   await page.getByLabel("Allowed attendees").fill("2");
+  await page.getByText("Private guest details", { exact: true }).click();
+  await page.getByLabel("Guest category", { exact: true }).fill("Family");
+  await page.getByLabel("Planned adults", { exact: true }).fill("2");
+  await page
+    .getByLabel("Private notes", { exact: true })
+    .fill("PRIVATE-NOTE-DO-NOT-PUBLISH");
+  await page
+    .getByLabel("Guest tags (comma separated)", { exact: true })
+    .fill("Family,Evening");
   await page.getByRole("button", { name: "Save guest", exact: true }).click();
   await expect(page.getByText("Sarah Smith", { exact: true })).toBeVisible();
+  await page
+    .getByRole("checkbox", { name: "Select Sarah Smith", exact: true })
+    .check();
+  await page.getByLabel("Bulk tags", { exact: true }).fill("VIP");
+  await page.getByRole("button", { name: "Tag selected", exact: true }).click();
+  await expect(
+    page.getByText("Guest tags updated.", { exact: true }),
+  ).toBeVisible();
+  const guestListURL = page.url();
+  await page
+    .getByRole("link", { name: "Reminder center", exact: true })
+    .click();
+  await page
+    .getByLabel(/^Reminder event/)
+    .selectOption({ label: "Garden Celebration" });
+  await page
+    .getByLabel("Planned reminder time", { exact: true })
+    .fill("2026-12-14T09:00");
+  await page
+    .getByRole("button", { name: "Save reminder preferences", exact: true })
+    .click();
+  await expect(
+    page.getByText("Manual reminder preferences saved.", { exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", {
+      name: "Prepare message for Sarah Smith",
+      exact: true,
+    })
+    .click();
+  await expect(
+    page.getByRole("textbox", { name: "Prepared message", exact: true }),
+  ).toHaveValue(/Sarah Smith/);
+  await expect(
+    page.getByRole("link", { name: "Open WhatsApp", exact: true }),
+  ).toHaveAttribute("href", /^https:\/\/wa.me\/94771234567/);
+  await page.reload();
+  await page
+    .getByLabel(/^Reminder event/)
+    .selectOption({ label: "Garden Celebration" });
+  await expect(
+    page.getByLabel("Planned reminder time", { exact: true }),
+  ).toHaveValue("2026-12-14T09:00");
+  await page.goto(guestListURL);
   await page.context().grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.getByRole("button", { name: "Copy link for Sarah Smith" }).click();
   await expect(
@@ -144,6 +200,7 @@ test("register → design → publish → guest → RSVP → live dashboard → 
   await expect(
     guest.getByRole("link", { name: "View Location on Google Maps" }),
   ).toHaveAttribute("href", /google.com/);
+  await expect(guest.getByText("PRIVATE-NOTE-DO-NOT-PUBLISH")).toHaveCount(0);
   await expect(guest.getByLabel("How many will be joining?")).toHaveCount(0);
   await expect(
     guest.getByRole("button", { name: "Maybe", exact: true }),
@@ -186,6 +243,62 @@ test("register → design → publish → guest → RSVP → live dashboard → 
   await expect(
     page.getByText("RSVP name: Sarah Lee", { exact: true }),
   ).toBeVisible();
+  const guestPageURL = page.url();
+  await page
+    .getByRole("button", { name: "QR code for Sarah Smith", exact: true })
+    .click();
+  await expect(
+    page.getByRole("img", { name: "QR code for this invitation link" }),
+  ).toBeVisible();
+  for (const extension of ["PNG", "PDF"]) {
+    const qrDownload = page.waitForEvent("download");
+    await page
+      .getByRole("button", { name: `Download QR ${extension}`, exact: true })
+      .click();
+    expect((await qrDownload).suggestedFilename()).toBe(
+      `invitation-qr.${extension.toLowerCase()}`,
+    );
+  }
+  await page.getByRole("button", { name: "Close dialog", exact: true }).click();
+  await page.getByRole("link", { name: "Guest check-in", exact: true }).click();
+  await page.getByLabel("Personal invitation link", { exact: true }).fill(url);
+  await page
+    .getByRole("button", { name: "Confirm check-in", exact: true })
+    .click();
+  await expect(
+    page.getByRole("status").filter({ hasText: "checked in successfully" }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Confirm check-in", exact: true })
+    .click();
+  await expect(
+    page.getByRole("status").filter({ hasText: "already checked in" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Checked in", exact: true }),
+  ).toBeDisabled();
+  await page.setViewportSize({ width: 320, height: 800 });
+  await expect(page.locator("body")).toHaveJSProperty("scrollWidth", 320);
+  await page.screenshot({
+    path: "test-results/upgrade-check-in-mobile.png",
+    fullPage: true,
+  });
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.getByRole("link", { name: "Analytics", exact: true }).click();
+  await page
+    .getByLabel(/^Report event/)
+    .selectOption({ label: "Garden Celebration" });
+  await expect(page.locator(".report-summary")).toContainText(
+    "1 checked-in attendees",
+  );
+  const reportDownload = page.waitForEvent("download");
+  await page
+    .getByRole("button", { name: "Export report CSV", exact: true })
+    .click();
+  expect((await reportDownload).suggestedFilename()).toBe(
+    "evently-analytics.csv",
+  );
+  await page.goto(guestPageURL);
   await guest.reload();
   await expect(guest.getByLabel("Your name")).toHaveValue("Sarah Lee");
   await guest
