@@ -24,6 +24,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        // Keep shared React/runtime dependencies out of feature chunks. Pulling
+        // them in implicitly creates a canvas -> charts -> canvas TDZ cycle.
+        onlyExplicitManualChunks: true,
         manualChunks(id) {
           if (id.includes("node_modules")) {
             if (id.includes("konva")) return "canvas";
