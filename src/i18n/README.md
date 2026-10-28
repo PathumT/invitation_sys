@@ -2,7 +2,7 @@
 
 English remains the only active interface language. Sinhala (si), Tamil (ta), Spanish (es), and French (fr) are disabled drafts, as requested. Browser language and stored preferences cannot activate them.
 
-All five dictionaries contain 853 matching keys. Each non-English dictionary contains 38 draft core translations and 815 English placeholders awaiting translation and native-speaker review. These are not complete native translations. `review/pending.json` lists pending keys; `review/status.json` records counts and approval; `review/source-catalog.json` provides English text and source context.
+All five dictionaries contain 879 matching keys. Each non-English dictionary contains 38 draft core translations and 841 English placeholders awaiting translation and native-speaker review. These are not complete native translations. `review/pending.json` lists pending keys; `review/status.json` records counts and approval; `review/source-catalog.json` provides English text and source context.
 
 Authentication, navigation, sharing, public RSVP, and supported static page/error copy use the dictionaries. Date, time, and number formatting follows the reviewed locale; calendar-only dates retain their day across viewer timezones. Existing English formatting is preserved. Literal guest-template placeholders and interpolated user values remain literal.
 

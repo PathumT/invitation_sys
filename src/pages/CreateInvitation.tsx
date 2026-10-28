@@ -1,3 +1,4 @@
+import { OpeningAnimationPicker } from "../components/invitations/opening/OpeningAnimationPicker";
 import { uiText } from "../i18n/uiText";
 import { occasionMessage } from "../utils/designSuggestions";
 import { MiniSiteBuilder } from "../components/invitations/MiniSiteBuilder";
@@ -29,6 +30,7 @@ import {
   refreshPublished,
 } from "../services/invitationService";
 import { tenantDocument } from "../firebase/firestore";
+import { FieldTypography } from "../components/editor/FieldTypography";
 import { DesignPreview } from "../components/invitations/DesignPreview";
 import { mapsUrl, errorMessage } from "../utils";
 import { toast } from "sonner";
@@ -458,6 +460,7 @@ export default function CreateInvitation() {
                 />
                 {fieldError("message")}
               </label>
+              <FieldTypography field="message" label="Guest message" />
               <button
                 type="button"
                 className="button outline small"
@@ -531,6 +534,7 @@ export default function CreateInvitation() {
                 />
                 {fieldError("venueAddress")}
               </label>
+              <FieldTypography field="venueAddress" label="Venue address" />
               <div className="maps-link-field">
                 <div className="maps-link-heading">
                   <label htmlFor="event-google-maps">
@@ -673,34 +677,11 @@ export default function CreateInvitation() {
               </label>
               <fieldset className="invitation-experience-options">
                 <legend>{uiText("ui.ee60422d2ddf")}</legend>
-                <label>
-                  {uiText("ui.5d5ee1577500")}
-                  <select
-                    value={design.animation || "none"}
-                    onChange={(e) =>
-                      reset({
-                        ...design,
-                        animation: e.target.value as typeof design.animation,
-                      })
-                    }
-                  >
-                    {[
-                      "none",
-                      "envelope",
-                      "reveal",
-                      "fade",
-                      "slide",
-                      "confetti",
-                      "particles",
-                      "floral",
-                      "elegant",
-                    ].map((mode) => (
-                      <option key={mode} value={mode}>
-                        {mode === "none" ? uiText("ui.e7cdf3322cf3") : mode}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                <OpeningAnimationPicker
+                  design={design}
+                  event={event}
+                  onChange={(animation) => reset({ ...design, animation })}
+                />
                 <label>
                   <input
                     type="checkbox"

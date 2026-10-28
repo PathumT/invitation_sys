@@ -46,3 +46,8 @@ No production rules, deployment, .env changes, production migration or productio
 - `npm run i18n:check`: zero remaining supported static extractions, 853 keys. Four draft languages retain 815 pending placeholders each.
 
 Logs: `.tools/localization-regression.log`, `.tools/localization-final-check.log`, `.tools/localization-rules.log`, and `.tools/localization-build.log`. Earlier representative layout screenshots remain under the paths listed above. No production Firebase, Google sign-in, physical-device sharing, or native translated layout certification is implied.
+
+
+## Five invitation opening animations
+
+The five independent opening scenes, editor previews, persisted public selections, and legacy-style compatibility are implemented. Final checks: **84 unit tests passed**, lint and production build passed, and **6 browser workflows passed in one run** across Chromium, Firefox, and WebKit. These include all five real previews and public openings, responsive layouts, reduced motion, Skip/focus, RSVP, failed-chunk fallback, and the existing advanced editor/export/deadline regression. No new dependencies or production changes were made. See [opening animation guide](INVITATION_OPENINGS.md) for implementation details, screenshot paths, and verification limits. English remains active; the locale dictionaries now contain 879 matching keys with 841 pending placeholders per non-English draft.

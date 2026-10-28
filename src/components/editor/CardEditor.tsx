@@ -1,3 +1,4 @@
+import { fitInvitationText } from "../../utils/fitInvitationText";
 import { uiText } from "../../i18n/uiText";
 import { invitationFont } from "../../utils/invitationFont";
 import {
@@ -549,7 +550,8 @@ export function CardEditor({ event }: { event: Invitation }) {
                     {...props}
                     text={interpolate(e.text || "", event)}
                     fill={e.fill}
-                    fontSize={e.fontSize}
+                    fontSize={fitInvitationText(e, interpolate(e.text || "", event))}
+                    lineHeight={1.15}
                     fontFamily={invitationFont(e.fontFamily)}
                     align={e.align}
                   />

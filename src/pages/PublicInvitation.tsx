@@ -266,7 +266,7 @@ export function GuestExperience({
             {uiText("ui.dde9b4683a75")}
           </Link>
         )}
-        <InvitationPresentation event={e}>
+        <InvitationPresentation event={e} embedded={embedded}>
           <EventMiniSite event={e} rsvp={rsvp} />
         </InvitationPresentation>
       </div>
@@ -284,7 +284,7 @@ export function GuestExperience({
           </Link>
         </div>
       )}
-      <InvitationPresentation event={e}>
+      <InvitationPresentation event={e} embedded={embedded}>
         <article
           className="invitation-sheet"
           aria-label={uiText("ui.a8dd6a7adcfd", {

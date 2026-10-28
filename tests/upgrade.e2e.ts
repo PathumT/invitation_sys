@@ -41,7 +41,12 @@ test("advanced design exports, checkpoints, envelope and deadline remain usable 
   await page.getByLabel(/^Dress code/).fill("Smart casual");
   await page.getByLabel(/^Event website/).fill("https://example.com");
   await page.getByLabel("Show event countdown").check();
-  await page.getByLabel(/^Presentation/).selectOption("envelope");
+  await page
+    .getByRole("button", {
+      name: "Select Animation: Classic Envelope",
+      exact: true,
+    })
+    .click();
   await page.getByRole("button", { name: "Customize invitation" }).click();
   await expect(page.locator("canvas")).toBeVisible();
   const fonts = await page.evaluate(async () => [
@@ -51,7 +56,7 @@ test("advanced design exports, checkpoints, envelope and deadline remain usable 
   expect(fonts.every((count) => count > 0)).toBe(true);
   await page.getByRole("button", { name: "Text", exact: true }).click();
   await page
-    .getByRole("textbox", { name:"Text content", exact: true })
+    .getByRole("textbox", { name: "Text content", exact: true })
     .fill("Special note: {{dressCode}} / {{hostName}}");
   for (const [label, extension] of [
     ["JPEG", "jpg"],
@@ -89,7 +94,7 @@ test("advanced design exports, checkpoints, envelope and deadline remain usable 
   const guest = await guestContext.newPage();
   await guest.goto(url);
   await guest
-    .getByRole("button", { name: "Open invitation", exact: true })
+    .getByRole("button", { name: "Open Invitation", exact: true })
     .click();
   await expect(
     guest.getByText("The RSVP deadline has passed. Please contact your host.", {

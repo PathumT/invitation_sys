@@ -1,61 +1,32 @@
 import { uiText } from "../../i18n/uiText";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { InvitationOpeningRenderer } from "./opening/InvitationOpeningRenderer";
+import { resolveOpeningStyle } from "./opening/openingStyles";
 import type { Invitation } from "../../types";
 import { eventInstant, countdownParts } from "../../utils/eventTime";
 export function InvitationPresentation({
   event,
   children,
+  embedded = false,
 }: {
   event: Invitation;
   children: ReactNode;
+  embedded?: boolean;
 }) {
-  const reduce = useReducedMotion();
-  const preset = event.design.animation || "none";
-  const [opened, setOpened] = useState(false);
-  if (preset === "envelope" && !opened && !reduce)
-    return (
-      <div className="envelope-reveal">
-        <span aria-hidden="true">&#9993;</span>
-        <h1>{event.title}</h1>
-        <p>{uiText("ui.d6ed82a67709")}</p>
-        <button className="button primary" onClick={() => setOpened(true)}>
-          {uiText("ui.5aa56ab42916")}
-        </button>
-      </div>
-    );
-  if (preset === "none" || reduce) return <>{children}</>;
+  const style = resolveOpeningStyle(event.design.animation);
+  if (!style || embedded) return <>{children}</>;
   return (
-    <motion.div
-      className={`animated-invitation animation-${preset}`}
-      initial={{
-        opacity: 0,
-        y: preset === "slide" ? 30 : 0,
-        scale: preset === "reveal" || preset === "floral" ? 0.96 : 1,
-      }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.55 }}
+    <InvitationOpeningRenderer
+      key={`${event.id}-${style}`}
+      style={style}
+      title={event.title}
+      hostName={event.hostName}
     >
-      {["confetti", "particles", "floral"].includes(preset) && (
-        <div className="invitation-particles" aria-hidden="true">
-          {Array.from({ length: 16 }, (_, i) => (
-            <span
-              key={i}
-              style={{ left: `${i * 6.3}%`, animationDelay: `${i * 0.12}s` }}
-            >
-              {preset === "floral"
-                ? "\u2740"
-                : preset === "confetti"
-                  ? "\u25C6"
-                  : "\u2022"}
-            </span>
-          ))}
-        </div>
-      )}
       {children}
-    </motion.div>
+    </InvitationOpeningRenderer>
   );
 }
+
 export function EventCountdown({ event }: { event: Invitation }) {
   const [now, setNow] = useState(Date.now());
   const target = eventInstant(event.eventDate, event.eventTime, event.timezone);

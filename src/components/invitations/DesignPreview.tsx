@@ -1,3 +1,4 @@
+import { fitInvitationText } from "../../utils/fitInvitationText";
 import { uiText } from "../../i18n/uiText";
 import { invitationFont } from "../../utils/invitationFont";
 import type { Design, Invitation } from "../../types";
@@ -39,12 +40,13 @@ export function DesignPreview({
                 ? `${(el.shadowOffsetX || 0) / 4.8}cqw ${(el.shadowOffsetY || 0) / 4.8}cqw ${el.shadowBlur / 4.8}cqw ${el.shadowColor || "#000000"}`
                 : undefined,
               background: el.type === "rect" ? el.fill : undefined,
-              fontSize: `${el.fontSize / 4.8}cqw`,
+              fontSize: `${fitInvitationText(el, interpolate(el.text || "", event, guest)) / 4.8}cqw`,
               fontFamily: invitationFont(el.fontFamily),
               textAlign: el.align,
               transform: `rotate(${el.rotation}deg)`,
               transformOrigin: "top left",
               whiteSpace: "pre-wrap",
+              overflowWrap: "anywhere",
               lineHeight: 1.15,
               overflow: "hidden",
             }}

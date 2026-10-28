@@ -62,6 +62,11 @@ export interface DesignElement {
   crop?: { x: number; y: number; width: number; height: number };
 }
 export type AnimationPreset =
+  | "classic-envelope"
+  | "luxury-golden"
+  | "floral-bloom"
+  | "royal-curtain"
+  | "modern-minimal"
   | "none"
   | "envelope"
   | "reveal"

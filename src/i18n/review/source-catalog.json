@@ -554,7 +554,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 45,
+        "line": 46,
         "kind": "existing"
       }
     ]
@@ -564,7 +564,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 283,
+        "line": 284,
         "kind": "existing"
       }
     ]
@@ -574,7 +574,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 287,
+        "line": 288,
         "kind": "existing"
       }
     ]
@@ -584,7 +584,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 298,
+        "line": 299,
         "kind": "existing"
       },
       {
@@ -599,7 +599,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 298,
+        "line": 299,
         "kind": "existing"
       }
     ]
@@ -609,7 +609,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 304,
+        "line": 305,
         "kind": "existing"
       }
     ]
@@ -619,7 +619,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 312,
+        "line": 313,
         "kind": "existing"
       }
     ]
@@ -629,7 +629,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 323,
+        "line": 324,
         "kind": "existing"
       }
     ]
@@ -639,7 +639,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 329,
+        "line": 330,
         "kind": "existing"
       }
     ]
@@ -649,7 +649,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 339,
+        "line": 340,
         "kind": "existing"
       }
     ]
@@ -659,7 +659,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 344,
+        "line": 345,
         "kind": "existing"
       }
     ]
@@ -669,7 +669,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 345,
+        "line": 346,
         "kind": "existing"
       }
     ]
@@ -679,7 +679,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 346,
+        "line": 347,
         "kind": "existing"
       }
     ]
@@ -689,7 +689,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 347,
+        "line": 348,
         "kind": "existing"
       }
     ]
@@ -699,7 +699,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 356,
+        "line": 357,
         "kind": "existing"
       }
     ]
@@ -709,7 +709,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 364,
+        "line": 365,
         "kind": "existing"
       }
     ]
@@ -719,7 +719,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 370,
+        "line": 371,
         "kind": "existing"
       }
     ]
@@ -729,7 +729,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 376,
+        "line": 377,
         "kind": "existing"
       }
     ]
@@ -739,7 +739,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 383,
+        "line": 384,
         "kind": "existing"
       }
     ]
@@ -749,7 +749,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 390,
+        "line": 391,
         "kind": "existing"
       }
     ]
@@ -759,7 +759,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 397,
+        "line": 398,
         "kind": "existing"
       }
     ]
@@ -769,7 +769,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 404,
+        "line": 405,
         "kind": "existing"
       }
     ]
@@ -779,7 +779,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 411,
+        "line": 412,
         "kind": "existing"
       }
     ]
@@ -789,7 +789,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 628,
+        "line": 630,
         "kind": "existing"
       }
     ]
@@ -799,7 +799,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 629,
+        "line": 631,
         "kind": "existing"
       }
     ]
@@ -809,7 +809,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 629,
+        "line": 631,
         "kind": "existing"
       }
     ]
@@ -819,7 +819,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 634,
+        "line": 636,
         "kind": "existing"
       }
     ]
@@ -829,7 +829,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 635,
+        "line": 637,
         "kind": "existing"
       }
     ]
@@ -839,8 +839,13 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 648,
+        "line": 650,
         "kind": "existing"
+      },
+      {
+        "file": "src/components/editor/FieldTypography.tsx",
+        "line": 18,
+        "kind": "jsx-text"
       }
     ]
   },
@@ -849,8 +854,13 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 673,
+        "line": 675,
         "kind": "existing"
+      },
+      {
+        "file": "src/components/editor/FieldTypography.tsx",
+        "line": 23,
+        "kind": "jsx-text"
       }
     ]
   },
@@ -859,12 +869,12 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 685,
+        "line": 687,
         "kind": "existing"
       },
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 712,
+        "line": 714,
         "kind": "existing"
       },
       {
@@ -879,8 +889,13 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 694,
+        "line": 696,
         "kind": "existing"
+      },
+      {
+        "file": "src/components/editor/FieldTypography.tsx",
+        "line": 32,
+        "kind": "jsx-text"
       }
     ]
   },
@@ -889,7 +904,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 748,
+        "line": 750,
         "kind": "existing"
       }
     ]
@@ -899,7 +914,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 765,
+        "line": 767,
         "kind": "existing"
       }
     ]
@@ -909,7 +924,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 778,
+        "line": 780,
         "kind": "existing"
       }
     ]
@@ -919,7 +934,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 783,
+        "line": 785,
         "kind": "existing"
       }
     ]
@@ -929,7 +944,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 786,
+        "line": 788,
         "kind": "existing"
       }
     ]
@@ -939,7 +954,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 795,
+        "line": 797,
         "kind": "existing"
       }
     ]
@@ -949,7 +964,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 803,
+        "line": 805,
         "kind": "existing"
       }
     ]
@@ -959,7 +974,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 814,
+        "line": 816,
         "kind": "existing"
       }
     ]
@@ -969,7 +984,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 831,
+        "line": 833,
         "kind": "existing"
       }
     ]
@@ -979,7 +994,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 834,
+        "line": 836,
         "kind": "existing"
       }
     ]
@@ -989,7 +1004,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 875,
+        "line": 877,
         "kind": "existing"
       }
     ]
@@ -999,7 +1014,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 876,
+        "line": 878,
         "kind": "existing"
       }
     ]
@@ -1009,7 +1024,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 885,
+        "line": 887,
         "kind": "existing"
       }
     ]
@@ -1019,7 +1034,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 893,
+        "line": 895,
         "kind": "existing"
       }
     ]
@@ -1029,7 +1044,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 909,
+        "line": 911,
         "kind": "existing"
       }
     ]
@@ -1039,7 +1054,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 926,
+        "line": 928,
         "kind": "existing"
       }
     ]
@@ -1049,7 +1064,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 931,
+        "line": 933,
         "kind": "existing"
       }
     ]
@@ -1059,7 +1074,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 951,
+        "line": 953,
         "kind": "existing"
       }
     ]
@@ -1069,7 +1084,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 965,
+        "line": 967,
         "kind": "existing"
       }
     ]
@@ -1079,7 +1094,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 990,
+        "line": 992,
         "kind": "existing"
       }
     ]
@@ -1089,7 +1104,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 993,
+        "line": 995,
         "kind": "existing"
       }
     ]
@@ -1099,7 +1114,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 995,
+        "line": 997,
         "kind": "existing"
       }
     ]
@@ -1109,7 +1124,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 997,
+        "line": 999,
         "kind": "existing"
       }
     ]
@@ -1119,7 +1134,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 999,
+        "line": 1001,
         "kind": "existing"
       }
     ]
@@ -1129,7 +1144,7 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 1001,
+        "line": 1003,
         "kind": "existing"
       }
     ]
@@ -1139,8 +1154,38 @@
     "sources": [
       {
         "file": "src/components/editor/CardEditor.tsx",
-        "line": 1036,
+        "line": 1038,
         "kind": "existing"
+      }
+    ]
+  },
+  "ui.858db341abf2": {
+    "english": " appearance",
+    "sources": [
+      {
+        "file": "src/components/editor/FieldTypography.tsx",
+        "line": 16,
+        "kind": "jsx-text"
+      }
+    ]
+  },
+  "ui.3a9dfa58df63": {
+    "english": "Colour",
+    "sources": [
+      {
+        "file": "src/components/editor/FieldTypography.tsx",
+        "line": 29,
+        "kind": "jsx-text"
+      }
+    ]
+  },
+  "ui.55416ae2efd9": {
+    "english": "Text automatically shrinks to fit its card area. Use the design editor to resize or move the text area.",
+    "sources": [
+      {
+        "file": "src/components/editor/FieldTypography.tsx",
+        "line": 38,
+        "kind": "jsx-text"
       }
     ]
   },
@@ -1149,7 +1194,7 @@
     "sources": [
       {
         "file": "src/components/invitations/DesignPreview.tsx",
-        "line": 57,
+        "line": 59,
         "kind": "existing"
       }
     ]
@@ -1170,6 +1215,16 @@
       {
         "file": "src/components/invitations/EventMiniSite.tsx",
         "line": 61,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/invitations/opening/ClassicEnvelopeAnimation.tsx",
+        "line": 30,
+        "kind": "existing"
+      },
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 75,
         "kind": "existing"
       },
       {
@@ -1254,7 +1309,7 @@
       },
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 732,
+        "line": 713,
         "kind": "existing"
       }
     ]
@@ -1334,7 +1389,7 @@
       },
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 740,
+        "line": 721,
         "kind": "existing"
       },
       {
@@ -1474,37 +1529,12 @@
       }
     ]
   },
-  "ui.d6ed82a67709": {
-    "english": "A special invitation is waiting for you.",
-    "sources": [
-      {
-        "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 21,
-        "kind": "existing"
-      }
-    ]
-  },
-  "ui.5aa56ab42916": {
-    "english": "Open invitation",
-    "sources": [
-      {
-        "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 23,
-        "kind": "existing"
-      },
-      {
-        "file": "src/components/invitations/InvitationSharePanel.tsx",
-        "line": 165,
-        "kind": "existing"
-      }
-    ]
-  },
   "ui.4a9573bb0885": {
     "english": "The celebration has begun.",
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 75,
+        "line": 46,
         "kind": "existing"
       }
     ]
@@ -1514,7 +1544,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 81,
+        "line": 52,
         "kind": "existing"
       }
     ]
@@ -1524,7 +1554,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 85,
+        "line": 56,
         "kind": "existing"
       }
     ]
@@ -1534,7 +1564,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 89,
+        "line": 60,
         "kind": "existing"
       }
     ]
@@ -1544,7 +1574,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 93,
+        "line": 64,
         "kind": "existing"
       }
     ]
@@ -1554,7 +1584,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 97,
+        "line": 68,
         "kind": "existing"
       }
     ]
@@ -1564,7 +1594,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 134,
+        "line": 105,
         "kind": "existing"
       }
     ]
@@ -1574,7 +1604,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 134,
+        "line": 105,
         "kind": "existing"
       }
     ]
@@ -1584,7 +1614,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 137,
+        "line": 108,
         "kind": "existing"
       }
     ]
@@ -1594,7 +1624,7 @@
     "sources": [
       {
         "file": "src/components/invitations/InvitationPresentation.tsx",
-        "line": 149,
+        "line": 120,
         "kind": "existing"
       }
     ]
@@ -1815,6 +1845,16 @@
       {
         "file": "src/components/invitations/InvitationSharePanel.tsx",
         "line": 156,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.5aa56ab42916": {
+    "english": "Open invitation",
+    "sources": [
+      {
+        "file": "src/components/invitations/InvitationSharePanel.tsx",
+        "line": 165,
         "kind": "existing"
       }
     ]
@@ -2135,6 +2175,266 @@
       {
         "file": "src/components/invitations/MiniSiteBuilder.tsx",
         "line": 382,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3f79bb7b435b": {
+    "english": "e",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/ClassicEnvelopeAnimation.tsx",
+        "line": 53,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.39245a48b5ab": {
+    "english": "AN OCCASION TO REMEMBER",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/ClassicEnvelopeAnimation.tsx",
+        "line": 62,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c230dcfd2f34": {
+    "english": "TOGETHER IS A BEAUTIFUL PLACE",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/FloralBloomAnimation.tsx",
+        "line": 117,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a6951e289896": {
+    "english": "{{value0}} invitation opening",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/InvitationOpeningRenderer.tsx",
+        "line": 115,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3bc88da65178": {
+    "english": "Preparing your invitation...",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/InvitationOpeningRenderer.tsx",
+        "line": 124,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.3e3d2fa22c49": {
+    "english": "YOU ARE WARMLY INVITED",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/InvitationOpeningRenderer.tsx",
+        "line": 138,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1648332824af": {
+    "english": "Open Invitation",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/InvitationOpeningRenderer.tsx",
+        "line": 153,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c10f12735084": {
+    "english": "Opening your invitation...",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/InvitationOpeningRenderer.tsx",
+        "line": 161,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.944211b3200c": {
+    "english": "Skip Animation",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/InvitationOpeningRenderer.tsx",
+        "line": 165,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.eeca151716fd": {
+    "english": "AN EXCEPTIONAL CELEBRATION",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/LuxuryGoldenAnimation.tsx",
+        "line": 63,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.ccdac2271a61": {
+    "english": "A MOMENT WORTH SHARING",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/MinimalRevealAnimation.tsx",
+        "line": 25,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.f7cb07f4eb4b": {
+    "english": "Opening Animation",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 47,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8ea5affbc8b8": {
+    "english": "Give your guests a beautiful first impression.",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 48,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8df7155e2e42": {
+    "english": "No animation",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 56,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.14b049b1adf4": {
+    "english": " Selected",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 79,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.043a718774c5": {
+    "english": "s",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 87,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.1a02babac814": {
+    "english": "Play Preview: {{value0}}",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 97,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.a79cfcd221db": {
+    "english": "Play Preview",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 102,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8cac46f15abe": {
+    "english": "Select Animation: {{value0}}",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 109,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.57fd7a0cf33f": {
+    "english": "Selected",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 114,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.e49b0b35359b": {
+    "english": "Select Animation",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 115,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.7ef31a1033ef": {
+    "english": "{{value0}} preview",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 124,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.2aa73accb2ce": {
+    "english": "Your invitation is revealed",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 141,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.260e2643b063": {
+    "english": "Preview respects your device's reduced-motion setting.",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 146,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.c49b4964fe15": {
+    "english": "Replay animation",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/OpeningAnimationPicker.tsx",
+        "line": 152,
+        "kind": "existing"
+      }
+    ]
+  },
+  "ui.8c0443cae24b": {
+    "english": "THE HONOUR OF YOUR PRESENCE",
+    "sources": [
+      {
+        "file": "src/components/invitations/opening/RoyalCurtainAnimation.tsx",
+        "line": 23,
         "kind": "existing"
       }
     ]
@@ -3619,7 +3919,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 52,
+        "line": 54,
         "kind": "existing"
       }
     ]
@@ -3629,7 +3929,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 135,
+        "line": 137,
         "kind": "existing"
       }
     ]
@@ -3639,7 +3939,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 208,
+        "line": 210,
         "kind": "existing"
       }
     ]
@@ -3649,7 +3949,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 215,
+        "line": 217,
         "kind": "existing"
       },
       {
@@ -3664,7 +3964,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 216,
+        "line": 218,
         "kind": "existing"
       }
     ]
@@ -3674,7 +3974,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 220,
+        "line": 222,
         "kind": "existing"
       }
     ]
@@ -3684,7 +3984,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 229,
+        "line": 231,
         "kind": "existing"
       }
     ]
@@ -3694,7 +3994,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 273,
+        "line": 275,
         "kind": "existing"
       }
     ]
@@ -3704,7 +4004,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 276,
+        "line": 278,
         "kind": "existing"
       }
     ]
@@ -3714,7 +4014,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 281,
+        "line": 283,
         "kind": "existing"
       }
     ]
@@ -3724,7 +4024,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 288,
+        "line": 290,
         "kind": "existing"
       },
       {
@@ -3739,7 +4039,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 290,
+        "line": 292,
         "kind": "existing"
       }
     ]
@@ -3749,7 +4049,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 290,
+        "line": 292,
         "kind": "existing"
       }
     ]
@@ -3759,7 +4059,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 291,
+        "line": 293,
         "kind": "existing"
       }
     ]
@@ -3769,7 +4069,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 305,
+        "line": 307,
         "kind": "existing"
       }
     ]
@@ -3779,7 +4079,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 314,
+        "line": 316,
         "kind": "existing"
       },
       {
@@ -3799,7 +4099,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 316,
+        "line": 318,
         "kind": "existing"
       }
     ]
@@ -3809,7 +4109,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 317,
+        "line": 319,
         "kind": "existing"
       }
     ]
@@ -3819,7 +4119,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 341,
+        "line": 343,
         "kind": "existing"
       }
     ]
@@ -3829,7 +4129,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 343,
+        "line": 345,
         "kind": "existing"
       }
     ]
@@ -3839,7 +4139,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 396,
+        "line": 398,
         "kind": "existing"
       }
     ]
@@ -3849,7 +4149,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 397,
+        "line": 399,
         "kind": "existing"
       }
     ]
@@ -3859,7 +4159,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 403,
+        "line": 405,
         "kind": "existing"
       }
     ]
@@ -3869,7 +4169,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 408,
+        "line": 410,
         "kind": "existing"
       }
     ]
@@ -3879,7 +4179,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 409,
+        "line": 411,
         "kind": "existing"
       }
     ]
@@ -3889,7 +4189,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 414,
+        "line": 416,
         "kind": "existing"
       }
     ]
@@ -3899,7 +4199,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 420,
+        "line": 422,
         "kind": "existing"
       }
     ]
@@ -3909,7 +4209,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 426,
+        "line": 428,
         "kind": "existing"
       }
     ]
@@ -3919,7 +4219,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 440,
+        "line": 442,
         "kind": "existing"
       }
     ]
@@ -3929,7 +4229,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 445,
+        "line": 447,
         "kind": "existing"
       }
     ]
@@ -3939,7 +4239,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 452,
+        "line": 454,
         "kind": "existing"
       }
     ]
@@ -3949,7 +4249,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 466,
+        "line": 469,
         "kind": "existing"
       }
     ]
@@ -3959,7 +4259,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 470,
+        "line": 473,
         "kind": "existing"
       }
     ]
@@ -3969,7 +4269,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 481,
+        "line": 484,
         "kind": "existing"
       }
     ]
@@ -3979,7 +4279,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 492,
+        "line": 495,
         "kind": "existing"
       }
     ]
@@ -3989,7 +4289,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 503,
+        "line": 506,
         "kind": "existing"
       }
     ]
@@ -3999,7 +4299,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 509,
+        "line": 512,
         "kind": "existing"
       }
     ]
@@ -4009,7 +4309,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 514,
+        "line": 517,
         "kind": "existing"
       }
     ]
@@ -4019,7 +4319,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 516,
+        "line": 519,
         "kind": "existing"
       }
     ]
@@ -4029,7 +4329,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 526,
+        "line": 529,
         "kind": "existing"
       }
     ]
@@ -4039,7 +4339,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 537,
+        "line": 541,
         "kind": "existing"
       }
     ]
@@ -4049,7 +4349,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 546,
+        "line": 550,
         "kind": "existing"
       }
     ]
@@ -4059,7 +4359,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 555,
+        "line": 559,
         "kind": "existing"
       }
     ]
@@ -4069,7 +4369,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 564,
+        "line": 568,
         "kind": "existing"
       }
     ]
@@ -4079,7 +4379,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 569,
+        "line": 573,
         "kind": "existing"
       }
     ]
@@ -4089,7 +4389,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 582,
+        "line": 586,
         "kind": "existing"
       }
     ]
@@ -4099,7 +4399,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 596,
+        "line": 600,
         "kind": "existing"
       }
     ]
@@ -4109,7 +4409,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 606,
+        "line": 610,
         "kind": "existing"
       }
     ]
@@ -4119,7 +4419,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 616,
+        "line": 620,
         "kind": "existing"
       }
     ]
@@ -4129,7 +4429,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 622,
+        "line": 626,
         "kind": "existing"
       }
     ]
@@ -4139,7 +4439,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 627,
+        "line": 631,
         "kind": "existing"
       }
     ]
@@ -4149,7 +4449,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 629,
+        "line": 633,
         "kind": "existing"
       }
     ]
@@ -4159,7 +4459,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 662,
+        "line": 666,
         "kind": "existing"
       }
     ]
@@ -4169,7 +4469,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 665,
+        "line": 669,
         "kind": "existing"
       }
     ]
@@ -4179,27 +4479,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 675,
-        "kind": "existing"
-      }
-    ]
-  },
-  "ui.5d5ee1577500": {
-    "english": "Presentation",
-    "sources": [
-      {
-        "file": "src/pages/CreateInvitation.tsx",
-        "line": 677,
-        "kind": "existing"
-      }
-    ]
-  },
-  "ui.e7cdf3322cf3": {
-    "english": "Static invitation",
-    "sources": [
-      {
-        "file": "src/pages/CreateInvitation.tsx",
-        "line": 699,
+        "line": 679,
         "kind": "existing"
       }
     ]
@@ -4209,7 +4489,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 715,
+        "line": 696,
         "kind": "existing"
       }
     ]
@@ -4219,7 +4499,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 718,
+        "line": 699,
         "kind": "existing"
       }
     ]
@@ -4229,7 +4509,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 726,
+        "line": 707,
         "kind": "existing"
       },
       {
@@ -4244,7 +4524,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 755,
+        "line": 736,
         "kind": "existing"
       }
     ]
@@ -4254,7 +4534,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 758,
+        "line": 739,
         "kind": "existing"
       }
     ]
@@ -4264,7 +4544,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 773,
+        "line": 754,
         "kind": "existing"
       }
     ]
@@ -4274,7 +4554,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 784,
+        "line": 765,
         "kind": "existing"
       }
     ]
@@ -4284,7 +4564,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 789,
+        "line": 770,
         "kind": "existing"
       }
     ]
@@ -4294,7 +4574,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 818,
+        "line": 799,
         "kind": "existing"
       }
     ]
@@ -4304,7 +4584,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 824,
+        "line": 805,
         "kind": "existing"
       }
     ]
@@ -4314,7 +4594,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 830,
+        "line": 811,
         "kind": "existing"
       }
     ]
@@ -4324,7 +4604,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 832,
+        "line": 813,
         "kind": "existing"
       }
     ]
@@ -4334,7 +4614,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 838,
+        "line": 819,
         "kind": "existing"
       }
     ]
@@ -4344,7 +4624,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 847,
+        "line": 828,
         "kind": "existing"
       }
     ]
@@ -4354,7 +4634,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 848,
+        "line": 829,
         "kind": "existing"
       }
     ]
@@ -4364,7 +4644,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 857,
+        "line": 838,
         "kind": "existing"
       }
     ]
@@ -4374,7 +4654,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 866,
+        "line": 847,
         "kind": "existing"
       }
     ]
@@ -4384,7 +4664,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 873,
+        "line": 854,
         "kind": "existing"
       }
     ]
@@ -4394,7 +4674,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 887,
+        "line": 868,
         "kind": "existing"
       }
     ]
@@ -4404,7 +4684,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 894,
+        "line": 875,
         "kind": "existing"
       }
     ]
@@ -4414,7 +4694,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 916,
+        "line": 897,
         "kind": "existing"
       }
     ]
@@ -4424,7 +4704,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 919,
+        "line": 900,
         "kind": "existing"
       }
     ]
@@ -4434,7 +4714,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 921,
+        "line": 902,
         "kind": "existing"
       }
     ]
@@ -4444,7 +4724,7 @@
     "sources": [
       {
         "file": "src/pages/CreateInvitation.tsx",
-        "line": 928,
+        "line": 909,
         "kind": "existing"
       }
     ]
