@@ -1,3 +1,4 @@
+import { uiText } from "../i18n/uiText";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
@@ -94,17 +95,18 @@ export default function Dashboard() {
     eventTime: "5:00 PM",
     venueName: "Somewhere wonderful",
     venueAddress: "A place to come together",
-    message: "Join us for a beautiful celebration.",
+    message: uiText("ui.78fb6157cf22"),
   };
   return (
     <div className="premium-dashboard">
       <div className="page-heading dashboard-page-heading">
         <div>
-          <span className="eyebrow">YOUR INVITATION WORKSPACE</span>
+          <span className="eyebrow">{uiText("ui.c9449e7bb51a")}</span>
           <h1>
-            Hello, {user?.displayName?.trim().split(/\s+/)[0] || "there"}!
+            {uiText("ui.23429bd9ba98")}
+            {user?.displayName?.trim().split(/\s+/)[0] || "there"}!
           </h1>
-          <p>A little inspiration for your next great gathering.</p>
+          <p>{uiText("ui.00fc419a0a4a")}</p>
         </div>
         <span className="dashboard-today">
           <CalendarDays size={16} />
@@ -117,9 +119,12 @@ export default function Dashboard() {
       </div>
       {error && (
         <div className="error-banner" role="alert">
-          <span>We couldn't load your workspace. {error}</span>
+          <span>
+            {uiText("ui.dd383958a651")}
+            {error}
+          </span>
           <button className="button outline small" onClick={retry}>
-            Try again
+            {uiText("ui.d8b8392e2c54")}
           </button>
         </div>
       )}
@@ -132,23 +137,21 @@ export default function Dashboard() {
         <div className="premium-welcome-copy">
           <span className="welcome-kicker">
             <Sparkles size={13} />
-            LITTLE INVITATIONS. BEAUTIFUL POSSIBILITIES.
+            {uiText("ui.7a5899afc5ad")}
           </span>
           <h2>
-            Create beautiful invitations
-            <br className="desktop-line" /> for life's special moments.
+            {uiText("ui.1d8f5ac8bebd")}
+            <br className="desktop-line" />
+            {uiText("ui.891df35822f1")}
           </h2>
-          <p>
-            Design, personalize and share stunning invitations with the people
-            who matter most &mdash; all in one place.
-          </p>
+          <p>{uiText("ui.777275d82c9e")}</p>
           <div className="welcome-actions">
             <Link className="button primary" to="/invitations/new">
               <Plus size={16} />
-              Create New Invitation
+              {uiText("ui.464c1232790b")}
             </Link>
             <Link className="button welcome-secondary" to="/templates">
-              Explore Templates
+              {uiText("ui.2488c5d85119")}
               <ArrowRight size={16} />
             </Link>
           </div>
@@ -158,21 +161,21 @@ export default function Dashboard() {
           <div className="hero-envelope">
             <Leaf size={35} />
             <span>
-              A little joy,
+              {uiText("ui.047e5fa87071")}
               <br />
-              on its way.
+              {uiText("ui.5050864fdb91")}
             </span>
           </div>
           <div className="hero-invitation">
             <Leaf size={24} />
-            <small>YOU ARE INVITED</small>
+            <small>{uiText("ui.cfe1b4640f0e")}</small>
             <strong>
-              A moment
+              {uiText("ui.a1fc5e2c7d88")}
               <br />
-              to remember.
+              {uiText("ui.21e85d8ca2ac")}
             </strong>
             <span className="gold-line" />
-            <em>Let's celebrate together</em>
+            <em>{uiText("ui.95d01ea65039")}</em>
           </div>
           <span className="hero-star one">&#10023;</span>
           <span className="hero-star two">&#10023;</span>
@@ -180,7 +183,7 @@ export default function Dashboard() {
       </motion.section>
       <section
         className="premium-stats"
-        aria-label="Workspace statistics"
+        aria-label={uiText("ui.9770f595eb7e")}
         aria-busy={loading}
       >
         {[
@@ -230,7 +233,7 @@ export default function Dashboard() {
             {loading ? (
               <span
                 className="stat-placeholder"
-                aria-label="Loading statistic"
+                aria-label={uiText("ui.dfa545c245e2")}
               />
             ) : (
               <strong>{error ? "—" : value}</strong>
@@ -243,18 +246,18 @@ export default function Dashboard() {
         <section className="premium-panel recent-invitations">
           <div className="premium-panel-heading">
             <div>
-              <h2>Recent invitations</h2>
-              <p>Small beginnings. Unforgettable occasions.</p>
+              <h2>{uiText("ui.5b16328ccefa")}</h2>
+              <p>{uiText("ui.3e61a50bb6ee")}</p>
             </div>
             <Link to="/invitations" className="text-link">
-              View All
+              {uiText("ui.ff5573a6f287")}
               <ArrowUpRight size={15} />
             </Link>
           </div>
           {loading ? (
             <div
               className="invitation-skeletons"
-              aria-label="Loading invitations"
+              aria-label={uiText("ui.97a042ad492a")}
             >
               {[0, 1, 2].map((item) => (
                 <div className="invitation-skeleton" key={item} />
@@ -263,10 +266,10 @@ export default function Dashboard() {
           ) : error ? (
             <div className="dashboard-empty">
               <Mail size={25} />
-              <h3>Workspace unavailable</h3>
-              <p>We couldn't load your invitations. Please try again.</p>
+              <h3>{uiText("ui.f29d3f31dc6e")}</h3>
+              <p>{uiText("ui.5c4d9b21dfc2")}</p>
               <button className="button outline" onClick={retry}>
-                Try again
+                {uiText("ui.d8b8392e2c54")}
               </button>
             </div>
           ) : events.length ? (
@@ -281,7 +284,9 @@ export default function Dashboard() {
                     <Link
                       className="recent-invitation-art"
                       to={`/invitations/${event.id}/preview`}
-                      aria-label={`Preview ${event.title}`}
+                      aria-label={uiText("ui.128b618dc412", {
+                        value0: String(event.title),
+                      })}
                     >
                       <DesignPreview design={event.design} event={event} mini />
                     </Link>
@@ -300,19 +305,23 @@ export default function Dashboard() {
                         {eventDate(event.eventDate)}
                         <span>&middot;</span>
                         <Users size={13} />
-                        {eventGuests.length} guests
+                        {eventGuests.length}
+                        {uiText("ui.d68761f770a1")}
                       </p>
                       <div className="event-response-line">
                         <span>
-                          {eventSummary.responded} of {eventGuests.length}{" "}
-                          responded
+                          {eventSummary.responded}
+                          {uiText("ui.a4282e4b2298")}
+                          {eventGuests.length} {uiText("ui.42d72995406e")}
                         </span>
                         <b>{eventSummary.responseRate}%</b>
                       </div>
                       <progress
                         value={eventSummary.responded}
                         max={Math.max(1, eventGuests.length)}
-                        aria-label={`Response progress for ${event.title}`}
+                        aria-label={uiText("ui.8fad8ca7e1b8", {
+                          value0: String(event.title),
+                        })}
                       />
                     </div>
                     <InvitationActions
@@ -329,13 +338,11 @@ export default function Dashboard() {
               <span className="dashboard-empty-icon">
                 <Mail size={27} />
               </span>
-              <h3>Your next memory starts here</h3>
-              <p>
-                Create your first invitation and bring your people together.
-              </p>
+              <h3>{uiText("ui.005d30268f09")}</h3>
+              <p>{uiText("ui.31324866be76")}</p>
               <Link className="button primary" to="/invitations/new">
                 <Plus size={15} />
-                Create your first invitation
+                {uiText("ui.d0c6907a5067")}
               </Link>
             </div>
           )}
@@ -344,12 +351,12 @@ export default function Dashboard() {
           <section className="premium-panel rsvp-overview">
             <div className="premium-panel-heading">
               <div>
-                <h2>Who's joining you?</h2>
-                <p>Every reply, in one place.</p>
+                <h2>{uiText("ui.b4a0f6f81644")}</h2>
+                <p>{uiText("ui.d29f7751fe15")}</p>
               </div>
               <Link
                 to="/analytics"
-                aria-label="View RSVP analytics"
+                aria-label={uiText("ui.38b4054df9f8")}
                 className="icon-button"
               >
                 <ArrowUpRight size={17} />
@@ -357,11 +364,18 @@ export default function Dashboard() {
             </div>
             <div className="response-rate">
               <strong>
-                {loading || error ? "—" : `${summary.responseRate}%`}
+                {loading || error
+                  ? "—"
+                  : uiText("ui.cdffc1a8fa98", {
+                      value0: String(summary.responseRate),
+                    })}
               </strong>
-              <span>of your guests have responded</span>
+              <span>{uiText("ui.1b34f916afad")}</span>
             </div>
-            <div className="rsvp-stacked-bar" aria-label="RSVP distribution">
+            <div
+              className="rsvp-stacked-bar"
+              aria-label={uiText("ui.3cfbf341915a")}
+            >
               {[
                 { key: "accepted", value: summary.accepted },
                 { key: "declined", value: summary.declined },
@@ -395,26 +409,26 @@ export default function Dashboard() {
           <section className="premium-panel premium-activity">
             <div className="premium-panel-heading">
               <div>
-                <h2>Recent activity</h2>
-                <p>Good news from your guests.</p>
+                <h2>{uiText("ui.6cb44b56336a")}</h2>
+                <p>{uiText("ui.d2444a944bff")}</p>
               </div>
               <span className="activity-live">
                 <span />
-                Live
+                {uiText("ui.b64ac05f17e6")}
               </span>
             </div>
             {loading ? (
-              <div className="activity-loading" aria-label="Loading activity">
+              <div
+                className="activity-loading"
+                aria-label={uiText("ui.0acd8adfdd7a")}
+              >
                 <span />
                 <span />
                 <span />
               </div>
             ) : error ? (
               <div className="activity-quiet">
-                <p>
-                  Activity couldn't be loaded. Try again from the workspace
-                  error message.
-                </p>
+                <p>{uiText("ui.2298414142f9")}</p>
               </div>
             ) : activity.length ? (
               <div className="premium-activity-list">
@@ -447,12 +461,12 @@ export default function Dashboard() {
             ) : (
               <div className="activity-quiet">
                 <Clock size={23} />
-                <strong>A little quiet, for now</strong>
-                <p>Responses will appear here as your guests reply.</p>
+                <strong>{uiText("ui.d96c3fd531f7")}</strong>
+                <p>{uiText("ui.b9dade950d76")}</p>
               </div>
             )}
             <Link to="/guests" className="premium-panel-footer">
-              View guest list
+              {uiText("ui.9d2d2eb013c7")}
               <ArrowRight size={14} />
             </Link>
           </section>
@@ -461,8 +475,8 @@ export default function Dashboard() {
       <section className="dashboard-quick-section">
         <div className="dashboard-section-heading">
           <div>
-            <span className="eyebrow">MAKE SOMETHING MEANINGFUL</span>
-            <h2>A little shortcut to your next step</h2>
+            <span className="eyebrow">{uiText("ui.541937cf38bb")}</span>
+            <h2>{uiText("ui.862f429aaf60")}</h2>
           </div>
         </div>
         <div className="premium-quick-grid">
@@ -547,18 +561,18 @@ export default function Dashboard() {
       <section className="dashboard-template-section">
         <div className="dashboard-section-heading">
           <div>
-            <span className="eyebrow">A DESIGN FOR EVERY OCCASION</span>
-            <h2>Find a little inspiration</h2>
-            <p>Thoughtful templates, ready for your personal touch.</p>
+            <span className="eyebrow">{uiText("ui.c2678f35dc46")}</span>
+            <h2>{uiText("ui.a364e275bbb5")}</h2>
+            <p>{uiText("ui.a79908f20576")}</p>
           </div>
           <Link className="text-link" to="/templates">
-            Explore all templates
+            {uiText("ui.39c2fa5cfc32")}
             <ArrowRight size={15} />
           </Link>
         </div>
         <div
           className="premium-template-gallery"
-          aria-label="Invitation template inspiration"
+          aria-label={uiText("ui.6855cd382561")}
           tabIndex={0}
         >
           {gallery.map(({ occasion, template }) => (
@@ -569,7 +583,9 @@ export default function Dashboard() {
                   setPreviewId(template.id);
                   setPreviewOccasion(occasion);
                 }}
-                aria-label={`Preview ${occasion} template`}
+                aria-label={uiText("ui.91382b25e84a", {
+                  value0: String(occasion),
+                })}
               >
                 <DesignPreview
                   design={template.design}
@@ -578,7 +594,7 @@ export default function Dashboard() {
                 />
                 <span>
                   <Eye size={16} />
-                  Preview design
+                  {uiText("ui.e127649ca4a6")}
                 </span>
               </button>
               <div className="premium-template-info">
@@ -588,7 +604,7 @@ export default function Dashboard() {
                   className="text-link"
                   to={`/invitations/new?template=${encodeURIComponent(template.id)}&occasion=${encodeURIComponent(occasion)}`}
                 >
-                  Use Template
+                  {uiText("ui.6a0418f673c8")}
                   <ArrowRight size={14} />
                 </Link>
               </div>
@@ -598,14 +614,14 @@ export default function Dashboard() {
       </section>
       {shareOpen && (
         <Modal
-          title="Share a little joy"
+          title={uiText("ui.8b49078262a7")}
           onClose={() => setShareOpen(false)}
           className="dashboard-share-dialog"
         >
           {events.length ? (
             <>
               <label>
-                Choose an invitation
+                {uiText("ui.704e7e942736")}
                 <select
                   value={shareId}
                   onChange={(e) => setShareId(e.target.value)}
@@ -624,7 +640,7 @@ export default function Dashboard() {
                     className="text-link"
                     to={`/invitations/${shareEvent.id}/edit`}
                   >
-                    Edit or publish this invitation
+                    {uiText("ui.f47488076591")}
                     <ArrowRight size={15} />
                   </Link>
                 </>
@@ -633,13 +649,10 @@ export default function Dashboard() {
           ) : (
             <div className="dashboard-empty">
               <Share2 size={27} />
-              <h3>A beautiful invitation comes first</h3>
-              <p>
-                Create and publish an invitation, then share it with your
-                guests.
-              </p>
+              <h3>{uiText("ui.87855a185b2f")}</h3>
+              <p>{uiText("ui.52d726cc6987")}</p>
               <Link className="button primary" to="/invitations/new">
-                Create invitation
+                {uiText("invitation.create")}
                 <ArrowRight size={15} />
               </Link>
             </div>
@@ -648,14 +661,15 @@ export default function Dashboard() {
       )}
       {remove && (
         <Modal
-          title="Delete this invitation?"
+          title={uiText("ui.0e5d7537b52a")}
           onClose={() => {
             if (!busy) setRemove(null);
           }}
         >
           <p>
-            Delete <strong>{remove.title}</strong>? This revokes public links
-            and permanently removes the invitation and its guest list.
+            {uiText("ui.85941fb9c992")}
+            <strong>{remove.title}</strong>
+            {uiText("ui.4fd7b4e5734c")}
           </p>
           <div className="modal-actions">
             <button
@@ -663,7 +677,7 @@ export default function Dashboard() {
               disabled={busy}
               onClick={() => setRemove(null)}
             >
-              Keep invitation
+              {uiText("ui.1de10d002022")}
             </button>
             <button
               className="button danger"
@@ -673,7 +687,7 @@ export default function Dashboard() {
                 try {
                   await deleteInvitation(remove.id);
                   setRemove(null);
-                  toast.success("Invitation deleted.");
+                  toast.success(uiText("ui.d3169492c581"));
                 } catch (e) {
                   toast.error(errorMessage(e));
                 } finally {
@@ -681,7 +695,7 @@ export default function Dashboard() {
                 }
               }}
             >
-              {busy ? "Deleting..." : "Delete invitation"}
+              {busy ? uiText("ui.685ecb984ac2") : uiText("ui.6daff779d26e")}
             </button>
           </div>
         </Modal>
@@ -697,7 +711,7 @@ export default function Dashboard() {
             className="button primary full"
             to={`/invitations/new?template=${encodeURIComponent(preview.id)}&occasion=${encodeURIComponent(previewOccasion)}`}
           >
-            Use Template
+            {uiText("ui.6a0418f673c8")}
             <ArrowRight size={15} />
           </Link>
         </Modal>

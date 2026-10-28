@@ -1,3 +1,5 @@
+import { uiText } from "../i18n/uiText";
+import type { Invitation, Guest } from "../types";
 import { Link } from "react-router-dom";
 import {
   Users,
@@ -19,10 +21,19 @@ import { DesignPreview } from "../components/invitations/DesignPreview";
 import { format } from "date-fns";
 export default function Dashboard({
   analytics = false,
+  filtered,
 }: {
   analytics?: boolean;
+  filtered?: { events: Invitation[]; guests: Guest[] };
 }) {
-  const { events, guests, loading, error } = useWorkspace();
+  const {
+    events: allEvents,
+    guests: allGuests,
+    loading,
+    error,
+  } = useWorkspace();
+  const events = filtered?.events || allEvents,
+    guests = filtered?.guests || allGuests;
   const { user } = useAuth();
   const accepted = guests.filter((g) => g.rsvpStatus === "accepted").length,
     declined = guests.filter((g) => g.rsvpStatus === "declined").length,
@@ -51,14 +62,16 @@ export default function Dashboard({
     <>
       <div className="page-heading">
         <div>
-          <div className="eyebrow">YOUR WORKSPACE, AT A GLANCE</div>
+          <div className="eyebrow">{uiText("ui.8a5b4209c438")}</div>
           <h1>
             {analytics
-              ? "A little insight. A better gathering."
-              : `Hello, ${user?.displayName?.split(" ")[0] || "there"} `}
+              ? uiText("ui.00a21c8c1cde")
+              : uiText("ui.2b4d21337d47", {
+                  value0: String(user?.displayName?.split(" ")[0] || "there"),
+                })}
             {!analytics && <span className="greeting-flower">✳</span>}
           </h1>
-          <p>Here’s what’s happening with your invitations.</p>
+          <p>{uiText("ui.ef129578aa8f")}</p>
         </div>
         <div className="date-label">
           <CalendarDays size={16} />
@@ -70,17 +83,17 @@ export default function Dashboard({
         <div>
           <span className="banner-label">
             <span />
-            EVERY GREAT MOMENT STARTS HERE
+            {uiText("ui.09a1d802befa")}
           </span>
           <h2>
-            A reason to gather.
+            {uiText("ui.3e18b6c9cda2")}
             <br />
-            An invitation to remember.
+            {uiText("ui.019a8f62d6fd")}
           </h2>
-          <p>Turn your next occasion into something beautifully personal.</p>
+          <p>{uiText("ui.ebe3ceb3ed62")}</p>
           <Link className="button primary" to="/invitations/new">
             <Plus size={17} />
-            Create an invitation
+            {uiText("ui.1495a0b48d52")}
             <ArrowUpRight size={17} />
           </Link>
         </div>
@@ -88,27 +101,28 @@ export default function Dashboard({
           <div className="art-card back">
             <Leaf size={38} />
             <span>
-              together is
-              <br />a beautiful place
+              {uiText("ui.b4c524d6e692")}
+              <br />
+              {uiText("ui.975e61675e17")}
             </span>
           </div>
           <div className="art-card front">
             <span className="art-star">✳</span>
-            <small>THE PLEASURE OF YOUR COMPANY</small>
+            <small>{uiText("ui.de3ae44c6da1")}</small>
             <span>
-              You’re
+              {uiText("ui.6d4d224c45f7")}
               <br />
-              <em>invited.</em>
+              <em>{uiText("ui.b573e44bda25")}</em>
             </span>
             <div className="art-line" />
-            <small>LET’S MAKE A MEMORY</small>
+            <small>{uiText("ui.a16f1dcf6a6b")}</small>
           </div>
           <span className="art-spark">✧</span>
         </div>
       </section>
       <div className="section-title">
-        <h2>The big picture</h2>
-        <span className="subtle">Across all your events</span>
+        <h2>{uiText("ui.6a1c7bdd1527")}</h2>
+        <span className="subtle">{uiText("ui.d5cb1473ca4a")}</span>
       </div>
       <div className="stats-grid">
         {[
@@ -141,15 +155,16 @@ export default function Dashboard({
       {analytics && (
         <div className="metrics-strip">
           <span>
-            <b>{events.length}</b> total events
+            <b>{events.length}</b>
+            {uiText("ui.d319e5fa46b0")}
           </span>
           <span>
-            <b>{guests.filter((g) => g.shareId).length}</b> personalized
-            invitations
+            <b>{guests.filter((g) => g.shareId).length}</b>
+            {uiText("ui.991633af6993")}
           </span>
           <span>
             <b>{guests.filter((g) => g.shareStatus === "initiated").length}</b>{" "}
-            sharing initiated
+            {uiText("ui.cd3587a5501a")}
           </span>
           <span>
             <b>
@@ -159,7 +174,7 @@ export default function Dashboard({
                 0,
               )}
             </b>{" "}
-            attendees confirmed
+            {uiText("ui.4c2a8db78120")}
           </span>
         </div>
       )}
@@ -167,12 +182,12 @@ export default function Dashboard({
         <section className="panel response-panel">
           <div className="panel-heading">
             <div>
-              <h2>Who’s coming?</h2>
-              <p>A little look at your RSVPs</p>
+              <h2>{uiText("ui.60ab32671df4")}</h2>
+              <p>{uiText("ui.fd31db0b8dd8")}</p>
             </div>
             <span className="live-badge">
               <span />
-              Live
+              {uiText("ui.b64ac05f17e6")}
             </span>
           </div>
           <div className="chart-layout">
@@ -216,7 +231,7 @@ export default function Dashboard({
                     : 0}
                   %
                 </strong>
-                <span>responded</span>
+                <span>{uiText("ui.42d72995406e")}</span>
               </div>
             </div>
             <div className="chart-legend">
@@ -234,15 +249,15 @@ export default function Dashboard({
           <div className="panel-bottom">
             <Mail size={15} />
             {guests.length
-              ? `${pending} guests haven’t responded yet.`
-              : "Your first RSVP is the start of something lovely."}
+              ? uiText("ui.b4627de88259", { value0: String(pending) })
+              : uiText("ui.e752ec30b28d")}
           </div>
         </section>
         <section className="panel activity-panel">
           <div className="panel-heading">
             <div>
-              <h2>Fresh from your guests</h2>
-              <p>The latest little updates</p>
+              <h2>{uiText("ui.5a2e23e80637")}</h2>
+              <p>{uiText("ui.693d4fd0ec4d")}</p>
             </div>
             <span className="activity-symbol">↗</span>
           </div>
@@ -275,27 +290,30 @@ export default function Dashboard({
               <span className="empty-icon">
                 <Mail size={25} />
               </span>
-              <h3>A little quiet, for now.</h3>
+              <h3>{uiText("ui.da6aa9e55105")}</h3>
               <p>
-                Once your guests respond, their
+                {uiText("ui.7754ff39f3fb")}
                 <br />
-                latest updates will appear right here.
+                {uiText("ui.2ce7b9f14516")}
               </p>
             </div>
           )}
           <Link className="panel-bottom link-bottom" to="/guests">
-            View guest list
+            {uiText("ui.9d2d2eb013c7")}
             <ArrowRight size={15} />
           </Link>
         </section>
       </div>
       <div className="section-title">
         <div>
-          <h2>{analytics ? "Upcoming events" : "Your occasions"}</h2>
-          <p>Big days, small gatherings, and everything in between.</p>
+          <h2>
+            {analytics ? uiText("ui.df9110b56fb1") : uiText("ui.bd926c3a16c2")}
+          </h2>
+          <p>{uiText("ui.77a710ba9923")}</p>
         </div>
         <Link className="text-link" to="/invitations">
-          View all invitations <ArrowRight size={16} />
+          {uiText("ui.9b66b1fae3ba")}
+          <ArrowRight size={16} />
         </Link>
       </div>
       <div className="event-grid">
@@ -316,7 +334,8 @@ export default function Dashboard({
                 <CalendarDays size={14} />
                 {e.eventDate || "Date to be decided"}
                 <span>·</span>
-                {guests.filter((g) => g.invitationId === e.id).length} guests
+                {guests.filter((g) => g.invitationId === e.id).length}
+                {uiText("ui.d68761f770a1")}
               </p>
               <p>
                 <MapPin size={14} />
@@ -329,20 +348,21 @@ export default function Dashboard({
           <span>
             <Plus size={26} />
           </span>
-          <h3>Something to celebrate?</h3>
+          <h3>{uiText("ui.959c90b93aa6")}</h3>
           <p>
-            Your next great gathering
+            {uiText("ui.c7b3d900714f")}
             <br />
-            starts with an invitation.
+            {uiText("ui.0f6a87303e7e")}
           </p>
           <b>
-            Create invitation <ArrowRight size={15} />
+            {uiText("ui.f063f6bf7add")}
+            <ArrowRight size={15} />
           </b>
         </Link>
       </div>
       <div className="footnote">
         <Leaf size={16} />
-        <p>A thoughtful invitation goes a long way. Make someone’s day.</p>
+        <p>{uiText("ui.3a2b54636008")}</p>
       </div>
     </>
   );

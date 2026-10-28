@@ -10,15 +10,37 @@ service cloud.firestore {
     match /tenants/{uid} {
       allow read, delete: if owner(uid);
       allow create: if owner(uid) && request.resource.data.keys().hasOnly(['name','ownerId','createdAt']) && request.resource.data.ownerId == uid && request.resource.data.name is string && request.resource.data.createdAt == request.time;
-      allow update: if owner(uid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name']) && request.resource.data.name is string;
+      function validBranding() { let b = request.resource.data.get('branding', {}); return b is map && b.keys().hasOnly(['displayName','logoUrl','primaryColor','accentColor','footerText']) && b.get('displayName','') is string && b.get('displayName','').size() <= 160 && b.get('logoUrl','') is string && b.get('logoUrl','').size() <= 2048 && b.get('footerText','') is string && b.get('footerText','').size() <= 160 && b.get('primaryColor','#004b3d').matches('^#[a-fA-F0-9]{6}$') && b.get('accentColor','#c58b3e').matches('^#[a-fA-F0-9]{6}$'); }
+      allow update: if owner(uid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name','branding']) && request.resource.data.name is string && validBranding();
       match /invitations/{invitationId} {
         allow read, delete: if owner(uid);
         allow create, update: if owner(uid) && request.resource.data.title is string && request.resource.data.status in ['draft','published','archived'] && request.resource.data.design is map;
+        match /versions/{versionId} {
+          allow read, delete: if owner(uid);
+          allow create: if owner(uid) && request.resource.data.keys().hasOnly(['design','createdAt']) && request.resource.data.design is map && request.resource.data.createdAt == request.time;
+          allow update: if false;
+        }
         match /guests/{guestId} {
           allow read, delete: if owner(uid);
-          allow create, update: if owner(uid) && request.resource.data.name is string && request.resource.data.phoneNumber is string && request.resource.data.guestCountAllowed is int && request.resource.data.guestCountAllowed >= 1 && request.resource.data.guestCountAllowed <= 20;
+          function validGuest() { return request.resource.data.name is string && request.resource.data.phoneNumber is string && request.resource.data.guestCountAllowed is int && request.resource.data.guestCountAllowed >= 1 && request.resource.data.guestCountAllowed <= 20; }
+          allow create: if owner(uid) && validGuest() && !request.resource.data.keys().hasAny(['checkedInAt','checkedInBy','checkedInCount','checkedInOverrideReason']);
+          allow update: if owner(uid) && validGuest() && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['checkedInAt','checkedInBy','checkedInCount','checkedInOverrideReason']) || (request.resource.data.checkedInAt == request.time && request.resource.data.checkedInBy == uid && request.resource.data.get('checkedInCount',1) is int && request.resource.data.get('checkedInCount',1) >= 1 && request.resource.data.get('checkedInCount',1) <= request.resource.data.guestCountAllowed && request.resource.data.get('checkedInOverrideReason','') is string && request.resource.data.get('checkedInOverrideReason','').size() <= 300));
         }
       }
+      // Reserved trusted-server collections: browser clients cannot grant roles or paid access.
+      match /members/{memberUid} { allow read: if owner(uid) || (request.auth != null && request.auth.uid == memberUid && request.auth.token.firebase.sign_in_provider != 'anonymous'); allow write: if false; }
+      match /entitlements/{entitlementId} { allow read: if owner(uid); allow write: if false; }
+      match /teamInvitations/{invitationId} { allow read: if owner(uid); allow write: if false; }
+      match /reminderPreferences/{eventId} {
+        allow read, delete: if owner(uid);
+        allow create, update: if owner(uid) && request.resource.data.keys().hasOnly(['kind','template','scheduledFor','timezone','scheduledAt','deliveryMode','updatedAt']) && request.resource.data.kind in ['invitation','rsvp','event','venue','thanks'] && request.resource.data.template is string && request.resource.data.template.size() > 0 && request.resource.data.template.size() <= 2000 && request.resource.data.scheduledFor is string && request.resource.data.timezone is string && (request.resource.data.scheduledAt == null || request.resource.data.scheduledAt is timestamp) && request.resource.data.deliveryMode == 'manual' && request.resource.data.updatedAt == request.time;
+      }
+      match /reminderPreparations/{preparationId} {
+        allow read, delete: if owner(uid);
+        allow create: if owner(uid) && request.resource.data.keys().hasOnly(['eventId','guestId','kind','status','createdAt']) && request.resource.data.eventId is string && request.resource.data.guestId is string && request.resource.data.kind in ['invitation','rsvp','event','venue','thanks'] && request.resource.data.status == 'prepared' && request.resource.data.createdAt == request.time;
+        allow update: if false;
+      }
+      match /templatePreferences/{templateId} { allow read, delete: if owner(uid); allow create, update: if owner(uid) && request.resource.data.keys().hasOnly(['favorite','updatedAt']) && request.resource.data.favorite is bool && request.resource.data.updatedAt == request.time; }
       match /templates/{templateId} { allow read, write: if owner(uid); }
     }
     function activeShare(id) {
@@ -41,20 +63,52 @@ service cloud.firestore {
       allow update: if owner(resource.data.ownerUid) && validShare(request.resource.data) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['guestDisplayName','guestCountAllowed','publishedSnapshot','status']);
       allow delete: if owner(resource.data.ownerUid);
       match /response/{responseId} {
+        function acceptsResponses() {
+          let site = get(/databases/$(database)/documents/publicInvitations/$(shareId)).data.publishedSnapshot.get('site', {});
+          return !site.get('enabled', false) || 'rsvp' in site.get('sections', []);
+        }
+        function withinDeadline() {
+          let deadline = get(/databases/$(database)/documents/publicInvitations/$(shareId)).data.publishedSnapshot.get('rsvpDeadlineAt', null);
+          return deadline == null || (deadline is timestamp && request.time <= deadline);
+        }
+        function validAnswer(key, questions, answers, accepted) {
+          let question = questions.get(key, {});
+          let value = answers.get(key, null);
+          let required = accepted && question.get('required', false);
+          let kind = question.get('type', '');
+          let options = question.get('options', []);
+          return !questions.keys().hasAny([key]) ? !answers.keys().hasAny([key]) :
+            ((!answers.keys().hasAny([key]) && !required) ||
+            (kind == 'text' && value is string && value.size() <= 500 && (!required || value.matches('.*[^\\s].*'))) ||
+            (kind == 'yesno' && value is bool) ||
+            (kind in ['single','dietary'] && value is string && value in options) ||
+            (kind == 'multiple' && value is list && value.size() <= 10 && value.toSet().size() == value.size() && options.hasAll(value) && (!required || value.size() > 0)) ||
+            (kind == 'number' && value is int && value >= 0 && value <= 1000 && value >= question.get('min',0) && value <= question.get('max',1000)));
+        }
+        function validAnswers(data) {
+          let questions = get(/databases/$(database)/documents/publicInvitations/$(shareId)).data.publishedSnapshot.get('rsvpQuestions', {});
+          let answers = data.get('answers', {});
+          let accepted = data.rsvpStatus == 'accepted';
+          return questions is map && answers is map && questions.keys().hasOnly(['q0','q1','q2','q3','q4','q5']) && answers.keys().hasOnly(['q0','q1','q2','q3','q4','q5'])
+            && validAnswer('q0',questions,answers,accepted) && validAnswer('q1',questions,answers,accepted) && validAnswer('q2',questions,answers,accepted)
+            && validAnswer('q3',questions,answers,accepted) && validAnswer('q4',questions,answers,accepted) && validAnswer('q5',questions,answers,accepted);
+        }
+        function changesAllowed() { return get(/databases/$(database)/documents/publicInvitations/$(shareId)).data.publishedSnapshot.get('allowResponseChanges',true) == true; }
         function validResponse() {
           let d = request.resource.data;
           let open = get(/databases/$(database)/documents/publicInvitations/$(shareId)).data.get('mode','personal') == 'open';
-          return ((open && responseId.matches('^[a-f0-9]{48}$')) || (!open && responseId == 'current')) && d.keys().hasOnly(['rsvpStatus','attendeesCount','respondedAt','respondentName'])
+          return ((open && responseId.matches('^[a-f0-9]{48}$')) || (!open && responseId == 'current')) && d.keys().hasOnly(['rsvpStatus','attendeesCount','respondedAt','respondentName','answers'])
             && d.keys().hasAll(['rsvpStatus','attendeesCount','respondedAt','respondentName'])
             && d.respondentName is string && d.respondentName.size() >= 1 && d.respondentName.size() <= 160 && d.respondentName.matches('.*[^\\s].*')
             && d.rsvpStatus in ['accepted','declined']
             && d.attendeesCount is int
             && ((d.rsvpStatus == 'accepted' && d.attendeesCount == 1) || (d.rsvpStatus == 'declined' && d.attendeesCount == 0))
-            && d.respondedAt == request.time;
+            && d.respondedAt == request.time && validAnswers(d);
         }
         allow get: if (responseId == 'current' || responseId.matches('^[a-f0-9]{48}$')) && (ownsShare(shareId) || activeShare(shareId));
         allow list: if ownsShare(shareId);
-        allow create, update: if activeShare(shareId) && validResponse();
+        allow create: if activeShare(shareId) && acceptsResponses() && withinDeadline() && validResponse();
+        allow update: if activeShare(shareId) && acceptsResponses() && withinDeadline() && changesAllowed() && validResponse();
         allow delete: if ownsShare(shareId);
       }
     }

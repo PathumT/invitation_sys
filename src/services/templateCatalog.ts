@@ -12,6 +12,14 @@ export const categories = [
   "General Invitation",
   "Housewarming",
   "Party Celebrations",
+  "Religious Celebration",
+  "Holiday Celebration",
+  "Store Opening",
+  "Product Launch",
+  "Conference",
+  "Dinner Party",
+  "General Events",
+  "Corporate",
 ];
 const themes = [
   {
@@ -174,3 +182,97 @@ export const starterTemplates = themes.map((t, index) => {
   return { id: `starter-${index}`, name: t.name, category: t.category, design };
 });
 starterTemplates.splice(1, 0, grandOpeningTemplate);
+
+// Additive variants reuse licensed repository artwork; original IDs and JSON remain unchanged.
+const occasionEdits = [
+  [
+    "Housewarming",
+    "Home, sweet gathering",
+    "starter-7",
+    "A NEW HOME. A WARM WELCOME.",
+    "Come make yourself at home",
+  ],
+  [
+    "Party Celebrations",
+    "A night to remember",
+    "starter-1",
+    "GOOD PEOPLE. GREAT CELEBRATIONS.",
+    "Let the celebrations begin",
+  ],
+  [
+    "Religious Celebration",
+    "Together in gratitude",
+    "starter-0",
+    "FAITH. FAMILY. TOGETHERNESS.",
+    "Join us for a meaningful celebration",
+  ],
+  [
+    "Holiday Celebration",
+    "Season of togetherness",
+    "starter-3",
+    "THE SEASON IS BRIGHTER TOGETHER",
+    "Celebrate the joy of the season",
+  ],
+  [
+    "Store Opening",
+    "Open doors",
+    "starter-4",
+    "A NEW BEGINNING IN OUR COMMUNITY",
+    "Be part of our opening celebration",
+  ],
+  [
+    "Product Launch",
+    "The next big thing",
+    "starter-4",
+    "MEET WHAT COMES NEXT",
+    "A first look, just for you",
+  ],
+  [
+    "Conference",
+    "Ideas in good company",
+    "starter-4",
+    "CONNECT. LEARN. BE INSPIRED.",
+    "A gathering of ideas and people",
+  ],
+  [
+    "Dinner Party",
+    "At our table",
+    "starter-7",
+    "GOOD FOOD. WONDERFUL COMPANY.",
+    "There is a place at our table for you",
+  ],
+  [
+    "General Events",
+    "A moment worth sharing",
+    "starter-2",
+    "MAKE TIME FOR SOMETHING SPECIAL",
+    "We would love to celebrate with you",
+  ],
+  [
+    "Corporate",
+    "An occasion to connect",
+    "starter-4",
+    "GREAT THINGS START WITH CONNECTION",
+    "Join colleagues and friends",
+  ],
+] as const;
+for (const [category, name, sourceId, eyebrow, intro] of occasionEdits) {
+  const source = starterTemplates.find((template) => template.id === sourceId)!;
+  const design = structuredClone(source.design);
+  design.version = 1;
+  design.elements = design.elements.map((element) => ({
+    ...element,
+    ...(element.id === "eyebrow" ? { text: eyebrow } : {}),
+    ...(element.id === "intro" ? { text: intro } : {}),
+    ...(element.id === "host" ? { text: "Hosted by {{hostName}}" } : {}),
+    ...(element.id === "closing"
+      ? { text: "YOUR PRESENCE WILL MAKE IT SPECIAL" }
+      : {}),
+  }));
+  starterTemplates.push({
+    id: `occasion-${category.toLowerCase().replace(/\s+/g, "-")}`,
+    name,
+    category,
+    design,
+  });
+}

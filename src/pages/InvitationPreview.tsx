@@ -1,3 +1,4 @@
+import { uiText } from "../i18n/uiText";
 import { useState, useEffect } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { shareUrl } from "../utils";
@@ -14,10 +15,13 @@ export default function InvitationPreview() {
   useEffect(() => {
     getDoc(tenantDocument("invitations", id!))
       .then(async (s) => {
-        if (!s.exists()) throw new Error("Invitation not found.");
+        if (!s.exists()) throw new Error(uiText("ui.dbf2d9094b85"));
         const value = { ...s.data(), id: s.id } as Invitation;
         if (value.status === "published")
-          setPublicId(new URL(shareUrl(await ensurePublicLink(value), value.hostName)).pathname);
+          setPublicId(
+            new URL(shareUrl(await ensurePublicLink(value), value.hostName))
+              .pathname,
+          );
         else setEvent(value);
       })
       .catch((e) => setError(e.message));
@@ -27,12 +31,12 @@ export default function InvitationPreview() {
     return (
       <div className="full-state">
         <h1>{error}</h1>
-        <Link to="/invitations">Return to invitations</Link>
+        <Link to="/invitations">{uiText("ui.084eaaba311e")}</Link>
       </div>
     );
   return event ? (
     <GuestExperience data={ownerPreviewData(event)} preview />
   ) : (
-    <div className="full-state">Loading preview…</div>
+    <div className="full-state">{uiText("ui.c4cf2b2ccb5d")}</div>
   );
 }

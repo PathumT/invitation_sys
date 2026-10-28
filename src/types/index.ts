@@ -1,3 +1,42 @@
+export type MiniSiteSection =
+  | "cover"
+  | "intro"
+  | "countdown"
+  | "datetime"
+  | "venue"
+  | "schedule"
+  | "dressCode"
+  | "photos"
+  | "videos"
+  | "registry"
+  | "faq"
+  | "contact"
+  | "rsvp"
+  | "closing";
+export interface EventMiniSite {
+  enabled: boolean;
+  sections: MiniSiteSection[];
+  color: string;
+  background: string;
+  font: "Georgia" | "Arial" | "Trebuchet MS";
+  backgroundImage?: string;
+  schedule: { time: string; title: string }[];
+  photos: { url: string; caption: string; visibility?: "private" | "public" }[];
+  galleryLayout?: "grid" | "masonry";
+  videos: { url: string; title: string }[];
+  registry: { url: string; title: string }[];
+  faq: { question: string; answer: string }[];
+  closing: string;
+}
+export interface RSVPQuestion {
+  label: string;
+  type: "text" | "yesno" | "single" | "multiple" | "number" | "dietary";
+  required: boolean;
+  options?: string[];
+  min?: number;
+  max?: number;
+}
+export type RSVPAnswers = Record<string, string | boolean | number | string[]>;
 export type RSVPStatus = "pending" | "accepted" | "declined" | "maybe";
 export interface DesignElement {
   id: string;
@@ -13,10 +52,37 @@ export interface DesignElement {
   align: "left" | "center" | "right";
   src?: string;
   rotation: number;
+  locked?: boolean;
+  opacity?: number;
+  groupId?: string;
+  shadowColor?: string;
+  shadowBlur?: number;
+  shadowOffsetX?: number;
+  shadowOffsetY?: number;
+  crop?: { x: number; y: number; width: number; height: number };
 }
+export type AnimationPreset =
+  | "classic-envelope"
+  | "luxury-golden"
+  | "floral-bloom"
+  | "royal-curtain"
+  | "modern-minimal"
+  | "none"
+  | "envelope"
+  | "reveal"
+  | "fade"
+  | "slide"
+  | "confetti"
+  | "particles"
+  | "floral"
+  | "elegant";
 export interface Design {
   presentation?: "grand-opening";
   background: string;
+  version?: number;
+  gradient?: { start: string; end: string };
+  animation?: AnimationPreset;
+
   decorated?: boolean;
   palette?: { ink: string; accent: string };
   elements: DesignElement[];
@@ -41,11 +107,36 @@ export interface Invitation {
   design: Design;
   status: "draft" | "published" | "archived";
   publicShareId?: string;
+  rsvpDeadline?: string;
+  rsvpQuestions?: Record<string, RSVPQuestion>;
+  site?: EventMiniSite;
+  allowResponseChanges?: boolean;
+  confirmationMessage?: string;
+  dressCode?: string;
+  eventWebsite?: string;
+  countdown?: boolean;
+  music?: { url: string; volume: number };
+
   createdAt?: any;
   updatedAt?: any;
 }
 export interface Guest {
+  firstName?: string;
+  lastName?: string;
+  category?: string;
+  adultCount?: number;
+  childCount?: number;
+  mealPreference?: string;
+  dietaryRestrictions?: string;
+  privateNotes?: string;
+  tags?: string[];
   source?: "public";
+  checkedInAt?: { toDate: () => Date };
+  checkedInBy?: string;
+  checkedInCount?: number;
+  checkedInOverrideReason?: string;
+  reminderOptOut?: boolean;
+  answers?: RSVPAnswers;
   id: string;
   invitationId: string;
   name: string;

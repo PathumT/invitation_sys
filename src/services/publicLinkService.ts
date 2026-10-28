@@ -1,21 +1,25 @@
+import { uiText } from "../i18n/uiText";
+import { publishedSnapshot } from "../utils/publishedSnapshot";
 import { doc, runTransaction, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { tenantDocument, tenantId } from "../firebase/firestore";
 import { token } from "../utils";
 import type { Invitation } from "../types";
 export async function ensurePublicLink(event: Invitation) {
-  if (!event.id) throw new Error("Save and publish this invitation first.");
+  if (!event.id) throw new Error(uiText("ui.b0f71cf0b75d"));
   const ownerUid = tenantId();
   return runTransaction(db, async (tx) => {
     const ref = tenantDocument("invitations", event.id);
     const record = await tx.get(ref);
     if (!record.exists() || record.data().status !== "published")
-      throw new Error("Publish this invitation to enable public responses.");
+      throw new Error(uiText("ui.bf2f28985c03"));
     if (record.data().publicShareId)
       return record.data().publicShareId as string;
     const id = token();
-    const snapshot = { ...record.data(), id: event.id } as Invitation;
-    delete snapshot.publicShareId;
+    const snapshot = publishedSnapshot({
+      ...record.data(),
+      id: event.id,
+    } as Invitation);
     tx.set(doc(db, "publicInvitations", id), {
       mode: "open",
       ownerUid,

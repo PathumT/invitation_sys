@@ -1,3 +1,5 @@
+import { uiText } from "./i18n/uiText";
+import { useTranslation } from "react-i18next";
 import { Brand } from "./components/Brand";
 import { lazyRoute } from "./utils/lazyRoute";
 import { useEffect, useState, Suspense } from "react";
@@ -40,6 +42,9 @@ const GuestManagement = lazyRoute(
 );
 const Templates = lazyRoute(() => import("./pages/Templates"), "Templates");
 const Analytics = lazyRoute(() => import("./pages/Analytics"), "Analytics");
+const Plans = lazyRoute(() => import("./pages/Plans"), "Plans");
+const Reminders = lazyRoute(() => import("./pages/Reminders"), "Reminders");
+const CheckIn = lazyRoute(() => import("./pages/CheckIn"), "CheckIn");
 const Settings = lazyRoute(() => import("./pages/Settings"), "Settings");
 const PublicInvitation = lazyRoute(
   () => import("./pages/PublicInvitation"),
@@ -52,7 +57,7 @@ function Protected() {
     return (
       <div className="full-state">
         <Flower2 className="spin" />
-        <p>Opening your workspace…</p>
+        <p>{uiText("ui.bed9096c411e")}</p>
       </div>
     );
   return user && !user.isAnonymous ? (
@@ -76,7 +81,7 @@ function Network() {
   return !online ? (
     <div className="offline-banner">
       <WifiOff size={16} />
-      You’re offline. Reconnect to save changes and receive responses.
+      {uiText("ui.5bd760695ab2")}
     </div>
   ) : null;
 }
@@ -90,34 +95,38 @@ function Configuration() {
         <span className="empty-icon">
           <Settings2 size={28} />
         </span>
-        <span className="eyebrow">ONE LITTLE STEP BEFORE THE CELEBRATION</span>
+        <span className="eyebrow">{uiText("ui.9b3b45f8bbcd")}</span>
         <h1>
-          A home for your
+          {uiText("ui.fe090af694af")}
           <br />
-          next great gathering.
+          {uiText("ui.152bb14213c9")}
         </h1>
         <p>
-          Evently Invitations is ready for your Firebase project. Add your
-          client configuration to <code>.env</code> to connect your private
-          workspace.
+          {uiText("ui.88d6d139d8fb")}
+          <code>{uiText("ui.e9cbb0224c4a")}</code>
+          {uiText("ui.a609caee52ca")}
         </p>
         <div className="setup-steps">
           <p>
-            <b>01</b>Create a Firebase project and enable Email/Password
-            Authentication, Firestore, and Storage.
+            <b>01</b>
+            {uiText("ui.97ed92bb8ab0")}
           </p>
           <p>
-            <b>02</b>Copy the web app configuration into the matching variables
-            in <code>.env</code>.
+            <b>02</b>
+            {uiText("ui.7cfaa14553d1")}
+            <code>{uiText("ui.e9cbb0224c4a")}</code>.
           </p>
           <p>
-            <b>03</b>Deploy the supplied security rules, then restart{" "}
-            <code>npm run dev</code>.
+            <b>03</b>
+            {uiText("ui.fe066194d126")} <code>{uiText("ui.21f1677c8f4f")}</code>
+            .
           </p>
         </div>
         <details>
           <summary>
-            Missing configuration ({configurationErrors.length} values)
+            {uiText("ui.f2d53ec77d69")}
+            {configurationErrors.length}
+            {uiText("ui.d0b1c3baa24a")}
           </summary>
           <ul>
             {configurationErrors.map((e) => (
@@ -127,16 +136,15 @@ function Configuration() {
             ))}
           </ul>
         </details>
-        <p className="helper">
-          See README.md for setup, emulator testing, and Firebase Hosting
-          deployment. No demo records or simulated backend are used.
-        </p>
+        <p className="helper">{uiText("ui.e84756e4488e")}</p>
       </div>
-      <span className="setup-footer">Made for moments that matter.</span>
+      <span className="setup-footer">{uiText("ui.df06f57c5956")}</span>
     </div>
   );
 }
 export default function App() {
+  // Re-render route elements when a reviewed language changes, retaining page state.
+  useTranslation();
   return (
     <>
       <Toaster richColors position="bottom-right" />
@@ -148,7 +156,7 @@ export default function App() {
           <AuthProvider>
             <Suspense
               fallback={
-                <div className="full-state">Opening your occasion…</div>
+                <div className="full-state">{uiText("ui.17923c287ecf")}</div>
               }
             >
               <Routes>
@@ -182,12 +190,15 @@ export default function App() {
                     <Route path="templates" element={<Templates />} />
                     <Route path="analytics" element={<Analytics />} />
                     <Route path="settings" element={<Settings />} />
+                    <Route path="check-in" element={<CheckIn />} />
+                    <Route path="reminders" element={<Reminders />} />
+                    <Route path="plans" element={<Plans />} />
                     <Route
                       path="*"
                       element={
                         <div className="empty-state">
-                          <h1>This page wandered off.</h1>
-                          <Link to="/">Return to your workspace</Link>
+                          <h1>{uiText("ui.126b5b20d2cd")}</h1>
+                          <Link to="/">{uiText("ui.47d32925dd1f")}</Link>
                         </div>
                       }
                     />

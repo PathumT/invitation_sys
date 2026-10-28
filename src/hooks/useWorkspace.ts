@@ -1,3 +1,4 @@
+import { uiText } from "../i18n/uiText";
 import {
   createContext,
   createElement,
@@ -207,7 +208,6 @@ export function WorkspaceProvider({ children }: { children: ReactNode }) {
 }
 export function useWorkspace() {
   const value = useContext(WorkspaceContext);
-  if (!value)
-    throw new Error("Workspace pages must be inside WorkspaceProvider.");
+  if (!value) throw new Error(uiText("ui.46594024a4e8"));
   return value;
 }

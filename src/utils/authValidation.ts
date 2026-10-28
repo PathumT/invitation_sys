@@ -1,10 +1,11 @@
+import { i18n } from "../i18n";
 import { z } from "zod";
 export const authSchema = (registration: boolean) =>
   z
     .object({
       name: z.string(),
-      email: z.string().trim().email("Enter a valid email."),
-      password: z.string().min(8, "Use at least 8 characters."),
+      email: z.string().trim().email(i18n.t("validation.email")),
+      password: z.string().min(8, i18n.t("validation.passwordMin")),
       confirm: z.string(),
     })
     .superRefine((value, context) => {
@@ -13,12 +14,12 @@ export const authSchema = (registration: boolean) =>
         context.addIssue({
           code: "custom",
           path: ["name"],
-          message: "Enter your full name (2 to 160 characters).",
+          message: i18n.t("validation.fullName"),
         });
       if (value.password !== value.confirm)
         context.addIssue({
           code: "custom",
           path: ["confirm"],
-          message: "Passwords do not match.",
+          message: i18n.t("validation.passwordMismatch"),
         });
     });

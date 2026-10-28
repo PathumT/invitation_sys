@@ -1,10 +1,14 @@
 @import "tailwindcss";
 @theme {
-  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --font-sans:
+    "Inter", "Segoe UI", Arial, "Noto Sans Sinhala", "Noto Sans Tamil",
+    sans-serif;
   --color-primary: var(--brand-primary);
 }
 :root {
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family:
+    "Inter", "Segoe UI", Arial, "Noto Sans Sinhala", "Noto Sans Tamil",
+    sans-serif;
   color: var(--brand-ink);
   background: var(--brand-surface);
   font-synthesis: none;
@@ -14,7 +18,8 @@
   --ink: var(--brand-ink);
   --muted: #899088;
   --line: #e8ebe5;
-  --serif: Georgia, "Times New Roman", serif;
+  --serif:
+    Georgia, "Times New Roman", "Noto Sans Sinhala", "Noto Sans Tamil", serif;
 }
 * {
   box-sizing: border-box;

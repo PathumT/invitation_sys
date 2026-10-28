@@ -1,0 +1,861 @@
+/* Each scene owns its geometry and motion; only orchestration is shared. */
+.invitation-opening {
+  --opening-ink: #153d32;
+  --opening-gold: #bc8b43;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--opening-ink);
+  font-family: Georgia, serif;
+  min-height: 640px;
+  background: #f5f0e7;
+  box-sizing: border-box;
+}
+.opening-public {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.opening-preview {
+  height: 640px;
+  min-height: 0;
+  border-radius: 12px;
+}
+.invitation-opening h1,
+.invitation-opening h2 {
+  color: inherit;
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.opening-controls {
+  position: relative;
+  z-index: 8;
+  text-align: center;
+  padding: 12px 24px 25px;
+  margin-top: auto;
+  max-width: 680px;
+  width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+}
+.opening-controls h1 {
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.15;
+  max-height: 118px;
+  overflow: auto;
+}
+.opening-controls p {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.8;
+}
+.opening-controls .opening-kicker {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+}
+.opening-start,
+.opening-skip {
+  min-height: 44px;
+  cursor: pointer;
+  font:
+    500 13px Arial,
+    sans-serif;
+  border-radius: 999px;
+  padding: 12px 24px;
+  touch-action: manipulation;
+}
+.opening-start {
+  display: block;
+  margin: 16px auto 4px;
+  border: 1px solid currentColor;
+  background: var(--opening-ink);
+  color: #fff9ec;
+  box-shadow: 0 6px 24px #163b2717;
+}
+.opening-start:disabled {
+  opacity: 0.45;
+  cursor: wait;
+}
+.opening-skip {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 12px;
+}
+.opening-start:focus-visible,
+.opening-skip:focus-visible {
+  outline: 3px solid #b7904c;
+  outline-offset: 4px;
+}
+.opening-content:focus {
+  outline: none;
+}
+.classic-scene,
+.golden-scene,
+.floral-scene,
+.royal-scene,
+.minimal-scene {
+  position: relative;
+  flex: 1;
+  min-height: 300px;
+  height: 430px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.opening-public .classic-scene,
+.opening-public .golden-scene,
+.opening-public .floral-scene,
+.opening-public .royal-scene,
+.opening-public .minimal-scene {
+  height: auto;
+  min-height: 310px;
+}
+.opening-loading {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  font:
+    13px Arial,
+    sans-serif;
+}
+/* Ivory paper, layered pocket, hinged flap and embossed wax. */
+.opening-classic-envelope {
+  background: radial-gradient(ellipse at 50% 35%, #fffdf7, #e9e1cf);
+}
+.classic-scene {
+  perspective: 1100px;
+  padding-top: 60px;
+}
+.classic-envelope {
+  position: relative;
+  width: 300px;
+  height: 190px;
+  transform-style: preserve-3d;
+  margin-top: 50px;
+}
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #d6c8a9;
+  border-radius: 5px;
+  box-shadow:
+    0 25px 55px #4d3e232e,
+    inset 0 0 0 1px #c0af8b;
+}
+.envelope-letter {
+  position: absolute;
+  inset: 10px 16px 8px;
+  padding: 18px 20px;
+  background: linear-gradient(125deg, #fffdf6, #f5eddc);
+  box-shadow: 0 3px 12px #4d3e2320;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  border: 1px solid #ddd0b3;
+}
+.envelope-letter span,
+.envelope-arrival > span {
+  font:
+    8px Arial,
+    sans-serif;
+  letter-spacing: 0.25em;
+  color: #9c7a3d;
+}
+.envelope-letter strong {
+  font:
+    23px Georgia,
+    serif;
+  overflow-wrap: anywhere;
+  max-height: 75px;
+  overflow: hidden;
+}
+.envelope-letter i {
+  font-size: 12px;
+}
+.envelope-flap {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 115px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: linear-gradient(#e8ddc6, #d4c29e);
+  transform-origin: top;
+  backface-visibility: visible;
+  z-index: 4;
+  filter: drop-shadow(0 2px 1px #5a431c24);
+}
+.envelope-pocket {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(28deg, #e9ddc3 49.5%, #d4c4a2 50%, #f1e8d5 50.5%);
+  z-index: 3;
+  border-radius: 4px;
+}
+.wax-seal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 125px;
+  top: 88px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, #b65a4c, #7c3028);
+  color: #eed8a8;
+  border-radius: 46% 52% 44% 50%;
+  box-shadow:
+    0 3px 5px #46251455,
+    inset 0 0 0 3px #b35d4c;
+  z-index: 5;
+}
+.wax-seal span {
+  font:
+    italic 31px Georgia,
+    serif;
+  border: 1px solid #dca39466;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+}
+.envelope-arrival {
+  position: absolute;
+  text-align: center;
+  padding: 25px;
+  max-width: 420px;
+  pointer-events: none;
+}
+.envelope-arrival h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-top: 22px;
+}
+/* Gold paths and pinprick light against midnight. */
+.opening-luxury-golden {
+  --opening-ink: #ead3a0;
+  color: #ead3a0;
+  background: radial-gradient(ellipse at 50% 35%, #252321, #101518 70%);
+}
+.opening-luxury-golden .opening-start {
+  background: linear-gradient(115deg, #b58a44, #f4dfaa);
+  color: #241e14;
+  border-color: #dfbe79;
+}
+.golden-frame {
+  position: absolute;
+  width: min(80%, 365px);
+  height: 90%;
+  color: #d7b568;
+  z-index: 2;
+}
+.golden-spark {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffdd85;
+  box-shadow: 0 0 8px 2px #eccb6899;
+}
+.golden-light {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #fff6ceaa,
+    #e1b65e30 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.golden-card {
+  position: relative;
+  z-index: 3;
+  max-width: 270px;
+  text-align: center;
+  padding: 30px 15px;
+}
+.golden-card > span {
+  font:
+    8px Arial,
+    sans-serif;
+  letter-spacing: 0.25em;
+}
+.golden-card h2 {
+  font-size: clamp(27px, 4vw, 40px);
+  line-height: 1.1;
+}
+.golden-diamond {
+  font-size: 31px;
+  margin: 20px;
+}
+.golden-rule {
+  width: 68px;
+  height: 1px;
+  background: #ccac68;
+  margin: 25px auto;
+}
+.golden-card i {
+  font-size: 15px;
+}
+/* SVG stems draw, leaves unfurl, and individual petals open. */
+.opening-floral-bloom {
+  background: radial-gradient(ellipse at center, #fffdf6, #f5e7e4);
+  color: #42533a;
+}
+.floral-branch {
+  position: absolute;
+  width: clamp(140px, 40%, 235px);
+  height: 75%;
+  overflow: visible;
+}
+.corner-0 {
+  left: 0;
+  top: 0;
+}
+.corner-1 {
+  right: 0;
+  top: 0;
+  transform: scaleX(-1);
+}
+.corner-2 {
+  left: 0;
+  bottom: 0;
+  transform: scaleY(-1);
+}
+.corner-3 {
+  right: 0;
+  bottom: 0;
+  transform: scale(-1);
+}
+.floral-card {
+  z-index: 2;
+  text-align: center;
+  width: min(62%, 310px);
+  padding: 30px 16px;
+  background: #fffaf1df;
+  box-shadow: 0 10px 50px #a28c7510;
+  border: 1px solid #decab655;
+}
+.floral-card > span {
+  font:
+    8px Arial,
+    sans-serif;
+  letter-spacing: 0.18em;
+}
+.floral-card h2 {
+  font-size: clamp(26px, 4vw, 40px);
+  margin: 25px 0 18px;
+}
+.floral-card i {
+  font-size: 14px;
+}
+.floral-card-rule {
+  height: 1px;
+  background: #c1a975;
+  width: 50px;
+  margin: 25px auto 0;
+}
+.drifting-petal {
+  position: absolute;
+  width: 13px;
+  height: 21px;
+  border-radius: 70% 15% 65% 30%;
+  background: linear-gradient(130deg, #eed0c8, #fbefe5);
+  box-shadow: inset 1px 1px 1px #d8b2ac55;
+  z-index: 4;
+}
+/* Velvet panels: shaded pleats, scalloped edges and weighted gold hems. */
+.opening-royal-curtain {
+  --opening-ink: #ecd6a8;
+  background: #160d16;
+  color: #ecd6a8;
+}
+.opening-royal-curtain .opening-controls {
+  background: linear-gradient(transparent, #160d16 15%);
+}
+.opening-royal-curtain .opening-start {
+  background: #c8a65f;
+  color: #281621;
+  border-color: #e2c47e;
+}
+.royal-scene {
+  background: radial-gradient(ellipse at 50% 25%, #493726, #17121b 70%);
+}
+.royal-spotlight {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 155deg at 50% -25%,
+    transparent,
+    #ffe6a342 10deg,
+    #ffe6a36b 25deg,
+    transparent 52deg
+  );
+  filter: blur(8px);
+}
+.royal-card {
+  max-width: 280px;
+  text-align: center;
+  position: relative;
+  padding: 35px 25px;
+  border: 1px solid #d5b67977;
+  background: #211c2188;
+  box-shadow: 0 0 80px #e9cc8720;
+}
+.royal-card > span {
+  font:
+    8px Arial,
+    sans-serif;
+  letter-spacing: 0.2em;
+}
+.royal-crest {
+  font-size: 38px;
+  margin: 20px;
+}
+.royal-card h2 {
+  font-size: clamp(28px, 4vw, 39px);
+  margin: 15px 0;
+}
+.royal-card i {
+  font-size: 14px;
+}
+.royal-card-rule {
+  height: 1px;
+  background: #d5b679;
+  width: 45px;
+  margin: 24px auto 0;
+}
+.velvet-panel {
+  position: absolute;
+  top: -4%;
+  bottom: 0;
+  width: 52%;
+  z-index: 4;
+  background: repeating-linear-gradient(
+    90deg,
+    #270b16 0%,
+    #5f1027 5%,
+    #7b1a35 9%,
+    #4a0b20 13%,
+    #210913 18%,
+    #5c1028 23%
+  );
+  box-shadow: 0 12px 25px #0009;
+  transform-origin: top;
+}
+.curtain-left {
+  left: 0;
+  border-radius: 0 0 32% 0;
+}
+.curtain-right {
+  right: 0;
+  border-radius: 0 0 0 32%;
+  background-position: 20px 0;
+}
+.curtain-folds {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(155deg, #ef829220, transparent 35%, #0005),
+    repeating-linear-gradient(
+      92deg,
+      transparent 0 22px,
+      #fff1 24px,
+      transparent 28px 45px
+    );
+  border-right: 2px solid #8e614333;
+}
+.curtain-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    #ffe0ba33 50%,
+    transparent 70%
+  );
+}
+.curtain-fringe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    #a17b38 0 2px,
+    #e5c77c 2px 4px,
+    #785121 4px 6px
+  );
+  border-top: 3px solid #d1aa61;
+  border-radius: 50%;
+}
+.royal-valance {
+  position: absolute;
+  top: 0;
+  left: -5%;
+  right: -5%;
+  height: 42px;
+  border-radius: 0 0 50% 50%;
+  z-index: 5;
+  background: repeating-linear-gradient(
+    90deg,
+    #3f1020,
+    #701832 28px,
+    #330b19 52px
+  );
+  border-bottom: 3px solid #bd9659;
+  box-shadow: 0 8px 15px #0005;
+}
+/* A restrained line, staggered title, and one soft focus transition. */
+.opening-modern-minimal {
+  background: linear-gradient(135deg, #f1f1ec, #fafaf7 55%, #e6ebe4);
+  color: #2c3b35;
+}
+.minimal-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.minimal-line {
+  height: 1px;
+  background: #737e73;
+  width: 220px;
+  margin: 10px auto 35px;
+  transform-origin: center;
+}
+.minimal-card {
+  text-align: center;
+  width: min(90%, 420px);
+  padding: 35px 15px;
+}
+.minimal-eyebrow {
+  font:
+    9px Arial,
+    sans-serif;
+  letter-spacing: 0.22em;
+}
+.minimal-card h2 {
+  font-size: clamp(28px, 4vw, 45px);
+  line-height: 1.15;
+  margin: 25px 0;
+  white-space: pre-wrap;
+}
+.minimal-card h2 span {
+  display: inline-block;
+  white-space: pre;
+}
+.minimal-card i {
+  font-size: 15px;
+}
+/* Owner selection cards are static thumbnails; Play mounts the real scene. */
+.opening-picker {
+  min-width: 0;
+  margin: 14px 0 25px;
+}
+.opening-picker-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.opening-picker-heading h3 {
+  margin: 0;
+}
+.opening-picker-heading p {
+  font-size: 13px;
+  color: var(--muted, #7b8179);
+}
+.opening-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.opening-option {
+  border: 1px solid #dce2d7;
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 0;
+  background: #fff;
+}
+.opening-option.is-selected {
+  border-color: #35634d;
+  box-shadow: 0 0 0 1px #35634d;
+}
+.opening-option h4 {
+  font:
+    500 17px Georgia,
+    serif;
+  margin: 14px 3px 7px;
+}
+.opening-option > p {
+  font-size: 12px;
+  line-height: 1.5;
+  min-height: 36px;
+  margin: 0 3px 8px;
+  color: #6e776d;
+}
+.opening-option > small {
+  margin: 0 3px;
+  color: #7d837b;
+}
+.opening-thumbnail {
+  height: 130px;
+  position: relative;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+.opening-thumbnail > span {
+  font:
+    7px Arial,
+    sans-serif;
+  letter-spacing: 0.2em;
+}
+.thumbnail-frame {
+  position: absolute;
+  inset: 13px;
+  border: 1px solid currentColor;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.opening-thumbnail.opening-royal-curtain {
+  background: repeating-linear-gradient(
+    90deg,
+    #340e20,
+    #751b36 25px,
+    #350e20 48px
+  );
+}
+.opening-thumbnail.opening-floral-bloom .thumbnail-frame {
+  border-radius: 35% 0;
+  border-color: #6d8a60;
+}
+.opening-selected {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background: #fff;
+  color: #234d3b;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border-radius: 20px;
+  padding: 4px 6px;
+  font:
+    10px Arial,
+    sans-serif;
+  box-shadow: 0 2px 10px #0001;
+}
+.opening-option-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.opening-option-actions .button {
+  flex: 1;
+  min-height: 44px;
+  font-size: 11px;
+  padding: 8px;
+  white-space: normal;
+  line-height: 1.25;
+}
+.opening-preview-modal {
+  width: min(760px, calc(100vw - 24px));
+  max-width: 760px;
+  padding: 16px;
+  box-sizing: border-box;
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+}
+.opening-preview-modal .modal-head {
+  padding: 0 0 12px;
+}
+.opening-preview-modal .modal-head h2 {
+  font-size: 21px;
+}
+.opening-preview-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.opening-preview-footer small {
+  font-size: 11px;
+  flex: 1;
+  min-width: 150px;
+}
+.opening-preview-result {
+  padding: 20px;
+  text-align: center;
+  background: #f6f4ed;
+}
+.opening-preview-result .design-preview {
+  max-width: 300px;
+  margin: auto;
+}
+@media (min-height: 950px) {
+  .opening-public .opening-controls {
+    padding-bottom: 9vh;
+  }
+  .opening-public .classic-scene,
+  .opening-public .golden-scene,
+  .opening-public .floral-scene,
+  .opening-public .royal-scene,
+  .opening-public .minimal-scene {
+    max-height: 70vh;
+  }
+}
+@media (max-width: 480px) {
+  .opening-controls {
+    padding: 10px 16px 15px;
+  }
+  .opening-preview {
+    height: 590px;
+  }
+  .classic-envelope {
+    width: 260px;
+    height: 170px;
+  }
+  .wax-seal {
+    left: 105px;
+    top: 76px;
+  }
+  .envelope-flap {
+    height: 100px;
+  }
+  .classic-scene {
+    padding-top: 40px;
+  }
+  .opening-options {
+    grid-template-columns: 1fr;
+  }
+  .opening-preview-modal {
+    padding: 10px;
+  }
+  .opening-preview-modal .modal-head h2 {
+    font-size: 18px;
+  }
+  .floral-card {
+    width: 62%;
+    padding: 25px 12px;
+  }
+  .golden-card,
+  .royal-card {
+    max-width: 225px;
+    padding: 22px 16px;
+  }
+}
+@media (max-height: 550px) and (orientation: landscape) {
+  .opening-public {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+  .opening-public .opening-controls {
+    align-self: center;
+    padding: 15px;
+  }
+  .opening-public .classic-scene,
+  .opening-public .golden-scene,
+  .opening-public .floral-scene,
+  .opening-public .royal-scene,
+  .opening-public .minimal-scene {
+    min-height: 300px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .opening-public .classic-scene {
+    padding-top: 35px;
+  }
+  .opening-controls h1 {
+    font-size: 22px;
+  }
+  .opening-controls .opening-kicker {
+    font-size: 8px;
+  }
+  .classic-envelope {
+    transform: scale(0.8);
+  }
+  .opening-preview {
+    height: 480px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .invitation-opening * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.opening-preview {
+  display: flex;
+  flex-direction: column;
+}
+.royal-scene {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+  max-height: none !important;
+}
+.royal-card {
+  margin-bottom: 160px;
+}
+.golden-card h2,
+.floral-card h2,
+.royal-card h2,
+.minimal-card h2 {
+  max-height: 190px;
+  overflow: hidden;
+}
+
+.envelope-letter {
+  z-index: 1;
+}
+
+.minimal-card h2 .minimal-word {
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.minimal-card h2 .minimal-letter {
+  display: inline-block;
+}
+.envelope-letter i,
+.golden-card i,
+.floral-card i,
+.royal-card i,
+.minimal-card i {
+  overflow-wrap: anywhere;
+}

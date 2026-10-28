@@ -1,3 +1,6 @@
+import { uiText } from "../../i18n/uiText";
+import { useTranslation } from "react-i18next";
+import { InvitationQRCode } from "./InvitationQRCode";
 import { useEffect, useRef, useState } from "react";
 import {
   Copy,
@@ -13,6 +16,8 @@ import { ensurePublicLink } from "../../services/publicLinkService";
 import { shareUrl, errorMessage } from "../../utils";
 
 export function InvitationSharePanel({ event }: { event: Invitation }) {
+  const { t } = useTranslation();
+  const [qrOpen, setQrOpen] = useState(false);
   const [link, setLink] = useState("");
   const [error, setError] = useState("");
   const [retry, setRetry] = useState(0);
@@ -48,13 +53,13 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
   async function copy() {
     try {
       if (!navigator.clipboard?.writeText)
-        throw new Error("Clipboard unavailable");
+        throw new Error(uiText("ui.4ff69f6f16e0"));
       await navigator.clipboard.writeText(link);
-      toast.success("Public invitation link copied. Anyone can respond.");
+      toast.success(uiText("ui.4e453a08e12f"));
     } catch {
       input.current?.focus();
       input.current?.select();
-      toast.info("Select and copy the invitation link from the field.");
+      toast.info(uiText("ui.965e10ddecb5"));
     }
   }
   async function share() {
@@ -71,9 +76,7 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
       });
     } catch (e) {
       if (!(e instanceof Error && e.name === "AbortError"))
-        toast.error(
-          "Sharing could not open. Use Copy public link or WhatsApp instead.",
-        );
+        toast.error(uiText("ui.fbae29669515"));
     } finally {
       setSharing(false);
     }
@@ -81,21 +84,19 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
   return (
     <section
       className="invitation-share-panel"
-      aria-label="Share your invitation"
+      aria-label={uiText("ui.5fc19c12d3d2")}
     >
       <div className="invitation-share-heading">
         <span className="share-panel-icon">
           <Link2 size={20} />
         </span>
         <div>
-          <h3>Share your invitation</h3>
-          <p>
-            Anyone with this link can enter their name and accept or decline.
-          </p>
+          <h3>{uiText("ui.5fc19c12d3d2")}</h3>
+          <p>{uiText("ui.c1c9640611d9")}</p>
         </div>
       </div>
       <label className="invitation-link-label">
-        Invitation link
+        {uiText("ui.88c3be350635")}
         <input
           ref={input}
           type="text"
@@ -104,9 +105,9 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
           placeholder={
             published
               ? error
-                ? "Link could not be generated"
-                : "Generating your invitation link…"
-              : "Publish your invitation to generate a shareable link"
+                ? uiText("ui.091f33d8a8c2")
+                : uiText("ui.288ca402972d")
+              : uiText("ui.e6bf03bb1c49")
           }
           onFocus={(e) => e.target.select()}
         />
@@ -119,14 +120,14 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
             onClick={() => setRetry((n) => n + 1)}
           >
             <RefreshCw size={14} />
-            Retry link generation
+            {uiText("ui.7f5ff9117a29")}
           </button>
         </div>
       )}
       <div className="invitation-share-actions">
         <button className="button primary" disabled={!link} onClick={copy}>
           <Copy size={16} />
-          Copy public link
+          {t("invitation.copyLink")}
         </button>
         <button
           className="button outline"
@@ -134,7 +135,14 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
           onClick={share}
         >
           <Share2 size={16} />
-          {sharing ? "Opening share…" : "Share invitation"}
+          {sharing ? uiText("ui.2649d27971e2") : t("invitation.share")}
+        </button>
+        <button
+          className="button outline"
+          disabled={!link}
+          onClick={() => setQrOpen(true)}
+        >
+          {uiText("ui.2c24d35a117c")}
         </button>
         {link && (
           <>
@@ -145,7 +153,7 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
               rel="noopener noreferrer"
             >
               <MessageCircle size={16} />
-              WhatsApp
+              {uiText("ui.6a40edf1fc87")}
             </a>
             <a
               className="button outline"
@@ -154,23 +162,20 @@ export function InvitationSharePanel({ event }: { event: Invitation }) {
               rel="noopener noreferrer"
             >
               <ExternalLink size={16} />
-              Open invitation
+              {uiText("ui.5aa56ab42916")}
             </a>
           </>
         )}
       </div>
-      {!published && (
-        <p className="helper">
-          Add the event title, host, date, time and venue, then click Publish
-          invitation. Your link will appear here after publishing succeeds.
-        </p>
+      {qrOpen && link && (
+        <InvitationQRCode
+          url={link}
+          title={event.title}
+          onClose={() => setQrOpen(false)}
+        />
       )}
-      {local && (
-        <p className="helper">
-          This link uses localhost. Set VITE_APP_URL to your published website
-          address and restart the app to share it with other devices.
-        </p>
-      )}
+      {!published && <p className="helper">{uiText("ui.2ae3a22dbfb1")}</p>}
+      {local && <p className="helper">{uiText("ui.36aabc6fd80d")}</p>}
     </section>
   );
 }
