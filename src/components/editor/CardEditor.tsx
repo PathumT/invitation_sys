@@ -1,3 +1,5 @@
+import { invitationImageDesign } from "../../utils/invitationImageDesign";
+import { roundedInvitationCanvas } from "../../utils/roundedInvitationCanvas";
 import { fitInvitationText } from "../../utils/fitInvitationText";
 import { uiText } from "../../i18n/uiText";
 import { invitationFont } from "../../utils/invitationFont";
@@ -226,17 +228,41 @@ export function CardEditor({ event }: { event: Invitation }) {
     return () => window.removeEventListener("keydown", key);
   });
   async function exportDesign(format: "png" | "jpeg" | "pdf" = "png") {
+    let exportContact: Konva.Text | undefined;
+    const restoreLayout: (() => void)[] = [];
     try {
       await document.fonts.ready;
+      const exportDesign = invitationImageDesign({ ...event, design }, uiText("ui.78ba2a6d9b97"));
+      for (const element of exportDesign.elements) {
+        const original = design.elements.find((el) => el.id === element.id);
+        if (!original || original === element) continue;
+        const node = stage.current!.getLayers()[0].getChildren().find((child) => child.id() === element.id);
+        if (!node) continue;
+        const previous = { y: node.y(), height: node.height(), fontSize: node.getAttr("fontSize") };
+        restoreLayout.push(() => node.setAttrs(previous));
+        node.setAttrs({ y: element.y, height: element.height,
+          fontSize: fitInvitationText(element, interpolate(element.text || "", event)) });
+      }
+      const contact = exportDesign.elements.find((el) => el.id === "download-host-contact");
+      if (contact && !design.elements.some((el) => el.id === contact.id)) {
+        exportContact = new Konva.Text({
+          ...contact,
+          text: contact.text || "",
+          fontFamily: invitationFont(contact.fontFamily),
+          fontSize: fitInvitationText(contact, contact.text || ""),
+          lineHeight: 1.15,
+          listening: false,
+        });
+        stage.current!.getLayers()[0].add(exportContact);
+      }
       tr.current?.nodes([]);
       const mime = format === "jpeg" ? "image/jpeg" : "image/png";
       const guidesToHide = stage.current!.find(".export-guide");
       guidesToHide.forEach((node) => node.hide());
-      const url = stage.current!.toDataURL({
+      const canvas = stage.current!.toCanvas({
         pixelRatio: resolution / ((width * zoom) / 480),
-        mimeType: mime,
-        quality: 0.95,
       });
+      const url = roundedInvitationCanvas(canvas, format === "jpeg").toDataURL(mime, 0.95);
       guidesToHide.forEach((node) => node.show());
       if (format === "pdf") {
         const { jsPDF } = await import("jspdf");
@@ -272,6 +298,8 @@ export function CardEditor({ event }: { event: Invitation }) {
     } catch (error) {
       toast.error(errorMessage(error));
     } finally {
+      exportContact?.destroy();
+      restoreLayout.forEach((restore) => restore());
       stage.current?.find(".export-guide").forEach((node) => node.show());
     }
   }

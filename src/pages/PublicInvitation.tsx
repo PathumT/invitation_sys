@@ -1,3 +1,4 @@
+import { invitationImageDesign } from "../utils/invitationImageDesign";
 import { uiText } from "../i18n/uiText";
 import { formatCalendarDate, formatClockTime } from "../i18n/format";
 import { useTranslation } from "react-i18next";
@@ -23,6 +24,7 @@ import {
   Check,
   Heart,
   Flower2,
+  Download,
 } from "lucide-react";
 import { db } from "../firebase/config";
 import { respond } from "../services/rsvpService";
@@ -48,6 +50,19 @@ export function GuestExperience({
 }) {
   const { t } = useTranslation();
   const e = data.publishedSnapshot;
+  const imageDesign = invitationImageDesign(e, uiText("ui.78ba2a6d9b97"));
+  const [downloading, setDownloading] = useState(false);
+  async function downloadImage() {
+    setDownloading(true);
+    try {
+      const { downloadInvitationImage } = await import("../utils/downloadInvitationImage");
+      await downloadInvitationImage(imageDesign, e, data.guestDisplayName);
+    } catch (error) {
+      toast.error(errorMessage(error));
+    } finally {
+      setDownloading(false);
+    }
+  }
   const deadline = deadlineInstant(e);
   const [now, setNow] = useState(Date.now());
   useEffect(() => {
@@ -297,7 +312,7 @@ export function GuestExperience({
               aria-label={uiText("ui.3827fd19fcb9")}
             >
               <DesignPreview
-                design={e.design}
+                design={imageDesign}
                 event={e}
                 guest={data.guestDisplayName}
               />
@@ -355,6 +370,12 @@ export function GuestExperience({
             </header>
           )}
           <div className="guest-content">
+            {(customArtwork || grandOpening) && (
+              <button type="button" className="button outline full" disabled={downloading} onClick={downloadImage}>
+                <Download size={16} />
+                {downloading ? uiText("ui.a027b2ea334e") : uiText("ui.14a486072bb1")}
+              </button>
+            )}
             <EventCountdown event={e} />
             <InvitationMusic event={e} />
             {!(customArtwork || grandOpening) && (
@@ -428,7 +449,7 @@ export function GuestExperience({
                 <p className="guest-notes">{e.notes}</p>
               </details>
             )}
-            {e.contactNumber && (
+            {e.contactNumber && !(customArtwork || grandOpening) && (
               <a
                 className="compact-contact"
                 href={`tel:${e.contactNumber.replace(/[^+\d]/g, "")}`}

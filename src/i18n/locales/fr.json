@@ -880,5 +880,8 @@
   "ui.8c0443cae24b": "THE HONOUR OF YOUR PRESENCE",
   "ui.858db341abf2": " appearance",
   "ui.3a9dfa58df63": "Colour",
-  "ui.55416ae2efd9": "Text automatically shrinks to fit its card area. Use the design editor to resize or move the text area."
+  "ui.55416ae2efd9": "Text automatically shrinks to fit its card area. Use the design editor to resize or move the text area.",
+  "ui.a027b2ea334e": "Creating image?",
+  "ui.14a486072bb1": "Download invitation image",
+  "ui.db41f0494a50": "Could not create the invitation image."
 }
